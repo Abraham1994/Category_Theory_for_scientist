@@ -1,4 +1,10 @@
-## Welcome to GitHub Pages
+## Teoría de Categorías 
+
+Una **Categoría** *C* se entiende como un conjuntos de datos:
+
+
+
+
 
 You can use the [editor on GitHub](https://github.com/Abraham1994/Category_Theory_for_scientist/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
