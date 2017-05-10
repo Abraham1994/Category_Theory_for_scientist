@@ -1,7 +1,7 @@
 ## Teoría de Categorías 
 
 Una **Categoría** *C* se entiende como un conjuntos de datos:
-
+ $\xi$
 
 
 
