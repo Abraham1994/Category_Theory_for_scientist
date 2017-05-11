@@ -1,0 +1,810 @@
+\documentclass[12pt,a4paper]{report}
+\usepackage{anysize}\marginsize{3cm}{2.5cm}{3cm}{2.5cm}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}\graphicspath{{figs/}}
+\usepackage{lastpage}
+\usepackage[linesnumbered, ruled]{algorithm2e}
+\SetKwRepeat{Do}{do}{while}%
+\usepackage{upgreek} % para poner letras griegas sin cursiva
+\usepackage{cancel} % para tachar
+\usepackage{mathdots} % para el comando \iddots
+\usepackage{mathrsfs} % para formato de letra
+\usepackage{stackrel} % para el comando \stackbin
+\usepackage{float} % colocar en su lugar una figura 
+\usepackage{mathtools}
+\usepackage{lettrine} % primera letra de un parrafo de tamaño grande 
+% % % % % % % % % % % % % % % % % % % % % % % % %
+%\usepackage{algorithm}
+%\usepackage{algorithmic}
+%\input{spanishAlgorithmic} % mi archivo de traducción
+% % % % % % % % % % % % % % % % % % % % % % % % %
+%\usepackage[spanish,es-tabla,es-sloppy]{babel}
+\usepackage[spanish]{babel}
+\usepackage{amsmath,amssymb,amsthm}\theoremstyle{definition}
+
+\newcommand{\limite }[2]{\lim_{ #1 \rightarrow #2}}
+\newcommand{\noin}{\in \!\!\!\!\! / }
+\newcommand{\al}{\mathscr{A}_{P}}
+\newcommand{\msp}{\mathbf{m}_{P}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\ea}{\mathbb{A}^{n}}
+\newcommand{\cod}{\mbox{codim}}
+\newcommand{\Ou}{\mathscr{O}}
+\newcommand{\Op}{\mathscr{O}_{p}}
+\newcommand{\sop}{\mbox{sop}}
+\newcommand{\ep}{\mathbb{P}^{n}}
+\newcommand{\K}{\mathbb{K}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\F}{\mathscr{F}}
+\newcommand{\Po}{\mathcal{P}(\Omega)}
+\newcommand{\ordp}{\mbox{ord}_{P}}
+\newcommand{\ord}{\mbox{ord}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Li}{\mathscr{L}}
+\newcommand{\M}{\mathscr{M}}
+\newcommand{\ito}{It\^{o}}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\comment}[1]{ \fbox{
+		\parbox{\textwidth}{
+		\textcolor{red}{\Large #1}}
+	}\\ [20pt]}
+
+
+
+\newtheorem{defi}{Definici\'on}[chapter]
+\newtheorem{teo}{Teorema}[chapter]
+\newtheorem{eje}{Ejemplo}[chapter]
+\newtheorem{obs}{Observación}[chapter]
+\newtheorem{cor}{Corolario}[chapter]
+\newtheorem{prop}{Proposición}[chapter]
+\newtheorem{lem}{Lema}[chapter]
+%\renewcommand{\spanishproofname}{\upshape\bfseries Prueba.}
+\usepackage{rotfloat}
+\usepackage{tikz}
+\usetikzlibrary{decorations.pathreplacing,matrix,arrows,shapes.geometric}
+\usepackage{longtable}
+\setcounter{secnumdepth}{3}\setcounter{tocdepth}{3}
+\setlength{\belowcaptionskip}{10pt}
+\sloppy\linespread{1.5}
+\setlength{\parindent}{0cm}
+
+
+\renewcommand{\chaptername}{Cap\'itulo}
+\renewcommand{\contentsname}{\'Indice}
+%
+%\usepackage[style=alphabetic]{biblatex}
+%\addbibresource{referencias.bib}
+
+\begin{document}
+\input{Cap0_caratula.tex}\newpage\pagenumbering{arabic}
+
+
+\chapter{Elementos de Geometría Algebraica}
+
+Los siguientes conceptos y resultados serán necesarios.\\
+
+Un anillo conmutativo es \textbf{Noetheriano} si todos sus ideales son finitamente generados.
+
+\begin{teo}[Teorema de la base de Hilbert]
+	Si $R$ es un anillo Noetheriano entonces $R[X_{1}, \ldots , X_{n}]$ es un anillo Noetheriano.
+\end{teo}
+
+\begin{cor}
+	$\K[X_{1}, \ldots, X_{n}]$ es Noetheriano para todo cuerpo $\K$
+\end{cor}
+
+\begin{lem}\label{lema}
+	Sea $\F$ una colección no vacía de ideales de una anillo Notheriano. Entonces $\F$ posee un elemento maximal (en el sentido de inclusión).
+\end{lem}
+\underline{Demostración}. Por el axioma de elección, puede elegirse un ideal de cada subconjunto no vacío de $\F$. Sea $I_{0}$ el ideal para el subconjunto $\F$. Sea $\F_{1}= \{ I \in \F \: | \: I_{0} \subsetneq I \} $ y, si es no vacío, sea $I_{1}$ su ideal elegido. Sea $\F_{2}= \{ I \in \F \: | \: I_{1} \subsetneq I \} $ y si es no vacío, sea $I_{2}$ su ideal elegido...;  y así sucesivamente, obteniéndose $I_{1} \subsetneq I_{2} \subsetneq \ldots $. Bastaría probar que algún $\F_{n}$ es vacío. Suponiendo lo contrario, sea $I= \cup_{n=0}^{\infty}I_{n}$, es un ideal de $R$. Existe un conjunto finito de generadores de $I$, la cual debe estar contenido en algún $I_{n}$. Pero entonces $I_{n} =I = I_{n+1}$, lo cual es contradictorio.
+
+\section{Variedades cuasiproyectivas}
+
+En adelante $\K$ representará un cuerpo algebraicamente cerrado, llamado \textbf{espacio base}. El espacio $\ea : = \K ^{n}$ es llamado el \textbf{espacio afín n-dimensional sobre $\K$}.\\
+
+Considérese la relación de equivalencia $$ (y_{0}, y_{1}, \ldots, y_{n} ) \sim (\lambda y_{0},\lambda y_{1}, \ldots\lambda y_{n} )  \mbox{ si } \lambda \neq 0 $$ en $\K^{n+1}\setminus \{(0, \ldots,0)\}$. Se usará la notación de \textbf{coordenadas homogéneas}, es decir, $\overline{(y_{0}, \ldots, y_{n})} = ( y_{0} : y_{1} : \ldots : y_{n} )$. El conjunto de estas clases (denotado por $\ep$)  es llamado el \textbf{espacio proyectivo n-dimensional sobre $\K$}.\\
+Se escribe $ \ea (\K) $ y $\ep (\K) $ cuando se desea especificar el espacio base $\K$. \\
+Los elementos de $\ea$ y de $\ep$ son llamados \textbf{puntos}.\\
+
+Existe una \textbf{inyección natural} entre $\ea$ y $\ep$, definida por $$ (x_{1}, \ldots , x_{n}) \mapsto (1:x_{1}, \ldots , x_{n}) .$$ $\ea_{1}$ denota la imagen de $\ea$ mediante esta inyección. Los puntos de $\ea_{1}$ son de la forma $(\xi_{0}: \ldots :  \xi_{n})$, donde $\xi_{0}\neq 0$\\ 
+
+Un polinomio homogéneo es aquel cuyos términos son todos del mismo grado; también se le llama \textbf{forma}.\\
+Sea $F \in \K [X_{0}, \ldots , X_{n}]$. Se dice que $P=(\xi_{0} : \xi_{1} : \ldots \xi_{n}) \in \ep $ es un \textbf{cero proyectivo} de $F$ si $ F (\lambda \xi_{0}, \ldots ,  \lambda \xi_{n}) =0$ para todo $\lambda \in \K$; esto será denotado por $F(P)=F ( \xi_{0}: \ldots :   \xi_{n}) =0$\\
+
+Sea $S \subset \K[X_{0}, \ldots,X_{n} ]$. Se define $$  V(S)= \{ P \in  \ep \: | \: F(P)=0, \: \forall F \in S  \}$$
+Sea $X \subset \ep$. El conjunto $$I(X):= \{ F \in \K [X_{0}, \ldots X_{n}] \: | \:   \:  F(P)=0 , \: \forall P \in X \}$$ es llamado el \textbf{ideal de $X$}. Evidentemente es un ideal propio de $K[X_{0},\ldots, X_{n}]$\\ 
+Tanto $V(S)$ como $I(X)$ se definen similarmente en $\ea$.\\ 
+
+
+
+\subsection{Conjuntos cerrados. Irreducibilidadd}
+Un \textbf{conjunto cerrado $X$ en $\ea $} (o \textbf{conjunto cerrado afín}) es el conjunto de ceros comunes de un número finito de polinomios. Luego, 
+$$ X= \{ P=(x_{1},\ldots , x_{n})  \in \ea \:| \:  F_{1}(x_{1},\ldots, x_{n})= \ldots F_{s} (x_{1},\ldots , x_{n}) =0 \} $$
+donde $ F_{1}, \ldots , F_{s} \in \K [ T_{1}, \ldots , T_{n} ] $. \\
+Un conjunto $U \subset \ea $ es \textbf{abierto (afín) en $\ea$} si $\ea \setminus U$ es cerrado en $\ea$.\\
+
+Un \textbf{conjunto cerrado $X$ en $\ep $} (o \textbf{conjunto cerrado proyectivo}) es el conjunto de ceros proyectivos comunes de un número finito de formas. Luego, 
+$$ X= \{ Q=(y_{0}:\ldots : y_{n}) \in \ep | G_{1}(y_{1}:\ldots : y_{n})= \ldots G_{r} (y_{0} : \ldots : y_{n}) =0 \} $$
+donde $ G_{1}, \ldots , G_{r} \in \K [ T_{0}, \ldots , T_{n} ] $\\
+Un conjunto $U \subset \ea $ es \textbf{abierto (proyectivo) en $\ep$} si $\ep \setminus U$ es cerrado en $\ep$.\\
+Se observa que $\ea_{1}$ es un abierto de $\ep$. En efecto, su complemento son los puntos de la forma $(0 : \xi_{1} : \ldots : \xi_{n})$, el cual es obviamente cerrado en $\ep$. \\
+
+
+Sea $X \subset \ea \hookrightarrow \ep$ un conjunto afín cerrado definido por el sistema $\{F_{i} = 0$, $i=1, \ldots ,s \}$. Consideremos las formas $\tilde{F_{i}}\in \K [ T_{0}, \ldots , T_{n} ] $ definidas por 
+$$ \tilde{F_{i}} (T_{0},\ldots , T_{n}) =  \sum_{j=0}^{\partial F_{i}} T_{0}^{\partial F_{i}-j}F_{ij} (T_{1},\ldots , T_{n}) \; \; i=1, \ldots , s$$ 
+donde cada $F_{ij}$ es la suma de los términos de $F_{i}$ que tienen grado $j$, por tanto cada $F_{ij}$ es una forma de grado $j$. Luego cada $\tilde{F_{i}}$ es una forma de grado $\partial F_{i}$. La \textbf{clausura proyectiva de $X$} (denotada por $\widetilde{X}$) es el conjunto cerrado proyectivo definido por el sistema $\{\widetilde{F_{i}}=0, \ i =1, \ldots, n\}$.\\
+Se observa que $F_{i}(\xi_{1}, \ldots, \xi_{n})=0 $ si y solo si $\tilde{F_{i}}(1:\xi_{1} : \ldots : \xi_{n} ) =0 $. Utilizando la inyección natural, se concluye que \begin{equation} \label{eq1}
+X = \tilde{X} \cap \ea_{1}
+\end{equation}
+
+Sea $S \subset \ep$ arbitrario. Un conjunto $T\subset S$ es \textbf{cerrado en $S$} si existe un conjunto cerrado proyectivo $X$ tal que $T=S \cap X$. Un conjunto $U \subset S$ es \textbf{abierto en $S$} si $S\setminus U$ es cerrado en $S$. Lo anterior viene a ser la topología inducida en $S$\\
+La familia de conjuntos abiertos en $S$ definen una topología en $S$, llamada la \textbf{topología de Zariski}. En adelante se asumirá esta topología.\\
+
+Sea $X$ un cerrado proyectivo. $X$ es llamado \textbf{reducible} si $X=X_{1} \cup X_{2}$, donde $X_{1}, X_{2}$ son cerrados proyectivos y $X_{i}\subsetneq X$. Caso contrario, $X$ es llamado \textbf{irreducible}.\\
+
+\begin{prop}
+	Un cerrado proyectivo $X$ es irreducible si y solo si $I(X)$ es un ideal primo.
+\end{prop}
+\underline{DEMOSTRACIÓN} (CORREGIR). Si $I(X)$ no es primo, existen polinomios $F_{1},F_{2} \noin I(X) $ tales que $F_{1}F_{2} \in I(X)$. Sea $P=(\xi_{0}: \ldots, \xi_{n}) \in X $, se tiene  $ \forall \lambda \in \K: \: (F_{1}F_{2}) (\lambda\xi_{0}, \ldots , \lambda \xi_{n})= F_{1} (\lambda\xi_{0}, \ldots , \lambda \xi_{n})F_{2} (\lambda\xi_{0}, \ldots , \lambda \xi_{n})= 0$. Siendo $\K$ sin divisores de cero, necesariamente $F_{1}(P)=0$ o $F_{2}(P)=0$ (ERROR). Luego, $X= (X \cap V(F_{1})) \cup (X \cap V(F_{2})) $, donde $V(F_{i}) \neq X$. Por tanto, $X$ es reducible.\\
+Recíprocamente, si $X$ es reducible, existen $X_{1}, X_{2} \neq X$ cerrados proyectivos tales que $ X = X_{1} \cup X_{2}$, luego $I(X) \subsetneq I(X_{i})$. Sean $F_{i}\in I(X_{i})$ tales que $F_{i} \noin  I(X)$. Entonces $F_{1}F_{2}\in I(X)$, por tanto $I(X)$ no es primo.\\
+
+Cabe observar que el lema \ref{lema} implica que toda colección de cerrados (afines o proyectivos), tiene un elemento minimal. Pues, si $\{X_{\alpha}\}$ es tal colección, $\{I(X_{\alpha})\}$ posee un elemento maximal $I(X_{\alpha_{0}})$. Luego $X_{\alpha_{0}}$ es claramente el minimal de la colección. \\
+
+\begin{teo}
+	Todo cerrado proyectivo $X$ puede ser unívocamente representado como unión finita de cerrados proyectivos $X_{i}$, tales que $X_{i} \nsubseteq X_{j}$ para $i \neq j$
+\end{teo}
+
+\underline{Demostración}. Sea $\F = \{ $cerrados proyectivos $V \subset \ep  \: | \: V $no son unión finita de cerrados irreducibles$\}$. Supóngase que $\F \neq \emptyset$; sea $V$ el minimal de $\F$. Luego $V$ es reducible, por tanto $V=V_{1} \cup V_{2}$, $V_{i} \subsetneq V$; por minimalidad, $V_{i}\noin \F$, entonces $V_{i}= V_{i1} \cup \ldots \cup V_{im_{i}} $, $V_{ij}$ irreducibles. Pero en tal caso $V=\cup _{ij} V_{ij}$, lo que es contradictorio. En particular, $X \noin\F $. \\
+Supóngase que un $X = V_{1} \cup \ldots \cup V_{m}$, $V_{i}$ irreducible. Eliminado los $V_{i}$ tales que $V_{i} \subset V_{j}$ para algún $j \neq i$, y denotando los restantes por $X_{i}$, se prueba la existencia de la representación. Para la unicidad, supóngase que $X=W_{1} \cup \ldots W_{n}$ es otra representación. Entonces $X_{i} = \cup _{j} (W_{j}\cap X_{i})$, luego $X_{i}\subset W_{j(i)}$ para algún $j(i)$. Similarmente, $W_{(j(i))} \subset X_{k}$ para algún $K$. Pero $X_{i} \subset X_{{k}}$ implica que $i=k$, luego $X_{i}= X_{j(i)}$. Similarmente, cada $W_{f}$ es igual a algún $X_{i(j)}$\\
+
+Los $X_{i}$ obtenidos en el teorema anterior son llamados las \textbf{componentes irreducibles de $X$}. $X= X_{1} \cup \ldots \cup X_{n} $ es la \textbf{descomposición de $V$ en componentes irreducibles}.\\
+Los conceptos y resultados sobre irreductibilidad que se acaban de dar se aplican análogamente en el espacio $\ea$.\\
+
+
+
+\subsection{Conjuntos cuasiproyectivas y ejemplos}
+Un \textbf{conjunto cuasiproyectivo} es un subconjunto abierto $U$ de un conjunto $X$ cerrado proyectivo.\\
+Por la ecuación \ref{eq1} se concluye que todo conjunto afín cerrado es cuasiproyectivo.\\
+
+Una \textbf{variedad cuasiproyectiva} o, simplemente, \textbf{variedad} es un conjunto cuasiproyectivo irreducible. Una variedad que es cerrada en $\ep$ es llamada \textbf{variedad proyectiva}.\\
+
+EJEMPLOS..............................
+
+
+
+\subsection{Funciones racionales}
+Sea $X \subset \ep$ un variedad cuasiproyectiva. El \textbf{cuerpo de funciones} de $X$ consiste en el cuerpo de fracciones del anillo $K[T_{0}, \ldots , T_{n}]$; sus elementos son llamados \textbf{funciones racionales} (en $X$). En otras palabras:\\
+Sean $F, G \in \K [T_{0}, \ldots , T_{n}]$ formas con grados iguales, donde $G(P) \neq 0$ para al menos un $P \neq 0$. La expresión $F/G \in \K (T_{0}, \ldots ,T_{n} )$ es llamada \textbf{función racional en $X$}, además se dice que las funciones racionales $F/G$ y $ F'/G'$ son iguales si y solo si la forma $F'G-FG'$ se anulan en  $X$. \\
+Las condiciones que se imponen para $F$ y $G$ son necesarias para que se cancele el factor $\lambda$. \\
+El conjunto de funciones racionales en $X$ es denotado por $\K (X)$.\\
+
+Sea $X \subset \ep$. $\K(X)$ es un cuerpo, con las operaciones 
+$$ \begin{array}{ccc}
+\ds \frac{F}{G} + \frac{F'}{G'} =\frac{FG'+F'G}{GG'} & \qquad &\ds \frac{F}{G} \cdot \frac{F'}{G'} = \frac{FF'}{GG'}
+\end{array} $$
+
+$\K(X)$ es llamado el \textbf{cuerpo de funciones racionales en $X$}. Es un invariante fundamental de la variedad $X$. \\
+
+La función $f\in X$ es llamada \textbf{regular en $P \in X$} si admite una representación $f=F/G$ tal que $G(P)\neq 0$. En este caso, $f(P):=F(P)/G(P)$ es llamado el \textbf{valor de $f$ en $P$}.\\
+$f$ es llamada \textbf{regular} si es regular para todo $P \in X$. El conjunto de funciones racionales en $X $  se denota por $\K[X]$ es una $\K$-álgebra; más aún, es un anillo sin divisores del cero. \\
+
+\begin{prop}
+	\begin{itemize}
+		\item Si $X \subset \ep$, entonces $\K[X]$ es una $\K$-álgebra; más aún, es un anillo sin divisores del cero.
+		\item $\K[\ep]= \K$, $\K[\ea]= \K[T_{1},\ldots, T_{n}] $
+		\item Si $Y \subset \ea$, entonces $\K(Y)$ es el cuerpo de fracciones de $\K[Y]$.
+	\end{itemize}
+\end{prop}
+
+
+\subsection{Mapas racionales}
+Sea $X \subset \mathbb{P}^{m}$ una variedad. Un \textbf{mapa racional de $X$ a $\ea$} es una función $f:X \rightarrow \ea$ de la forma $f=(f_{1},\ldots , f_{n})$, donde cada $f_{i}\in \K(X)$. \\
+Si cada $f_{i}$ es regular en $P$ entonces $f$ es \textbf{regular en $P$}. Cuando $f$ es regular en cada punto de su dominio se le llama \textbf{mapa regular de $X$ a $\ea$}.\\
+
+Un \textbf{mapa racional de $X$ a $\ep$} es una función de la forma $f=(F_{0}:\ldots : F_{n})$, donde los $F_{i}:X \rightarrow $ son formas definidas sobre $(m+1)$ coordenadas homogéneas, todas del mismo grado, tales que en cada punto de $X$ alguna de ellas no se anula. Además $f=(F'_{0} : \ldots :F_{n} )$ si y solo si todas las formas $F_{i}F'_{j} - F'_{i}F_{j}$ se anulan en todo $X$.\\
+Un mapa racional $f$ es \textbf{regular} en el punto $P\in X$ si $f$ tiene alguna representación en la que alguna de las formas componentes no se anula en $P$. Si $f$ es regular en todo punto de $X$, es llamado \textbf{mapa regular (morfismo) entre variedades}. \\
+
+Todo mapa regular  es continuo y está definido sobre un conjunto abierto.  \\
+Sea un mapa racional $f:X \rightarrow \ep$, $U_{f} \subset X$ denota el conjunto de los puntos donde es regular. Si existe una variedad $Y\subset \ep$ tal que $F(P)\in Y $ para todo $P \in X$, se dice que $f$ es un \textbf{mapa racional de $X$ a $Y$} y se suele denotar por $f:X \rightarrow Y $.\\
+
+Sea $f: X \rightarrow Y$ un mapa racional. El conjunto $Im(f)=f(U_{f})$ es llamado la \textbf{imagen de $f$}. \\
+Si la imagen de $f$ es densa en $Y$ entonces $f$ es llamado \textbf{dominante}. \\
+Todo mapa racional es dominante si consideramos un contradominio apropiado.\\
+
+Sea $f:X  \rightarrow Y$ un mapa dominante y $g \in \K(Y)$. Se define la función $f^{*}(g)$ por 
+\begin{equation}\label{1.1}
+f^{*}(g)(P) = g(f(P)) 
+\end{equation}
+donde $P \in X$ es un punto tal que $P \in U_{f}$ y $f(p) \in U_{g}$.\\
+$f^{*}(g)$ es una función racional para cada $g \in \K(Y)$. Luego, se observa que todo mapa dominante $f:X \rightarrow Y$ induce el monomorfismo de cuerpos $f^{*}:\K(Y) \rightarrow \K(X)$, el cual es la identidad restringiendo a $\K$.\\
+Sea $f: X \rightarrow Y$ un mapa regular (no necesariamente dominante). Entonces \ref{1.1} define un homomorfismo de $\K$-álgebras $f^{*}:\K[X]\rightarrow \K[Y]$. \\
+
+\begin{prop} \label{prop2}
+	Sea $\varphi: \K (Y) \hookrightarrow \K (X)$ un monomorfismo entre cuerpos, que es identidad restrigiendo a $\K$. 
+\end{prop}
+
+Si $f:X \rightarrow Y$ y $f': Y \rightarrow Z$ son mapas racionales y $f$ es dominante, es posible definir la composición de la forma usual: $(f'\circ f)(P)= f'(f(P))$ para $P \in X$. Como $f$ es dominante, necesariamente $ U_{f'} \cap Im(f) \neq \emptyset $, es decir, el conjunto de puntos regulares del mapa $f' \circ f$ es no vacío. Por tanto, $f' \circ f :X \rightarrow Z $ es un mapa racional.\\
+
+\begin{prop} \label{prop3}
+	Sean $f:X \rightarrow Y$ y $f': Y \rightarrow Z$ mapas racionales.
+	\begin{itemize}
+		\item Si $f$ y $f'$ son dominantes entonces $ (f' \circ f)^{*} = f^{*} \circ f'^{*} $.
+		\item Si $f$ y $f'$ son mapas regulares entonces $(f' \circ f)^{*}=f^{*}\circ f'^{*}$
+	\end{itemize}
+\end{prop}
+
+Si los cuerpos de funciones racionales de dos variedades $X$ e $Y$ son isomorfos como $\K$-álgebras, entonces se dice que $X$ e $Y$ son \textbf{birracionalmente isomorfas}. \\
+De acuerdo a \ref{prop2} y \ref{prop3}, esto es equivalente de la existencia de mapas racionales dominantes $f:X \rightarrow Y $ y $f' : Y \rightarrow X$  tales que $ f' \circ f = id_{X} $ y $f \circ f' = id_{Y}$ (igualdad de mapas racionales).\\
+Si $f$ y $f'$ pueden ser elegidos siendo regulares, se dice que $X$ e $Y$ son \textbf{(birregularmente) isomorfos}. \\
+Dos variedades isomorfas pueden considerarse como si fueran iguales.\\
+Toda variedad es birracionalmente isomorfa a cualquiera de sus subcojuntos abiertos no vacíos.\\
+
+Una variedad isomorfa a $\ea$ (o equivalentemente, a $\ep$) es llamada \textbf{racional}. Una variedad isomorfa a un subconjunto cerrado de $\ea$ es llamada \textbf{variedad afín}.\\
+Una variedad afín no necesariamente es cerrada en $\ea$. Como ejemplo, la hipérbola en el plano.\\
+
+\begin{teo}{teo1}
+	La imagen de una variedad proyectiva $X$ mediante una mapa regular $f:X \rightarrow \ep$ es cerrada en $\ep$.
+\end{teo}
+
+\begin{cor}
+	Para toda variedad proyectiva $X$ se tiene: $ \K[X] = \K $. Luego, $X$ no tiene funciones regulares no constantes.
+\end{cor}
+
+\begin{cor}
+	Una variedad afín de dimensión positiva no puede ser isomorfa a una variedad proyectiva.
+\end{cor}
+
+\begin{prop}
+	Sean $X$ e $Y$ dos variedades afines. Para todo morfismo de $\K$-álgebras $\varphi : \K[X] \rightarrow \K[Y]$ existe un único mapa regular $f: Y \rightarrow X$ tal que $\varphi = f^{*}$.\\
+	En particular, $X$ e $Y$ son isomorfas si y solo si $K[X]$ y $K[Y]$ son isomorfas como $\K$-álgebras
+\end{prop}
+
+
+\subsection{Dimensión}
+Por una \textbf{variedad algebraica} se entiende una variedad afín o una variedad {proyectiva}.\\
+
+Sea $X$ una variedad algebraica. Su \textbf{dimensión} ($\dim X$) es el mayor entero $n$ tal que existe una sucesión estrictamente decreciente de variedades algebraicas (del mismo tipo) $$X=X_{0} \supsetneq \ldots \supsetneq X_{n} \neq \emptyset $$ donde $X_{i}$ es cerrado en $X_{i-1}$ para $i=1, \ldots , n $. \\
+Se cumple que $\dim \ep = \dim \ea =n$.\\
+
+Si $Y$ es una subvariedad de $X$, definimos la \textbf{codimensión de $Y$ en $X$} por $$ \cod _{X} Y  = \dim X - \dim Y $$ \\
+
+La \textbf{dimensión de un conjunto proyectivo} es el máximo de las dimensiones de sus componentes irreducibles. \\
+Las variedades de dimensión $1$ son llamada \textbf{curvas}; las de dimensión 2, \textbf{superficies} y las de dimensión 3, \textbf{cúbicas}
+
+
+
+\subsection{Anillo local de un punto}
+Sea $P$ un punto en una variedad $X$. El conjunto de funciones racionales que son regulares en $P$ se denota por $\al$ y es llamado el \textbf{anillo local de $P$}. Evidentemente, $\al$ es un anillo. Cuando se quiera enfatizar la dependencia con $X$, se escribe $\mathscr{A}_{X,P} $.\\
+
+$\al$ posee un único ideal maximal $\msp $, el cual consiste en las funciones $f \in \al$ tales que $f(P)=0$. Luego, $\al$ es un anillo local.\\
+Se cumple: $\al / \msp = \K$.\\
+El grupo cociente $\msp / \msp ^{2}$ es un $\al / \msp$-módulo, es decir, es un espacio vectorial sobre $\K$. El espacio dual a $\msp / \msp ^{2}$,  $\theta_{P}=(\msp / \msp ^{2})^{*}$, es llamado \textbf{espacio tangente a $X$ en $P$}. $\msp / \msp ^{2}$ es el \textbf{espacio cotangente a $X$ en $P$}.\\
+
+Sean $X\subset \ep$ y $P \in X$. Se cumple $$\dim X \leq \dim_{\K} \theta_
+P \leq n.$$
+
+
+\subsection{Puntos suaves y puntos singulares}
+Un punto $P$ es llamado \textbf{no singular (suave, regular, simple)} si $\dim (\msp / \msp ^{2})=\dim X$. Caso contrario, $P$ es llamado \textbf{singular}.\\
+
+Si todos los puntos de una variedad son singulares, esta es llamada una \textbf{variedad suave (no singular)}.\\
+$\ep$ y $\ea$ son suaves.
+
+\begin{prop}\label{2.1.34}
+	El conjunto $ X_{suave} $ de puntos puntos suaves de una variedad $X$ es abierto en $X$ y no vacío.
+\end{prop}
+
+
+\subsection{Producto de variedades}
+Sean $X \subset \mathbb{A}^{r}$ y $Y \subset \mathbb{A}^{s}$. Entonces el producto cartesiano $X \times Y$ es llamado el \textbf{producto de $X$ y $Y$}.\\
+
+Si $X$ e $Y$ son cerrados, entonces $X \times Y $ es un conjunto cerrado de $\mathbb{A}^{r+s}$.\\
+Si $X$ e $Y$ son variedades, entonces $X \times Y $ es también una variedad.\\
+
+Sean $X \subset \mathbb{P}^n$ y $Y \subset \mathbb{P}^{m}$ variedades cuasiproyectivas. Queremos encontrar una inyección $\varphi: X \times Y \rightarrow \mathbb{P}^{N} $ (para algún $N$) tal que $\varphi(X \times Y)$ sea una variedad cuasiproyectiva de $\mathbb{P}^{N} $. Es suficiente considerar el caso $X = \ep$ y $Y= \mathbb{P}^{m}$, puesto que si $\psi : \ep \times \mathbb{P}^{m} \rightarrow \mathbb{P}^{N}$ es una inyección ya construida, entonces puede tomarse $\varphi=\psi|_{X \times Y}$\\
+
+Para construir $\psi$, tomemos $N= (m+1)(n+1)-1$. Indexemos las coordenadas de $\mathbb{P}^{N}$ con pares $(i,j)$ donde $0\leq i \leq n$ y $0 \leq j \leq m$. Para $P=(x_{0}: \ldots : x_{n})\ep$ y $Q=(y_{0} : \ldots y_{m}) \mathbb{P}^{m}$, 
+$$ \psi_{(i,j)}((P,Q))= x_{i}y_{j} $$
+Esta inyección es conocida como la \textbf{inyección de Segre}.
+
+\begin{prop}
+	Sean $X$ e $Y$ variedades cuasiproyectivas. Se tiene $$ \dim(X \times Y) = \dim X + \dim Y $$
+\end{prop}
+
+
+\subsection{Haces lineales} 
+Sea $X$ una variedad cuasiproyectiva. Una \textbf{familia de espacios vectoriales en $X$} es un mapa regular $p: \mathscr{E} \rightarrow X$ tal que para cada $P \in X$ su \textbf{fibra} $\overline{\mathscr{E}}_{P} = p^{-1}(P)$ (el cual es cerrado en $\mathscr{E}$) es un espacio vectorial sobre $\K$.\\
+
+Un \textbf{morfismo} de una familia $p:\mathscr{E} \rightarrow X$ hacia otra familia $p':\mathscr{E}' \rightarrow X$ es un mapa regular $f:\mathscr{E} \rightarrow \mathscr{E}' $ tal que $p=p' \circ f$ y el \textbf{mapa inducido de fibras} $f_{P}: \overline{\mathscr{E}}_{P} \rightarrow \overline{\mathscr{E}}'_{P}  $ es un morfismo de espacios vectoriales sobre $\K$.\\ 
+Los \textbf{isomorfismos de familias} se definen de manera natural.\\
+
+El ejemplo más simple de una familia de espacios vectoriales es el producto $X \times \ea$ con las proyecciones natuarles $p_{X}:X \times \ea \rightarrow X$. Esta familia es llamada \textbf{trivial}. Si el conjunto $U$ es abierto en $X$ y $p: \mathscr{E} \rightarrow X$ es una familia, entonces $p|_{p^{-1}(U)} $ es también una fmialia de espacio vectoriales, llamada la \textbf{restricción de $\mathscr{E}$ por $U$}; se denota por $ \mathscr{E}|_{U}$.\\
+
+En adelante, solo se considerarán \textbf{familias de espacios lineales} (es decir, familias con fibras de dimensión $1$).\\
+Una familia lineal $p: \Li \rightarrow X $ es llamada \textbf{haz lineal (haz vectorial lineal) sobre $X$} si por todo $P$ existe un abierto $U \subset X$ tal que $P \in U$ y $\mathscr{E}|_{U}$ es isomorfo a la familia trivial. \\
+Usamos las letras $\Li, \M, \mathscr{N}, \ldots$ para denotar haces lineales. El haz lineal trivial se denota por $\mathscr{O}$.\\
+
+Una \textbf{sección de un haz lineal} $p: \Li \rightarrow X$ es un mapa regular $s:X \rightarrow \Li$ tal que $p \circ s = id_{X}$.\\
+En particular todo haz lineal posee una sección cero $s_{0}$ para la cual $s_{0}(P)=0 \in \overline{\Li}_{P}$. El conjunto de secciones de una haz $\Li$ es un espacio vectorial con las operaciones
+$$\begin{array}{ccc}
+(s+s')(P)= s(P)+ s'(P) & \qquad &(\alpha s) (P)= \alpha \cdot s(P)
+\end{array}$$
+para $P \in X$ y $\alpha \in \K$. Este espacio vectorial (\textbf{espacio de secciones}), es denotado por $H^{0}(X, \Li)$.\\
+En particular, fácilmente se verifica que $H^{0}(X, \mathscr{O})$ coincide con el conjunto $\K[X]$ de funciones regulares sobre $X$. Cada sección $s \in H^{0}(X, \Li)$ define un morfismo $ \tilde{s}: \mathscr{O} \rightarrow \Li$ únivocamente determinado por la condición $\tilde{s} )1=s(P)$ , donde 1 es considerado como un elemento en la fibra de $\mathscr{O}$. \\
+
+El conjunto $T_{s}= \{ P \in X | s (P) = 0 \}$ es llamado el \textbf{conjunto cero de $s$}. \\
+Por la definición de haz lineal y la continuidad de los mapas regulares se deduce que $T_{{s}}$ es cerrado en $X$.\\
+
+Sea $p:\Li \rightarrow X$ un haz lineal, donde $X=\cup U_{\alpha}$ es un cubrimiento abierto de $X$ tal que $\Li |_{U_{\alpha}} $ es trivial para todo $\alpha$. Sea $\varphi_{\alpha} : \Li |_{U_{\alpha}} \rightarrow U_{\alpha}  \times \mathbb{A}^{1} $ el isomorfismo correspondiente. Considérese el mapa
+$$ \varphi_{\alpha} \circ \varphi_{\beta} : (U_{\alpha}\cap U_{\beta}) \times \mathbb{A}^{1} \rightarrow (U_{\alpha}\cap U_{\beta}) \times \mathbb{A}^{1} $$
+Es un isomorfismo de familias triviales sobre $U_{\alpha} \cap U_{\beta}$. \\
+Sea $P \in U_{\alpha} \cap U_{\beta}$, entonces $(\varphi_{\alpha} \circ \varphi_{\beta})_{P}$ es un $\K$-isomorfismo de una fibra unidimensional $\overline{Li}_{p}$, es decir, un elemento $\lambda^{*} \in \K^{*}$. Así $\varphi_{\alpha} \circ \varphi_{\beta}$ define una función regular $f_{\alpha \beta \in \K [U_{\alpha}\cap U_{\beta}]}$, la cual no se anula en $U_{\alpha}\cap U_{\beta}$. \\
+Es fácil verificar que $f_{\alpha \alpha} =id $ para todo $\alpha$ y que $f_{\alpha \gamma}= f_{\alpha \beta} f _{\beta \gamma}$ en $ U_{\alpha}\cap U_{\beta} \cap U_{\gamma} $ para toda terna $\alpha, \beta, \gamma$. Recíprocamente, cualquier familia de funciones $f_{\alpha \beta} \in \K[U_{\alpha}\cap U_{\beta}] $ que satisfacen estas condiciones define una haz lineal.\\
+
+Sean $\Li$ y $\M$ haces lineales definidos por las familias $\{ f_{\alpha \beta} \}$ respectivamente, donde $f_{\alpha\beta}, g_{\alpha,\beta} \in \K [U_\{\alpha \} \cap U_{\beta} ]$ (es fácil notar que existe un cubrimiento abierto $\{ U_{\alpha} \}$ que trivializa $\Li$ y $\M$ al refinar los cubrimientos sobre los cuales estpan definidos). \\
+El sistema de funciones $\{f_{\alpha \beta}, g_{\alpha \beta} \}$ define un haz lineal $\Li \otimes \M$ llamado 4k \textbf{producto (tensorial) de $\Li$ y $M$}. El sistema $\{f^{-1}_{\alpha \beta}\}$ define un haz $ \Li^{-1}= \Li ^{\otimes (-1)} $ tal que $ \Li^{-1} \otimes \Li \cong \mathscr{O}$\\
+El producto tensorial de $m>0$ copias de un haz $\Li$ se denota por $\Li^{\times m} $, o simplemente $\Li^{m}$. Si $m<0$, se define $ \Li^{m} =\Li^{\otimes m} = (\Li ^{-1})^{\otimes m} $. Por definición $\Li^{0} = \Li^{\otimes 0} = \mathscr{O}$.\\
+Es fácil verificar que el conjunto $Pic(X)$ de los haces linales sobre $X$ es un grupo, el cual se conoce como el \textbf{grupo de Picard de $X$}.\\
+
+El siguiente es un importante ejemplo de haz lineal sobre $\ep$.\\
+Sea $V$ un espacio vectorial de dimensión $n+1$ tal que $\ep = \mathbb{P}(V)$. Considérese el conjunto $$ \mathscr{E} = \{ (P,v) \in \ep \times V \, | \, v \in \mathscr{\ell}_{p} \} $$, donde $\ell _{p}$ es el haz lineal en $V$ correspondiente a $P$. Existe una proyección natural $ \mathscr{E} \rightarrow \ep$, $(P,v)\mapsto P$, cuyas fibras son isomorfas a $\mathbb{A}^{1}$. \\
+Así, se puede verificar que $\mathscr{E}$ define un haz lineal sobre $\ep$ (\textbf{haz tautológico}). el cual es denotado por $\mathscr{O}(-1)$. Definimos $\mathscr {O}(1)= \mathscr{O}(-1)^{\otimes -1} $, y $\mathscr{O}_{m}= \mathscr {O}^{\otimes m}$. \\
+Para toda sección $s \in H (\ep, \Ou (1))$, su conjunto cero $T_{s}$ es un hiperplano en $\ep$, y viceversa, para todo hiperplano $H \subset \ep$ existe una sección $s \in H (\ep, \Ou (1))$ tal que $ T_{s} = H$. Más aún, existe un isomorfismo canónico $sH (\ep, \Ou (1)) \cong V^{*}$, donde $V^{*}$ es el espacio dual de $V$.
+
+
+
+
+\section{Curvas Cuasiproyectivas}
+Una \textbf{curva cuasiproyectiva} (\textbf{curva algebraica}, o simplemente \textbf{curva}) es una variedad cuasiproyectiva de dimensión 1. \\
+Puesto que todo punto $P$ de una variedad cuasiproyectiva $X$ es cerrado en $X$, una curva puede definirse como una variedad tal que todas las subvariedades propias cerradas son puntos. \\
+Si una curva es cerrada en algún espacio proyectivo, es llamada \textbf{proyectiva} o \textbf{completa}. Por el teorema \ref{prop2}, esta propiedad depende solo de la clase de isomorfismo de la curva.\\
+
+El conjunto de ceros de forma $f$ irreducible en $\mathbb{P}^{2}$ es una curva completa. La curva $\mathbb{A}^{1}$ no es completa.\\
+
+A veces, la unión $X= \cup X_{i}$ de varias curvas $X_{i}$ es llamada una \textbf{curva (reducible)}; en este caso las curvas $X_{i}$ son llamadas \textbf{componenetes irreduciles de $X$}. \\
+
+Debido a que las curvas son las variedades no triviales más simples, muchas propiedades de variedades descritas anteriormente pueden ser aplicadas más concretamente en el caso de curvas. 
+
+\subsection{Puntos no singulares de una curva}
+Se sigue de la proposición \ref{2.1.34} que una curva $X$ tiene solo una cantidad finita de puntos singulares. \\
+En adelante, $P$ será un punto de la curva $X$.
+
+\begin{prop}
+	$P$ es no singular si y solo si el ideal $\msp  $ en el anillo local $\Ou$ es principal
+\end{prop}
+
+Si $P$ es no singular, entonces cualquier función $t_{p} \in \Ou$ que cumpla que $\msp = t_{P} \Ou_{P}$ es llamada \textbf{parámetro local en $P$}.\\
+
+Para verificar si $P$ es no singular es conveniente usar el \textbf{criterio diferencial de no singularidad}. Sea $P \in X \subset \ep$, sin pérdida de generalidad se puede asumir que $ P \in X \cap \ea $ (puesto que $\ep$ es la unión de $n+1$ copias de $\ea$). \\
+Sean $(x_{1}, \ldots , x_{n})$ coordenadas en $\ea$. Sean $F_{1}(x), \ldots , F_{N}(x)\in \K[ x_{1}, \ldots , x_{n} ]$ un sistema de generadores del ideal $I_{X\cap \ea}$ (conjunto de polinomios que se anulan en $X \cap \ea$). Así, $F_{1}(x) = \ldots = F_{N}(x)=0$ es un sistema completo de ecuaciones que definen las curva afín $X \cap \ea$. Considérese el matriz jacobiana
+$$ \frac{\partial F}{\partial x} (P) = \left( \frac{\partial F_{i}}{\partial x_{j}} (P)  \right) _ { \begin{array}{c}
+	i=1, \ldots , N\\
+	j=1, \ldots , n
+	\end{array} }$$
+
+\begin{prop} \label{2.1.42}
+	$P $ es no singular si y solo si el rango de $\frac{\partial F}{\partial x} (P)$ es $n-1$
+\end{prop}
+
+En particular, si $N=1$ y $n=2$ (el caso de una curva plana con ecuación afín $F(x_{1},x_{2})=0$), entonces $P \in X$ es no singular si y solo si, al menos una de las derivadas parciales $\frac{\partial F}{\partial x_{1}}$ o $\frac{\partial F}{\partial x_{2}}$ no se anula en $P$. 
+
+\subsection{Expansión en serie de potencias}
+Los puntos no singulares poseen otra importante propiedad: una función regular en una vecindad de un punto no singular $P$ tiene una única expansión en serie de potencias de un arbitrario parámetro local $t_{P}$.\\
+
+Más precisamente, sea $P$ un punto no singular de la curva $X$. Fijemos un parámetro local $t_{p}$ en $P$. Para cada serie formal de potencias $F(t) = \sum_{i=0}^{\infty} a_{i} t^{i} \in \K [[t]]$ y cada entero $m>0$ denotemos por $(F(t))_{m}$ al polinomio $\sum_{i=0}^{m} a_{i} t^{i}$.
+
+\begin{prop}\label{2.1.44}
+	Existe una única inyección $\tau_{P}: \Ou \rightarrow \K[[t_{P}]]$ de $\K$-álgebras tal que $f-(\tau_{P}(f))_{m} \in \msp ^{m+1}$ para todo $m \geq 0$.
+\end{prop}
+
+Por tanto, cualquier función regular en $P$ tiene una única expansión en serie (formal) de potencias de un parámetro local fijo $t_{P}$.\\
+
+Nótese que la expansión en serie de potencias de potencias se extiende directamente a funciones racionales: \\
+Cualquier $f\in \K(X)$ tiene una expansión en serie de Laurent en cualquier punto no singular $P \in X$, ya que existe un entero $m$ tal que $t_{P}^{m}f$ es regular en $P$ y se puede poner $\tau_{P}(f)= t_{P}^{-m} \tau_{P} (t_{P}^{m}f)$. Así, se obtiene un monomorfismo de cuerpos $\tau_{P}: \K(x) \hookrightarrow \K((t_{P})) $ para todo $P \in X$ no singular.
+
+
+\subsection{Curvas completas suaves}
+Las curvas completas suaves son de la mayor importancia. Poseen las siguientes útiles propiedades.
+
+\begin{teo}\label{2.1.46}
+	Dos curvas completas suaves son isomorfas si y solo si son birracionalmente isomorfas.
+\end{teo}
+
+Cabe resaltar que las condiciones de suavidad y completitud no se pueden omitir en el teorema \ref{2.1.46}. Por ejemplo, $\mathbb{A}^{1}$ y  $\mathbb{P}^{1}$ son birracionalmente isomorfas, pero no isomorfas.\\
+Para variedades de mayores dimensiones tampoco se cumple el teorema \ref{2.1.46}. Por ejemplo las superficies proyectivas $\mathbb{P}^{2}$ y $\mathbb{P}^{1}\times \mathbb{P}^{1}$ son birracionalmente isomorfas, pero no isomorfas.\\
+
+\begin{prop}
+	Sea $\K$ un cuerpo y $\mathbb{F}$ un subcuerpo. $ \K \cong\mathbb{F}(X)  $ para alguna curva completa suave $X$ si y solo si $\K$ es de grado trascendete 1 sobre $\mathbb{F}$ y es finitamente generado sobre $\mathbb{F}$. 
+\end{prop}
+
+Estos resultados permiten usar ambos lenguajes, el algebraico y el geométrico, al estudiar curvas completas suaves, eligiendo el más conveniente para el problema en cuestión.\\
+
+Veamos como se puede expresar algebraicamente la noción de punto en una curva.\\
+Sea $V $ un subanillo propio de $\K (X)$ tal que $\K \subset V$. $V$ es llamado \textbf{anillo de valuación} si la condición que una función $f \in \K (X)$ no pertenezca a $V$ implique $f^{-1}\in V$\\
+Un ejemplo de anillo de valuación es el anillo local de un punto no singular $P \in X$. Para demostrar esto, consideremos el importante concepto. \\
+
+Para $f \in \Ou , f \neq 0$, se define $$ \ord (f) = \max \{ k \, | \, f \in \msp^{k}, \, f \noin \msp ^{k+1} \} $$ Para cualquier función racional $f = g/h$ donde $g /h \in \Ou _{P}$, se define $$ \ordp(f)= \ordp (g)- \ordp(h) $$
+
+Como $\Op \subset \K[U]$ para toda vecindad abierta $U$ de $P$, el cuerpo de fracciones de $\Op$ coincide con $\K(X)$, y $\ordp(f)$ está biene definida para todo $\K(X)\setminus \{0\}$. El número $\ordp(f)$ es llamado el \textbf{orden (cero) de $f$ en $P$}. Si $\ordp (f) <0 $ entonces $|\ordp (f)| $ es llamado \textbf{orden polar de $f$ en $P$}. \\
+Luego, $\ordp $ es un epimorfismo de grupos, $\ordp:  \K(X) \rightarrow \mathbb{Z}$. Como puede verificarse fácilmente, se tiene la siguiente propiedad: para todos $f, g \in \K(X)^{*}$
+$$\ordp (fg)= \ordp (f) + \ordp (g)$$ $$\ordp (f+g) \geq \min (\ordp (f),\ordp (g) $$
+
+Tal homomorfismo es llamado una \textbf{valuación discreta de $\K(X)$}. Note que $$ \Op = \{ f \in \K(X)^{*}  \, | \, \ordp (f) \geq 0  \} \cup \{0\} $$
+
+Según esta descripción de $\Op$, si $f\in \K(X)$ y $f \noin \Op$ entonces $f^{-1} \in \Op$. Así, $\Op$ es un anillo de valuación. Más aún
+
+\begin{teo}\label{2.1.50}
+	Sea $X$ una curva suave proyectiva. Entonces la correspondencia $P \rightarrow \Op$ es una biyección entre el conjunto de puntos $P \in X$ y el conjunto de anillos de valuación en $\K(X)$
+\end{teo}
+
+\subsection{Grado de un mapa}
+Si $f:X \rightarrow Y$ es un mapa racional no constante, entonces $f$ es dominante. Por tanto, $f^{*}: \K(Y) \rightarrow \K(X)$ es un monomorfismo de campos. Debido a que los cuerpos $\K(X)$ y $\K(Y)$ son de grado trascendente 1 sobre $\K$ y son finitamente generados, el grado de la extensión $[ \K(X) \, : \, f^{*}(\K(Y)) ] $ es finito, este llamado el \textbf{grado del mapa $f$} y es denotado por $gr(f)$. En la siguiente sección se dará otra interpretación de este número.
+
+\subsection{Cubiertas}
+Si $X$ e $Y$ son curvas completas suaves y $f: X \rightarrow Y$ es un mapa racional no constante, puede mostrarse que $f$ es regular y suryectiva. En este caso, $f$ es llamada una \textbf{cubierta de curvas}, el grado de $f$ es llamado el \textbf{grado de cubrimiento}.
+
+\chapter{El Teorema de Riemann-Roch clásico}
+
+\section{Divisores}
+Sea $X$una curva completa suave sobre $\K$ (como antes , asumimos que $\K$ es algebraicamente cerrado y que $X$ es irreducible). Un \textbf{divisor en $X$} es un suma formal finita de la forma $D=\sum a_{P}P$, donde $P$ son puntos de $X$ y $a_{P}$ son enteros.\\
+A veces escribimos $D= \sum a_{i}P_{i}$ en vez de $D=\sum a_{P}P$, donde $a_{i}=a_{P_{i}}$.\\
+
+El \textbf{soporte de un divisor $D$} es el conjunto $\sop D = \{ P \in X \, |\, a_{P}\neq 0 \}$. \\
+
+El conjunto de divisores en una curva es denotado por $\mbox{Div}(X)$. Este es un grupo abeliano con la operación de adición de divisores: Si $D= \sum a_{P} P$ y $E=\sum b_{P}P$, entonces $D \pm E = \sum (a_{P} \pm b_{P}) P $\\
+Sea $D= \sum a_{P} P$. El \textbf{grado de $D$} es el entero $gr(D)= \sum a_{P}$. La función grado $\mbox{Div}(X)\rightarrow \mathbb{Z}$ es suryectiva. \\
+Su núcleo, es decir, el subgrupo de divisores de de grado cero en $X$, es denotado por $\mbox{Div}^{0}(X)$. \\
+Si todos los $a_{P}$ de un divisor $D=a_{P}P$ son no negativo, $D$ es llamado un \textbf{divisor efectivo}, esto se denota por $D\geq 0$. Si $D\neq 0 $, el divisor es llamado \textbf{positivo}. \\
+El conjunto de divisores efectivos es denotado por $\mbox{Div}^{+}(X)$. Este induce un orden parcial en $\mbox{Div}(X) $: $D \geqslant F$ si $D-F \in \mbox{Div}^{+}(X) $. Notar que cualquier divisor es una resta de dos efectivos.
+
+Ahora sea, $f \in K (X)^{*}$un función racional no nula arbitraria. Entonces para casa $f$ se asigna el divisor $$(f) = \sum \ordp (f) P,$$ llamado el \textbf{divisor de la función $f$}. \\
+Notar que este definición es correcta, pues cualquier $ f\in \K(X)^{*}$ tiene un número finito de ceros y polos en $X$ y por tanto $\ordp (f) \neq 0$ para un número finito de puntos solamente. Además, también se cumple que $$ (f) = (f)_{0} - (f)_{\infty}  $$, donde 
+$$ \begin{array}{ccc}
+\ds (f)_{0} = \sum_{\ordp (d)>0} \ordp (f)P & \mbox{ y } & \ds (f)_{\infty} = \sum_{\ordp (d)<0} (-\ordp (f))P
+\end{array}$$
+son divisores efectivos. $(f)_{0}$ es llamado el \textbf{divisor de ceros de $f$} y $(f)_{\infty}$ es el \textbf{divisor de polos}.\\
+
+Divisores de la forma $(f)$ son llamados \textbf{principales}. Se ve de la definición que $(fg ^{\pm 1}) = (f) \pm (g)$; luego, los divisores principales forman un subgrupo $P(X)$ en $\mbox{Div}(X)$.\\
+Divisores $D_{1}$ y $D_{2}$ tales que $D_{1} - D_{2} \in P(X) $ son llamados \textbf{linealmente equivalentes} (o simplemente \textbf{equivalentes}). Esto se denota por $D_{1}\sim D_{2}$. 
+
+\begin{teo} \label{2.1.52}
+	El grado de un divisor principal es cero.
+\end{teo}
+
+Luego, $P(X) \subset \mbox{Div}^{0}(X)$. Se sigue del teorema que todos los divisores en un clase de equivalencia lineal son del mismo grado. \\
+Los grupos cocientes $\mbox{Cl}(X)=\mbox{Div}(X)/P(x)$ y $\mbox{Cl}^{0}(X)=\mbox{Div}^{0}(X)/P(x) $juegan un rol importante en el estudio de las propiedades de las curvas. \\
+Se puede verificar que $\mbox{Cl}(X)$ es un canónicamewnte isomorfo al grupo $\mbox{Pic}(X)$ (se discutirá más adelante). En lo que sigue, usaremos $ \mbox{Pic}(X) $ y $\mbox{Pic}^{0}(X)$ en lugar de $ \mbox{Cl}(X) $ y $\mbox{Cl}^{0}(X)$, respectivamente. \\
+Sea $D$ un divisor en la curva $X$. Considérese el conjunto $$L(D)= \{ f \in \K(X)^{*} \, | \, (f) +D \geqslant 0 \} \cup \{0\} $$
+
+Obivamente, $L(D)$ es un espacio vectorial sobre $\K$. Este es llamado el \textbf{espacio asociado al divisor $D$}, su dimensión es denotada por $ \ell (D) $.
+
+\begin{teo}\label{2.1.53}
+	La dimensión de $L(D)$ es finita para todo $D \in \mbox{Div}(X)$.
+\end{teo}
+
+\begin{cor}
+	Para un divisor efectivo $D$, se tiene $$ \ell (D) \leq gr(D) +1 $$
+\end{cor}
+
+\begin{cor}
+	Para cualquier divisor $D \in \mbox{Div}(X)$ se tiene $$ \ell(D) \leq \max \{ 0, gr (D)+1 \} $$
+\end{cor}
+
+\begin{prop}
+	El valor de $\ell(D)$ depende solamente de la clase de conjugación lineal de $D$.
+\end{prop}
+
+\subsection{Sistemas lineales}
+Sea $M \neq \{0\}$ un subespacio de $L(D)$. Un conjunto de divisores efectivos de la forma $(f) + D$, donde $f$ varía en $M \setminus \{0\}$, es llamado un \textbf{sistema linear} y se denota por $|M|$. Si $M=L(D)$ , entonces $|M|$ es llamado un \textbf{sistema linear completo} y es denotado por $|D|$.\\
+
+La dimensión de $\mathbb{P}(M)$ se denota por $\dim |M|$. Así, $\dim |M| =\dim M -1 $, en particular, $\dim |D|= \ell(D)-1$\\
+
+Hay una estrecha relación entre sistemas lineales en una curva $X$ y mapas racionales de $X$ hacia espacios proyectivos. En efecto, sea $\varphi : X \rightarrow \ep$ un mapa racional,
+\begin{equation}\label{eq2.1.2}
+\varphi : P \mapsto (f_{0}(P): \ldots : f_{n}(P))
+\end{equation}
+y asumir que $Im(\varphi)$ no está contenida en algún hiperplano $H \subset \ep $ (de otra manera, $\ep$ puede ser considerado un mapa de $X$ hacia $\mathbb{P}^{m}$, con $m < n$). Pongamos
+$$ (f_{i}) = \sum a_{P_{p}} P_{i},  \quad  i= 0, 1, \ldots , n$$
+$$ D= - \inf \{ (f_{0}), \ldots , (f_{n}) \} $$
+considerando el orden parcial sobre $\mbox{Div}(X)$ descrito antes, es decir, $D=- \sum a_{P}P$ donde $a_{P}= \min_{i=0, \ldots, n}a_{P_{i}} $. Obviamente, $(f_{i})+ D \geqslant 0$, es decir, $ f_{i} \in L(D)$. Sea $M_{\varphi}$ el subespacio lineal en $L(D)$ generado por $\{f_{i}\}$. De esta manera, hemos asignado a $\varphi$ un sistema lineal $|\M_{\varphi}|$. \\
+Recíprocamente, a cada sistema lineal no vacío $|M| \subset |D|$ le corresponde un mapa racional $\varphi : X \rightarrow \ep$, $n =\dim |M|$, definido por \ref{eq2.1.2}, donde $\{ f_{0},  \ldots , f_{n} \}$ es una base en $M$. En este caso, los divisores $(f_{i}+D)$ pueden ser considerados como imágenes inversas, $\varphi (H_{i})^{*}$, de los hiperplanos coordenados $H_{i}\, :\, x_{i}=0 $. Más generalmente, si $\lambda =(\lambda_{0}:  \ldots : \lambda_{n})$ y $H_{\lambda}$ es un hiperplano dado por $\sum \lambda_{i} x_{i}=0$, entonces $f^{*}(H_{\lambda})= (\sum \lambda_{i} f_{i}) +D$.\\
+
+También se puede describir $\varphi$ en términos de coordenadas libres. A cada punto $X \setminus \sop D$ se le asigna la funcional $\varphi_{P} $ en $M$ definida como $\varphi_{P}(f) = f(P)$. Así, puede definirse un mapa $$ \begin{array}{rl}
+\varphi = \varphi _{M} \! & :  X \setminus \sop D  \longrightarrow \mathbb{P} (M)^{*}\\
+              P \! & \mapsto  \varphi_{M} (P) = \varphi_{P}
+\end{array}$$ 
+el cual es racional. En lo que sigue, usaremos la notación $\varphi_{M}$ para el mapa definido por el sistema lineal $|M|$; si $|M| = |D|$ escribimos $\varphi _{D}$  en vez de $\varphi_{M}$. \\
+Usando la conexión entre sistemas lineales y mapas racionales, puede probarse el siguiente hecho importante.
+
+\begin{teo}\label{2.1.59}
+	Todo mapa racional de una curva completa suave $X$ hacia un espacio proyectivo es regular
+\end{teo}
+
+\begin{cor}
+	Sea $\varphi: X \rightarrow Y$ un mapa racional, donde $X$ e $Y$ son curvas completas suaves. Entonces $\varphi $ es regular.
+\end{cor}
+
+
+\subsection{Redes}
+Ahora explicaremos como puede decribirse un divisor sobre X en términos del campo de funciones $\K (X)$.\\
+
+Sea $P \in X$, una \textbf{red} en $\K(X)$ es un $\Ou-$submódulo libre $\Li_{P}$ es rango uno, es decir, $\Li_{P} = \ell_{P} \Ou_{P} $. \\
+Cuando se asigna a cada punto $P \in X$ una red $\Li_{P}$ se forma una \textbf{familia de redes} $(\Li_{P})_{P \in X}$. \\
+Una familia $(L_{P})_{P \in X}$ es llamada \textbf{familia de redes asintóticamente estándar} si para todo $P \in X$, salvo alguna una cantidad finita de puntos, se tiene $\Li_{P} = \Ou _{P}$.\\
+
+A cada divisor $D$ se asocia una familia de redes asintóticamente estándar. Sea $D= \sum a_{P} $, definimos \begin{equation} \label{eq2.1.3}
+\Li _{P} = \left\lbrace \begin{array}{ll}
+\Ou_{P} & \mbox{ si } P \noin \, \sop D \\
+t_{P}^{a_{P}} \Ou_{P} & \mbox{ si } P \in \sop D
+\end{array} \right.
+\end{equation}    
+donde $t_{P}$ es el parámetro local de $P$. Notar que $ \Li_{P}$ no depende de la elección del parámetro local. 
+
+\begin{prop}
+	La fórmula \ref{eq2.1.3} define una biyección entre $Div(X)$ y el conjunto de redes asintóticamente estádares en $X$.
+\end{prop} 
+
+Sea $\Li = (\Li_{P})_{P \in X}$ una familia de redes asintóticamentre estándar. La intersección $\cap _{P} \Li_{P} \subset \K(X)$ es llamada el \textbf{espacio de secciones de $\Li$}. Se denota por $H^{0}(\Li)$, sus elementos son llamados \textbf{secciones de $\Li$}. Por definición se obtiene fácilmente el siguiente resultado.
+
+\begin{prop}
+	Sea $D \in Div(X)$ y $\Li$ como en \ref{eq2.1.3}. Se cumple: $H^{0}(\Li) = L (D)$ .
+\end{prop}
+
+Una \textbf{fibra en $P \in X$} $(\Li_{P})$ es un espacio vectorial unidimensional $\overline{\Li}= \Li_{P} /t_{P} \Li_{P}  $ sobre el cuerpo $\Op / t_{P} \Op$. La imagen de la sección $s \in H^{0}(\Li)$ en $ \overline{\Li}_{P} $ es llamada el \textbf{valor de $s$ en $P$}.\\
+Si $s \in H^{0} ( \Li) \setminus \{0\}$, entonces se define el \textbf{divisor de ceros de $s$} por $$ D_{s} = \sum_{P} (\ordp (s) -a_{P} )P, $$ donde $\Li= t_{P} ^{a_{P}} \Op$ para todo $P$. $D_{s}$ es un divisor efectivo.\\
+
+Dos familias $\Li = (\Li_{P})$ y $\M = (\M_{P})$ asintóticamente estándares son llamadas \textbf{linealmente equivalentes} si existe $f \in \K(X)^{*}$ tal que $ \Li_{P} = f \M _{P} $ para todo $P \in X$.\\
+Dos familias de redes asintóticamente estándares son linealmente equivalentes si y solo si sus divisores asociados lo son.
+
+
+\subsection{Divisores de Cartier} 
+Puede darse una definición alternativa de divisor (\textbf{divisor de Cartier}), la cual es muy útil en diversas situaciones.\\
+Sea $D \in Div (X)$, $D= \sum a_{P} P$, y sea $U$ un conjunto abierto en $X$. Se denota $$D|_{U}= \sum_{P \in U} a_{P} P .$$
+
+Usando divi
+
+
+
+
+
+
+\subsection{Funtorialidad}
+Usando divisores de Cartier, podemos definir la \textbf{imagen inversa} $\varphi ^{*}(D) \in  Div(Y)$ bajo un mapa regular $\varphi:  X \rightarrow Y $ de curvas completas suaves irreducibles. En efecto, sea $(\{ U_{i}\} , \{f_{i}\} )$ un divisor de Cartier en $Y$, correspondiente a $D \in Div (Y)$. Entonces $\varphi^{*}(D)$ es definido en el cubrimiento $ \{ \varphi ^{-1}(U_{i})  \} $ de $X$ por el sistema de funciones $\{ \varphi^{*} (f_{i}) \}$, donde $\varphi ^{*} (f_{i}) = f (\varphi(x))$. \\
+Uno puede verificar fácilmente que $\varphi^{*}:Div(X) \rightarrow Div (Y)$ define un homomorfismo de grupo, done $\varphi^{*} (P(Y)) \subset P(X) $ pues $\varphi^{*}((f)) = (\varphi ^{*} (f))$ para todo $f \in \K(Y)$. Así, obtenemos una homomorfismo $\varphi^{*}: Pic (Y) \rightarrow Pic (X)$. Más aún, puede mostrarse fácilmente que $\varphi ^{*} (Div ^{0}(Y)) \subset Div ^{0} (X) $, lo cual genera un mapa $\varphi ^{*}: Pic ^{0} (Y) \rightarrow Pic ^{0}(X)$.\\
+
+Usando divisores de Cartier, para una curva $X \in \ep$ puede definirse el \textbf{divisor $(F) \in Div X$} de una forma $F $ en $\ep$. En efecto, $U_{i} = \{ T_{i} \neq 0 \} \cap X$ y $f_{i} = F/T^{s}_{i}$, donde $s = gr (F)$ y $(T_{0} : \ldots : T_{n})$ son coordenadas homogéneas en $\ep$.\\
+En particular, si $F=L$ es una forma lineal, entonces $(F)=(L)$ es llamado, \textbf{divisor de sección hiperplano}; todos sus divisores son linealmente equivalentes. El grado $gr(L)$ es llamado el \textbf{grado} de $X$, se denota por $gr (X)$. Si un mapa $f:X \rightarrow \mathbb{P}^{m}$ es dado por un sistema lineal $M \subset L(D)$, entonces los divisores efectivos $D' \in |M|$ son precisamente las imágenes inversas de divisores de sección hiperplano $(L) \in Div (f(X)) $. 
+
+\subsection{Conexión con haces lineales} 
+Existe una estrecha conexión entre divisores y haces lineales la cual es fácil de explicar usando divisores de Cartier. Si $ D= ( \{ U{\alpha} \} , \{f_{\alpha} \}  )$ es un divisor de Cartier en $X$, se considera $f_{\alpha \beta} = f_{\alpha}f_{\beta}^{-1} | _{ U_{\alpha} \cap U_{\beta} }$, como $f_\alpha = f_{\alpha \beta} \in \K[ U _{ \alpha} \cap U_{\beta} ] $ , la función $f_{\alpha \beta}$ define in haz lineal en $X$, denotado por $\Ou (D)$. 
+	
+\begin{prop}
+	La correspondencia $D \mapsto \Ou (D)$ es una biyección del conjunto de clases de equivalencia lineal de divisores en $X$ en el conjunto de clases de isomorifsmos de haces lineales en $X$.
+\end{prop}
+
+En virtud de la proposición anterior, el grado $gr (\Li)$ de un haz lineal $\Li$ en $X$ tiene sentido. Si $\Li \simeq \Ou (D)$, el mapa $\varphi _{D} $ a veces se dentora por $ \varphi _{\Li}$
+
+Sea $s \in H^{0} (X, \Li) $ y sea $X = \cup U_{ \alpha}$ un cubrimiento abierto tal que todos los $\Li|_{U_{\alpha}}$ son triviales. Como $\Li|_{U_{\alpha}} \simeq \Ou|_{U_{\alpha}} $, la restricción $s|_{U_{\alpha}}$ de $s$ puede considerarse como una función regular $f_ \alpha$ en $U_{\alpha}$. Sea $D_{s, \alpha }$ el divisor de ceros de $f_{\alpha}$ en $U_{\alpha}$, es decir $D_{s, \alpha} = (f_{\alpha})_{0}|_{U_{\alpha}}$.
+
+\begin{prop}
+	Existe un único divisor $D_{s}$ tal que $ D_{s}|_{U_{\alpha}} = D_{s,\alpha} $ para todo $\alpha$. 
+\end{prop}
+
+Este divisor $D_{s}$ es llamado el \textbf{divisior de ceros de $s$}; es efectivo y linealmente equivalente a cualquier divisor $D\in Div (X)$ con $\Li \simeq \Ou (D)$.
+
+
+\subsection{Imagen inversa de puntos}
+Para estudiar mapas no constantes de curvas proyectivas suaves $f: X \rightarrow Y$  es importante considerar divisores de la forma $f^{*}$(P), donde $P$ es un punto de $Y$.
+
+\begin{prop}
+	Para todo punto $P \in Y$ se tiene $$ gr (f^{*}(P)) = gr (f) $$ y para todo divisor $D \in Div  Y$ se tiene $$gr (f^{*}(D)) = (gr (D)) (gr(f)) $$
+\end{prop}
+
+Es posible deducir el teorema \ref{2.1.52} usando la proposición anterior.
+
+\subsection{Puntos de ramificación}
+Los divisores de la forma $f^{*}(Q)$ permiten definir la importante noción de puntos de ramificación de un mapa. Sea $f: X \rightarrow Y $ una cubierta (es decir, una mapa regular suryectivo) de curvas completas suaves. Sea $P \in X$ y $f(P)= Q$. Es claro que $P \in \sop (f^{*}(Q)) $. Si $f^{*}(Q)= P + D'$, donde $P \noin \sop D'$, el mapa $f$ es llamado \textbf{no ramificado} en $P \in X$. Caso contrario, se tiene $f^{*} (Q)= e_{P} P +D'$, donde $e_{P}\geq 2$ y $P \noin \sop D' $, y $f$ es llamado \textbf{ramificado} en $P$ y $P$ es llamado \textbf{punto de ramificación de $f$}, y $
+e_{P}  $ es llamado \textbf{índice de ramificación de $f$ en $P$}. \\
+Se sigue fácilmente de la definición de $f^{*}(Q)$ que, para parámetros locales $t_{P}$ y $t_{Q}$ en $P$ y $Q$ respectivamente, se tiene $f^{*} (t_{Q})= t_{P} ^{e_{P}}u $, donde $u \in \Ou ^{*}_{P}$. Si, para $Q \in Y$ y para todo $P \in f^{-1}(Q)$, el mapa $f$ es no ramificado en $P$, se dice que $f$ es \textbf{no ramificado en $Q$}. Caso contrario, $Q$ es llamado \textbf{punto de ramifiación de $f$}.\\
+
+Las definiciones de divisores y objetos correspondientes pueden ser dadas también para variedades de mayores dimensiones (siendo estas suaves y proyectivas por simplicidad).\\
+Un \textbf{divisor primo (simple)} en $X$ es una subvariedad (irreducible) en $X$ de codimensión 1 (no necesariamente suave). Un \textbf{divisor} $D$ en $X$ es una combinación lineal finita $$D= \ds \sum n_{i} F_{i} , \quad n_{i} \in \mathbb{Z}, $$ donde $F_{i}$ son divisores primos. El conjunto $ Div (X) $ de divisores en $X$ es un grupo abeliano con la operación de adición de divisores; el conjunto $Div^{+} (X)$ de divisores efectivos $D \geqslant 0$ (es decir, todo $n_{i}\geq 0$) es un subsemigrupo.\\
+
+Si $f \in \K (X)^{*}$ y $F$ es un divisor  primo en $X$, puede definirse el entero $\ord_{F} ( \subset X$ con $ F \cap \neq 0 $ tal que la subvariedad $F \cap  U$ en $U$ está dada por $g=0$, donde $g \in \K [U]$. Definir $$\ord _{F} (f) = \min \{ \ell  \, | \, f = g^{\ell} h  \mbox{ para } h \in \K[U] \}$$ Es fácil verificar que $\ord_{F}(f)$ está bien definido (es decir, no depende de la elección de $U$), más aún: $$ \ord_{F} (f_{1}f_{2}) = \ord_{F} (f_{1}) + \ord _{F} (f_{2}) $$ para todo $f_{1}, f_{2} \in \K (X)^{*}$ y $$ \ord_{F}(f_{1}+f_{2}) \geq \min \{ \ord_{F} (f_{1}) ,\ord_{F}(f_{2}) \} $$ si $f_{1}+f_{2}\neq 0$.\\
+
+Si $\ord_{F}(f) \geq 0$, es llamado el \textbf{orden cero de $f$} en $F$; si $\ord_{F}(f) < 0,$ entonces $|\ord_{F}(f)|$ es llamado el \textbf{orden polar} de $f$ en $F$. Para $f \in \K [X]^{*}$, al igual que en el caso de curvas, se define el \textbf{divisor  principal} $$(f) = \sum \ord_{F}(f)F$$ Para $D \in Div (X)$ arbitrario se escribe $$L (D) = \{ f \in K (X)^{*}  \,| \, (f) + D  \geqslant 0 \} \cup \{0\} $$ \\
+
+Usando propiedades de $\ord_{F}$, puede verificarse fácilmente que para cualquier $D \in Div (X)$ $L(D)$ es un subespacio vectorial de $\K(X)$ de dimesión finita. La dimensión de $L(D)$ se denota por $\ell (D)$.
+
+
+\section{Jacobianos}
+
+\subsection{Grupo algebraicos}
+
+Sea $G$ una variedad cuasiproyectiva algebraica la cual es también un grupo. Entonces $G$ es un \textbf{grupo albegracio} si los mapas
+$$ \psi : G \times G  \rightarrow G , \quad (g_{1}, g_{2})= g_{1} g_{2}$$ y $$ \varphi : G \rightarrow G ,  \quad(g) = g^{-1} $$ son regulares.
+
+Observar que el mapa $ L_{h}:G \rightarrow G$, $L_{h}(g) =hg$, donde $h$ es un elemento fijo y arbitrario del grupo, es un isomorfismo (de variedades pero no de grupos) pues $(L_{h})^{-1} = L_{h^{-1}}$.
+
+\begin{prop}
+	Si $G$ es un grupo algebraico, entonces $G$ es una variedad suave.
+\end{prop}
+
+
+\subsection{Variedades abelianas}
+
+Si $G$ es un grupo algebraico y una variedad proyectiva, entonces $G$ es llamado \textbf{variedad abeliana}. El nombre es justificado por el siguiente resultado.
+
+\begin{prop}
+	Una variedad abeliana es un grupo abeliano.
+\end{prop}
+
+\begin{prop}
+	Sea $\psi: G \rightarrow H$ un mapa regular de una variedad abeliana $G$ a un grupo algebraico. Entonces existe un morfismo de grupos algebraicos (es decir, un mapa regular que un homomorfismo de grupos) $\varphi : G \rightarrow H$ tal que $\psi = L_{h} \circ \varphi$, donde $h= \psi(e) \in H$
+\end{prop}
+
+\begin{cor}
+	Si $A$ y $B$ son variedades abelianas isomorfas como variedades, entonces $A$ y $B$ son también isomorfas como grupos
+\end{cor}
+
+Por tanto, para variedades abelianas: Toda el álgebra está determinada por la geometría.
+
+
+\subsection{Jacobiano de una curva}
+Ahora, sea $X$ una curva proyectiva suave. Recordar que $Pic^{0}(x)$ denota al subgrupo de $Pic (X)= Div(X)/ P(X)$ que consiste de las clases de equivalencia lineal de grado cero.
+
+\begin{teo}\label{2.1.82}
+	Para toda variedadproyectiva suave existe una única variedad abeliana $J_{X}$ tal que:
+	\begin{itemize}
+		\item $J_{X}$ es isomorof a $Pic^{0}(X)$ como grupo.
+		\item El mapa $$i_{P_{0}} : X \rightarrow J_{X} ,  \quad P \mapsto P-P_{0}  ,$$ donde $P_{0}$ es cualquier punto de $X$, es regular.
+		\item Para todo mapa regular $\varphi X \rightarrow A$ de $X$ hacia una variedad abeliana $A$ tal que $\varphi(P_{0})$ es el elemento neutro de $A$, existe un morfismo de variedades abelianas $\lambda J_{X} \rightarrow A$ con $\varphi = \lambda \circ i_{P_{0}}$
+	\end{itemize}
+\end{teo}
+
+La variedad abeliana $J_{X}$ es llamada el \textbf{Jacobiano} de $X$. \\
+La dimensión de $J_{X}$ es llamada el \textbf{género} de $X$, denotado por $G(X)$. Puede mostrarse que esta definición coincide con la definición de género de $X$ en términos de diferenciales dadas en la sección...... , para $\K = \C$, también coincide con la definición topológica de género dada en la sección....
+
+
+\subsection{Funtorialidad}
+Para un mapa regular $f:X \rightarrow Y$ de curvas suaves proyectivas, existen dos mapas de Jacobianos, $f_{*}$   : $J_{X} \rightarrow J_{Y}$ y $f^{*}: J_{Y}\rightarrow J_{X} $; para un mapa regular se tiene $$ (f \circ g)_{*}  =  f_{*} \circ g_{*}, \quad (f \circ g)^{*}  =  f^{*} \circ g^{*} $$
+La existencia del mapa $f_{*}$ se deduce del teorema \ref{2.1.82}c.\\
+La existencia del mapa $f^{*}$  se deduce del siguiente resultado.
+ 
+\begin{teo}
+	Sea $f: X \rightarrow Y$ un mapa de curvas proyectivas suaves. Entonces el mapa $f^{*}: J_{Y} \rightarrow J_{X}$ definida por la imagen de un divisor es un isomorfismo de variedade abelianas.
+\end{teo} 
+
+\subsection{Inyecciones en el Jacobiano}
+Debe notarse que una curva que no es isomorfa a $\mathbb{P}^{1}$ puede ser inyectada en su Jacobiano.
+
+\begin{prop}
+	Si $i_{P_{0}} :X \rightarrow J_{X}$ no es inyectiva, entonces $X$ es isomorfa a $\mathbb{P}^{1}$
+\end{prop}
+
+Notar que $J_{X}$ puede identificarse también con el conjunto de clases de haces lineales de grado cero. Entonces puede verificarse fácilmente que para un haz lineal $\L$ de grado $a$, el mapa $\M \mapsto \M \times \L$ es una biyección del conjunto de haces lineales de grado cero al conjunto de haces lineales de grado $a$. 
+
+\begin{prop}
+	Existe una biyección natural del cnojunto de clases de isomorfismo de haces lineales de un grado fijo en una curva proyectiva suave $X$ al Jacobiano $J_{X}$ de esta curva
+\end{prop}
+
+
+\section{Superficies de Riemann}
+
+Cuando $\K = \C$, toda curva algebraica suave puede considerarse una superficie de Riemann, un conjunto de curvas proyectivas define un superficie de Riemann compacta.\\
+Recordad que una \textbf{superficie de Riemann} es una variedad compleja conexa de dimensión compleja 1. Más precisamente, una superficie de Riemann es un espacio topológico $T$ de Hausdorff conexo, equipado con un atlas $S$. Por una atlas se entiende una familia $S= \{ (U:{\alpha} , p_{\alpha}) \, | \, \alpha \in A \}$, donde $A$ es un conjunto de índices, $\{U_{\alpha}\} _{\alpha \in A}$ es un cubrimiento abierto de $T$, y $p_\alpha : U_{\alpha} \rightarrow V_{\alpha} $ es un homomorfismo de $U_{\alpha}$ en el subconjunto abierto $V_{\alpha \subset \C}$ tal que
+.......................................................................................................................................................................................................
+
+Muchos resultados importantes de la teroía de curvas algebraicas pueden reducirse al cálculo de la dimensión de $L(D)$ para varios divisores $D$, por tanto una expresión explícita de para $\ell (D)$ desempeñará un rol esencial en la teoría de curvas. Esta expresión viene dada por el teorema de Riemann Roch, el cual es un resultado crucial de la teroía. Para establecerlo se requiere el concepto de formas diferenciales en curvas, el cual es también útil para diversas preguntas.\\
+En adelante, $X$ representa un curva proyectiva suave sobre un cuerpo algebraicamene cerrado $\K$.
+
+\section{Formas diferenciales}
+Sea $P \in X$, y $f$ una función regular en $P$, es decir, $f \in \Op$. $d_{f}d$ denota la imagen de $f-f(P) \mathbf{m}_{P}$ en el espacio vectorial unidimensional $\msp/ \msp ^{2}$ sobre $\K$.\\
+El elemento $d_{P}f$ es llamado el \textbf{diferencial} de $f$ en $P.$
+
+\begin{prop}
+	El diferencial $d_{P}: \Op \rightarrow \msp/ \msp ^{2} $ es un morfismo de $\K-$espacios vectoriales. Además, \textbf{regla de Leibniz} $$ d_{P}(fg)= f(P)d_{P}g + g(P)d_{P}f $$ se cumple para todos $f,g \in \Op$.
+\end{prop}
+
+Sea $U \subset X$ un conjunto abierto de $X$. Sea $f\in \K [U]$ una función racional en $X$ regular en $U$. Ahora, sea $\Phi [U]$  el conjunto de mapas $\varphi$ que mandan todo punto $P \in U$ a un elemento en $\msp/ \msp ^{2}$; obviamente, $\Phi[U]$ es un módulo sobre el anillo $\K[U]$. \\
+Toda función $f \in \K[U]$ define un elemento $df \in \Phi[U]$ donde $(df)(P)=d_{P}f$. Este es una \textbf{forma diferencial regular} en $U$ si para todo $P \in U$ existe una veciendad $V$ de $P$ tal que la restricción $\varphi |_{V}$ descansa en el $\K[V]$-submódulo de $\Phi[V]$ generado por elementos $df$, $f \in \K[V]$.\\
+El conjunto de formas diferenciales en $U$ forman un $K[U]$-módulo, denotado por $\Omega[U]$. En particular, si $U =X$, se obtiene un $\K$-espacio vectorial $\Omega[X]$, a veces simplemente $\Omega.$
+
+\begin{teo}\label{2.2.2}
+	El espacio $\omega[X]$ es de dimensión finita.
+\end{teo}
+
+La dimensión $\dim _{\K} \Omega[X] $ es denotada por $g=g(X)$ y es llamada el \textbf{género} de $X$. Notar que esta definición coincide con la dada en las secciones ........
+
+\begin{prop}\label{2.2.3}
+	Sea $P \in X$ y sea $t=t_{P}$ un parámetro local en $P$. Entonces existe una vecindad $U$ de $P$ tal que $\Omega[U] = \K[U]dt$.
+\end{prop}
+
+\begin{cor}
+	Sea $\omega \in \Omega[U]$. Entonces el conjunto cero $F_{\omega}$ de $\omega$ (es decir, los puntos $P \in U$ con $\omega_{P}=0$) es cerrado en $U$.
+\end{cor}
+
+Sea $\omega \in \Omega[U]$ una forma diferencial regular en un subconjunto abierto $U$ de $X$. Entonces se dice que $\omega$ define una \textbf{forma diferencial racional}; dos formas, $\omega \in \Omega[U]$ y $\omega \in \Omega[U']$, definen la mismas forma diferencial racional en $X$ si las restricciones de $\omega$y $\omega'$ sobre $U \cap U'$ coinciden. El conjunto de formas diferenciales racionales es denotado por $\Omega(X)$. Obviamente, $\Omega(X)$ es un espacio vectorial sobre el cuerpo $\K(X)$ de funciones racionales en $X$. Más aún, la proposición \ref{2.2.3} implica el siguiente hecho.
+
+\begin{prop}\label{2.2.5}
+	La dimensión de $\Omega(X)$ sobre $\K(X)$ es 1.
+\end{prop}
+
+\subsection{Clase canónica}
+De la definición de la forma diferencial $\omega$, se sigue que todo punto $P$ tienen un vecindad $U$ tal que $\omega= fdt$, $f \in \K(X)$, donde $t-t(P)$ es una parámetro local en cualquier $P \in U$. Luego se sigue que, si $\omega \neq0$, existe un cubrimiento abierto finito $\{U_{i}\}$ de $X$ tal que $\omega|_{U_{i}}=f_{i}dt_{i}$. Co(mo $f_{i}dt_{i}= f_{j}dt_{j}$ en $U_{i}\cap U_{j}$, donde $t_{i}-t_{i}(Q)$ y $t_{j}-t_{j}(Q)$ son parámetros locales en cualquier $Q \in U_{i}\cap U_{j}$, el sistema $(\{ U_{i} \}, \{f_{i} \})$ define un divisor de Cartier, denotado por $(\omega)$ y llamado el \textbf{divisor asociado con $\omega$}. \\
+Por la proposición \ref{2.2.5} toda forma $\omega' \in \Omega(X)$ puede representarse por $\omega' = f \omega$ para algún $f \in \K(X)$, entonces $(\omega') = (\omega ){(f)}$. Por tanto, la clase de equivalencia lineal$K = K_{X}$ de $(\omega)$, $\omega \in \Omega (X)$ no depende de la elección de $\omega{}$ es llamada la \textbf{clase canónica de $X$}. A veces, por $K_{X}$ se denota un divisor arbitrario  de la clase canónica
+
+\subsection{Curvas suaves planas}
+Sea $F(x_{0} : x_{1} :x_{2})=0$ una ecuación homogénea de grado $m$ que define la curva suave $X$ en $\mathbb{P}^{2}$. Sean $x=x_{1}/x_{0}$ y $y=x_{2}/x_{0}$ coordenadas en $\mathbb{A}^{2}\subset \mathbb{P}^{2}$, y sea $G(x,y)=f(1:x:y)=0$ la ecuación de la curva afín $X'=X \cap \mathbb{A}^{2}$. Considérese las formas racionales en $X$ dadas por \begin{equation} \label{eq.2.2.2}
+\omega = \frac{Pdy}{G'_{x}}
+\end{equation}
+donde $G'_{x} =  \partial G/ \partial x$ y $P(x,y)\in P[x,y]$
+
+
+\begin{prop}
+	Una forma dada por \ref{eq.2.2.2} es regular si y solo si $grP \leq m-3$. Recíprocamente, toda regular en $X$ puede ser representada en la forma \ref{eq.2.2.2} para algún $P \in \K[x,y]$ con $gr (P)\leq m-3$. Así,
+$$	\Omega[X] [X] =  \{ \frac{Pdy}{G'_{x}} \, | \, P(x,y) \in \K[x,y], gr P \leq m-3 \} $$
+	Más aún, $K_{X}=(m-3)L$ donde $L$ es la clase de una sección (lineal) hiperplana.
+\end{prop}
+
+Por tanto, los divisores de la clase canónica $K_{X}$ son divisores de la forma $(F)$, donde $F$ es una forma de grado $m-3$. Es posible decir que los divisores de la clase canónica son divisores de $X$ con curvas dadas por la ecuación $F=0$ de grado $m-3$. Tales curvas son llamadas \textbf{adjuntas} para $X$. Para $m \leq 3$ no existen curvas adjuntas.
+
+\begin{cor}
+	El género de una curva suave plana $X$ de grado $m-3$ es $$g(X) = \frac{(m-1)(m-2)}{2}$$
+\end{cor}
+
+De la división del divisor $(\omega )$ puede verse fácilmente que una forma $\omega $ es regular si y solo si $(\omega) \geqslant 0$. Por tanto, $\Omega [X]$ es isomorfo a $L (K_{X})$, donde $K_{X}=(\omega)$, siendo $\omega$ una forma diferencial racional no nula en $X$. Debido al teorema \ref{2.1.53}, esto implica el teorema \ref{2.2.2}. \\
+
+Para cada $D \in Div(X)$, se define $$\Omega (D)= \{ \omega \in \Omega (X) \setminus \{0 \} \, | \, (\omega) +D \geqslant 0\} \cup \{0\} $$ 
+De la definición de $\Omega (D)$ es claro que $\Omega(D)\simeq L(K_{X}+D) $; en particular, $\Omega (D)$ es de dimensión finita para $D \in Div (X)$. El haz lineal $\Ou(K_{X}+D)$ es a veces denotado por $\Omega(D)$; así, $\Omega (D)  \simeq H^{0}(\Omega (D))$.
+
+
+\subsection{Funtorialidad}
+Sea $\varphi:X \rightarrow Y$ un mapa regular de curvas proyectivas suaves, y sea $\omega = \ds \sum_{i=1}^{m}f_{i}dg_{i}\in \Omega(Y)$. Considerar $$\varphi^{*}(\omega) = \sum_{i=1}^{m}\varphi^{*}(f_{i})d\varphi^{*}(g_{i})\in \Omega(X)$$
+
+Está bien definida. Si $\omega$ es regular en $Q\in Y$ , entonces $\varphi^{*}$ lo es en cualquier punto $P \in \varphi^{*}(Q)$.\\
+
+Así, existen mapas $$\varphi : \Omega (Y) \rightarrow \Omega(X) \quad \mbox{ y } \quad \varphi : \Omega [Y] \rightarrow \Omega[X]  $$
+
+\begin{prop}
+	Si $\varphi$ es un mapa separable (es decir, el correspondiente cuerpo de extensión $\K(X)\setminus \varphi^{*} (\K(Y)) $ es separable), entonces $\varphi^{*}$ es una inyección. Caso cotrario, $\varphi^{*}$ es trivial.\\
+	Si $\varphi: X \rightarrow Y$ y $\psi : Y \rightarrow Z$ son mapas regulares, entonces $(\psi \circ \varphi)^{*}= \varphi^{*} \circ \psi ^{*}$
+\end{prop}
+
+
+
+\subsection{Automorfismos} 
+Un isomorfismo $g:X \rightarrow X$ de una curva proyectiva suave $X$ sobre sí mismo es llamado un \textbf{automorfismo}. El conjunto de automorfismos de $X$ es denotado por $Aut(X)$, o $Aut_{\K}(X)$ si es  necesario indicar la dependencia  con el cuerpo base. Es claro que $Aut (X) $ es un grupo. 
+
+\begin{prop}
+	$Aut(\mathbb{P}^{1}) = PGL(2,\K)$, es decir, el grupo cociente del grupo $GL(2,\K)$ módulo su centro (el cual cconsiste de las matrices de la forma $ \left( \begin{array}{cc}
+	a & 0 \\
+	0 & a
+	\end{array} \right) $, $a \in \K ^{*}$  )
+\end{prop}
+
+Así, $Aut(\mathbb{P}^{1})$ es un grupo infinito. Más adelante veremos si $g(X)=1$, entonces $X$ es una variedad abeliana (de dimesión 1), y por tanto $Aut (X)$ contiene a $X$ como un subgrupo normal; el grupo cociente $Aut(X) / X$ es un grupo finito $G$ de orden 2,4 o 6 (si $p$, la característica de $\K$, es distinto de 2 o 3; para $p=3$, el orden de $G$ es un divisor de 12; para $p=2$, es divisor de 24). Por tanto, para $g(X)=1$, el grupo $Aut(X)$ es también infinito. Por otro lado, tenemos el siguiente resultado.\\
+
+\begin{teo}
+	Si $g(X)\geq 2$, entonces $Aut(x)$ es finito.
+\end{teo}
+
+\begin{obs}
+	Si $p=0$, entonces $$|Aut(X)| \leq 84 (g-1) $$. Esto también vale para el caso de una curva de característica finita siempre que $p \geq g+2$ , siendo la curva $y^{2}=x^{r}-x, r \neq 2$ la única excepción, para la cual $g=(p-1)/2$ y $|Aut(X)| = 2^{2}(p-1)$. Para $p \leq g+1$, como veremos más adelante, el grupo $Aut(X)$ puede ser muy grande inclusive para otras curvas.
+\end{obs}
+
+Ahora, sea $H \subset Aut(X)$ un subgrupo finito arbitrario (el caso $g(X)$ es permitido). Es claro que $H$ actúa en $\K(X)$. Considérese el cuerpo $ \K = \K (X)^{H}$ invariante por esta acción. Como $\K$ es finitamente generado sobre $\K$ y de grado trascendetal 1 sobre $\K$, por la proposición \ref{2.1.49} y el teorema \ref{2.1.46} existe un única cuva proyectiva suave  tal que $\K(Y) = \K$. La inyección $ \K(Y) \hookrightarrow \K(X)$ define un mapa regular $X \rightarrow Y$ de grado $h =|H|$. En esta situación , $Y$ es denotado por $X/H$. En particular, si $H= \langle g \rangle $ es un grupo cíclico en $Aut(X)$ generado por $g \in Aut (X)$ , luego, $X/H$ es denotado por $X/\langle g \rangle$ o por $ X^{g}$. 
+
+
+\section{El teorema de Riemann-Roch}
+
+\chapter{Aplicación en Criptografía}
+
+
+
+
+
+
+
+\end{document}
