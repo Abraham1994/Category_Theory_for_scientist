@@ -1,4 +1,16 @@
-## Teoría de Categorías 
+# Teoría de Categorías 
+
+## ¿Para qué?
+
+La teoría de categorías ha servido mucho a la Matemática "Pura", ya que es una manera de encontrar conexiones entre diversos contextos matemáticos. Nos permite darnos cuenta que hay estructuras que se repiten, lo cual es sospechoso (y provechoso)... y hermoso.
+
+Pero eso no es todo. El Álgebra, a grandes rasgos, estudia cómo se comportan los objetos que están sujetos a una estructura. *La teoría de Categorías hace algo parecido, pero con ideas y conceptos*. Gracias a la generalidad de la Matemáticas, estas ideas y conceptos pueden venir de cualquier lugar. 
+*Los teoremas se cumplirán, como siempre*, y sus implicaciones nos permiten aumentar nuestro entendimiento, crear nuevas estructuras, generar nuevas preguntas... En otras palabras, pueden ser muy útiles en la Ciencia
+
+En este pequeño trabajo vamos a estudiar los conceptos y teorema básicos sobre esta fascinante teoría; además se darán algunos ejemplos actuales y posibles aplicaciones. 
+
+
+
 
 Una **Categoría** *C* se entiende como un conjuntos de datos:
  $\xi$
