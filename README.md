@@ -30,7 +30,7 @@ Una **categoría** es una clase *Ç* de objetos junto con
 
 [Libro base](categorias_aplicadas.pdf)
 
-
+[Criptografía](semi1_principal.tex)
 
 
 
