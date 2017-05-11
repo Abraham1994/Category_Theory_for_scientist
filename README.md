@@ -26,9 +26,9 @@ En este pequeño trabajo usaremos **categorías pequeñas**, las cuales se basan
 ### Definición de categoría 
 Una **categoría** es una clase *Ç* de objetos junto con 
 1. Una clase de conjuntos disjuntos, *hom*; además por cada par de objetos *A,B* en *Ç* hay un solo conjunto, *Hom(A,B)*. Un elemento de *Hom(A,B)* es llamado **morfismo de *A* a *B*** es denotado por *f:A→B*. 
-2. Por cada terna *(A,B,C)* de objetos en *Ç*, una función *hom(B,C)×hom(A,B)→hom(A,C)*; para morfismos *f:A→B*, *g: B → C*, esta función se escribe *(g,f) *
+2. Por cada terna *(A,B,C)* de objetos en *Ç*, una función *hom(B,C)×hom(A,B)→hom(A,C)*; para morfismos *f:A→B*, *g: B → C*, esta función se escribe *(g,f)*
 
-
+[Libro base](categorias_aplicadas.pdf)
 
 
 
