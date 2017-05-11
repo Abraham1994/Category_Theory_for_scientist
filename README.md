@@ -18,11 +18,20 @@ Al respecto, podemos citar los famosos teoremas de incompletitud de Gödel y el 
 
 En la definición más amplia de categoría se usa el concepto de clase. Sin entrar en detalles, este concepto se desarrolló debido a la aparición de paradojas, como la de Russel: 
 
-```markdown
-# Paradoja de Russel
+##### Paradoja de Russel
 Digamos que un conjunto es una colección de elementos. Sea *M* el conjunto de todos los conjuntos que no son elementos de sí mismos. Luego, ¿M es elemento de sí mismo?
-```
-En este pequeño trabajo usaremos **categorías pequeñas**, las cuales se basan en conjuntos "normales", es decir, clases que son conjuntos. De esta manera nos podemos avanzar sin tener que preocuparnos de paradojas. 
+
+En este pequeño trabajo usaremos **categorías pequeñas**, las cuales se basan en conjuntos "normales", es decir, clases que son conjuntos. De esta manera podemos avanzar sin tener que preocuparnos de contradicciones. 
+
+
+### Definición de categoría 
+
+
+
+
+
+
+
 
 
 You can use the [editor on GitHub](https://github.com/Abraham1994/Category_Theory_for_scientist/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
