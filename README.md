@@ -10,14 +10,6 @@ Pero eso no es todo. El Álgebra, a grandes rasgos, estudia cómo se comportan l
 En este pequeño trabajo vamos a estudiar los conceptos y teorema básicos sobre esta fascinante teoría; además se darán algunos ejemplos actuales y posibles aplicaciones. 
 
 
-
-
-Una **Categoría** *C* se entiende como un conjuntos de datos:
- $\xi$
-
-
-
-
 You can use the [editor on GitHub](https://github.com/Abraham1994/Category_Theory_for_scientist/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
