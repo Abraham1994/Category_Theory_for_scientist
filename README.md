@@ -2,8 +2,7 @@
 
 
 ### ¿Para qué?
-
-La teoría de categorías ha servido mucho a la Matemática "Pura", ya que es una manera de encontrar conexiones entre diversos contextos matemáticos. Nos permite dar cuenta que hay estructuras que se repiten, lo cual es sospechoso (y provechoso)... y hermoso.
+**La teoría de categorías** ha servido mucho a la Matemática "Pura", ya que es una manera de encontrar conexiones entre diversos contextos matemáticos. Nos permite dar cuenta que hay estructuras que se repiten, lo cual es sospechoso (y provechoso)... y hermoso.
 
 Pero eso no es todo. El Álgebra, a grandes rasgos, estudia cómo se comportan los objetos que están sujetos a una estructura. *La teoría de Categorías hace algo parecido, pero con ideas y conceptos*. Gracias a la generalidad de la Matemáticas, estas ideas y conceptos pueden venir de cualquier lugar. 
 *Los teoremas se cumplirán, como siempre*, y sus implicaciones permiten aumentar nuestro entendimiento, crear nuevas estructuras, generar nuevas preguntas... En otras palabras, pueden ser muy útiles en la Ciencia
@@ -18,13 +17,16 @@ Al respecto, podemos citar los famosos teoremas de incompletitud de Gödel y el 
 
 En la definición más amplia de categoría se usa el concepto de clase. Sin entrar en detalles, este concepto se desarrolló debido a la aparición de paradojas, como la de Russel: 
 
-##### Paradoja de Russel
+#### Paradoja de Russel
 Digamos que un conjunto es una colección de elementos. Sea *M* el conjunto de todos los conjuntos que no son elementos de sí mismos. Luego, ¿M es elemento de sí mismo?
 
 En este pequeño trabajo usaremos **categorías pequeñas**, las cuales se basan en conjuntos "normales", es decir, clases que son conjuntos. De esta manera podemos avanzar sin tener que preocuparnos de contradicciones. 
 
 
 ### Definición de categoría 
+Una **categoría** es una clase *Ç* de objetos junto con 
+1. Una clase de conjuntos disjuntos, *hom*; además por cada par de objetos *A,B* en *Ç* hay un solo conjunto, *Hom(A,B)*. Un elemento de *Hom(A,B)* es llamado **morfismo de *A* a *B*** es denotado por *f:A→B*. 
+2. Por cada terna *(A,B,C)* de objetos en *Ç*, una función *hom(B,C)×hom(A,B)→hom(A,C)*; para morfismos *f:A→B*, 
 
 
 
