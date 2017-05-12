@@ -9,65 +9,41 @@ Pero eso no es todo. El Álgebra, a grandes rasgos, estudia cómo se comportan l
 
 En este pequeño trabajo vamos a estudiar los conceptos y teorema básicos sobre esta fascinante teoría; además se darán algunos ejemplos actuales y posibles aplicaciones. 
 
+### Definición de categoría 
+[Aquí]
 
-### Una advertencia acerca del *Lenguaje*
+#### Una advertencia acerca del *Lenguaje*
 Muchos piensan que la Matemática es perfecta...
+
 Entre los cimientos de la Matemática están la Teoría de Conjuntos y la Lógica. Es increíble e inquitante saber que estos cimientos, en lugar de fortalecer, pueden hacer tambalear la Matemática conocida. 
 Al respecto, podemos citar los famosos teoremas de incompletitud de Gödel y el debate sobre el axioma de elección. 
 
 En la definición más amplia de categoría se usa el concepto de clase. Sin entrar en detalles, este concepto se desarrolló debido a la aparición de paradojas, como la de Russel: 
 
-#### Paradoja de Russel
+###### Paradoja de Russel 
 Digamos que un conjunto es una colección de elementos. Sea *M* el conjunto de todos los conjuntos que no son elementos de sí mismos. Luego, ¿M es elemento de sí mismo?
 
-En este pequeño trabajo usaremos **categorías pequeñas**, las cuales se basan en conjuntos "normales", es decir, clases que son conjuntos. De esta manera podemos avanzar sin tener que preocuparnos de contradicciones. 
-
-
-### Definición de categoría 
-Una **categoría** es una clase *Ç* de objetos junto con 
-1. Una clase de conjuntos disjuntos, *hom*; además por cada par de objetos *A,B* en *Ç* hay un solo conjunto, *Hom(A,B)*. Un elemento de *Hom(A,B)* es llamado **morfismo de *A* a *B*** es denotado por *f:A→B*. 
-2. Por cada terna *(A,B,C)* de objetos en *Ç*, una función *hom(B,C)×hom(A,B)→hom(A,C)*; para morfismos *f:A→B*, *g: B → C*, esta función se escribe *(g,f)*
-
-[Libro base](categorias_aplicadas.pdf)
-
-[Criptografía](semi1_principal.tex)
+Para evitar esto, se introduce el concepto de **clase**, la cual es un generelización de conjunto. Para no entrar en detalles, solo diremos que una clase es como un "conjunto muy grande". Un conjunto es una clase tal que existe otra clase de la que es un elemento. En la práctica estas paradojas no son un obstáculo, por lo menos al principio.
 
 
 
 
+### Conceptos preliminares
+En esta sección se presentarán algunos conceptos que se usarán en las definiciones y proposiciones. También se introducen los ologs.
 
-You can use the [editor on GitHub](https://github.com/Abraham1994/Category_Theory_for_scientist/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### La Categoría de Conjuntos
+En esta sección vamos a ver como los conceptos categóricos se aplican a los conjuntos. Las definiciones y resultados serán casos particulares de cosas más profundas. No seremos taaan formales, porque la intención aquí es sentar ideas y comenzar con las aplicaciones. 
 
-### Markdown
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### Más aplicaciones
+Se definirán varias estructuras algebraicas muy utlizadas en la Ciencia: Monoides, grupos, grados, órdenes y bases de datos. En en el fondo, cada una de ellas es una categoría, vista por dentro y por fuera; aunque no hablaremos mucho de categorías en esta sección. 
 
-```markdown
-Syntax highlighted code block
 
-# Header 1
-## Header 2
-### Header 3
+### Formalizando
+Como la rigurosa y bella estructura logra englobarlo todo. Algunas consecuencias de este hecho. Muchos resultados parecerían poco prácticos si no se tiene en cuenta las secciones anteriores. 
 
-- Bulleted
-- List
 
-1. Numbered
-2. List
+### Más teoría y resultados
+Funtores adjuntos. Categoría de funtores. Mónadas. Operadas. Estas últimas son una generalización de categorías.
 
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Abraham1994/Category_Theory_for_scientist/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
