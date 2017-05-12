@@ -25,7 +25,7 @@ Digamos que un conjunto es una colección de elementos. Sea *M* el conjunto de t
 
 Para evitar esto, se introduce el concepto de **clase**, la cual es un generelización de conjunto. Para no entrar en detalles, solo diremos que una clase es como un "conjunto muy grande". Un conjunto es una clase tal que existe otra clase de la que es un elemento. En la práctica estas paradojas no son un obstáculo, por lo menos al principio.
 
-
+where \(\alpha = (t_1 - t_0)/L\) is the rate at which the thickness increases
 
 
 ## Conceptos preliminares
