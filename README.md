@@ -10,26 +10,24 @@ Pero eso no es todo. El Álgebra, a grandes rasgos, estudia cómo se comportan l
 En este pequeño trabajo vamos a estudiar los conceptos y teorema básicos sobre esta fascinante teoría; además se darán algunos ejemplos actuales y posibles aplicaciones. 
 
 ## Definición de categoría 
-[Aquí]
+[Aquí](aplied category.pdf)
 
 ### Una advertencia acerca del *Lenguaje*
 Muchos piensan que la Matemática es perfecta...
 
 Entre los cimientos de la Matemática están la Teoría de Conjuntos y la Lógica. Es increíble e inquitante saber que estos cimientos, en lugar de fortalecer, pueden hacer tambalear la Matemática conocida. 
-Al respecto, podemos citar los famosos teoremas de incompletitud de Gödel y el debate sobre el axioma de elección. 
+Al respecto, podemos citar los famosos [teoremas de incompletitud de Gödel](https://es.wikipedia.org/wiki/Teoremas_de_incompletitud_de_G%C3%B6del) y el debate sobre el [axioma de elección](https://es.wikipedia.org/wiki/Axioma_de_elecci%C3%B3n). 
 
 En la definición más amplia de categoría se usa el concepto de clase. Sin entrar en detalles, este concepto se desarrolló debido a la aparición de paradojas, como la de Russel: 
 
-#### Paradoja de Russel 
+#### [Paradoja de Russel](https://es.wikipedia.org/wiki/Paradoja_de_Russell)
 Digamos que un conjunto es una colección de elementos. Sea *M* el conjunto de todos los conjuntos que no son elementos de sí mismos. Luego, ¿M es elemento de sí mismo?
 
 Para evitar esto, se introduce el concepto de **clase**, la cual es un generelización de conjunto. Para no entrar en detalles, solo diremos que una clase es como un "conjunto muy grande". Un conjunto es una clase tal que existe otra clase de la que es un elemento. En la práctica estas paradojas no son un obstáculo, por lo menos al principio.
 
-where \(\alpha = (t_1 - t_0)/L\) is the rate at which the thickness increases
-
 
 ## Conceptos preliminares
-En esta sección se presentarán algunos conceptos que se usarán en las definiciones y proposiciones. También se introducen los ologs.
+En esta sección se presentarán algunos conceptos que se usarán en las definiciones y proposiciones. También se introducen los ***OLOGS***.
 
 
 ## La Categoría de Conjuntos
@@ -47,3 +45,8 @@ Como la rigurosa y bella estructura logra englobarlo todo. Algunas consecuencias
 ## Más teoría y resultados
 Funtores adjuntos. Categoría de funtores. Mónadas. Operadas. Estas últimas son una generalización de categorías.
 
+
+## Referencias y lectura adicional
+- [Category Theory for Scientists](categorias_aplicadas.pdf) Este el libro base, de David I. Spivak, quien creó el concepto de olog. El libro se basa en un curso dictado por el autor en el MIT.
+- [OLOGS: A CATEGORICAL FRAMEWORK FOR KNOWLEDGE REPRESENTATION](olog.pdf) Del mismo autor, muy interesante. 
+- [Category Theory for Computing Science] De Michael Barr y Charles Wells. 
