@@ -49,4 +49,4 @@ Funtores adjuntos. Categoría de funtores. Mónadas. Operadas. Estas últimas so
 ## Referencias y lectura adicional
 - [Category Theory for Scientists](categorias_aplicadas.pdf) Este el libro base, de David I. Spivak, quien creó el concepto de olog. El libro se basa en un curso dictado por el autor en el MIT.
 - [OLOGS: A CATEGORICAL FRAMEWORK FOR KNOWLEDGE REPRESENTATION](olog.pdf) Del mismo autor, muy interesante. 
-- [Category Theory for Computing Science] De Michael Barr y Charles Wells. 
+- [Category Theory for Computing Science](Barr-Wells-ctcs.pdf) De Michael Barr y Charles Wells. 
