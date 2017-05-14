@@ -1,6 +1,17 @@
 # Teoría de Categorías
-\\( 1/x^{2} \\)
-\\[ \frac{1}{n^{2}} \\]
+
+<div style="float: right">
+Something that stays right and is not wrapped in a para.
+</div>
+
+{::options parse_block_html="true" /}
+
+<div>
+This is wrapped in a para.
+</div>
+<p>
+This can contain only *span* level elements.
+</p>
 
 ## ¿Para qué?
 **La teoría de categorías** ha servido mucho a la Matemática "Pura", ya que es una manera de encontrar conexiones entre diversos contextos matemáticos. Nos permite dar cuenta que hay estructuras que se repiten, lo cual es sospechoso (y provechoso)... y hermoso.
