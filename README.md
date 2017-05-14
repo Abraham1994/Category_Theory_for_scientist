@@ -1,5 +1,5 @@
 # Teoría de Categorías
-
+\\( 1/x^{2} \\)
 \\[ \frac{1}{n^{2}} \\]
 
 ## ¿Para qué?
