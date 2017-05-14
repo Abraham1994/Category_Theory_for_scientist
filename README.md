@@ -10,18 +10,16 @@ Pero eso no es todo. El Álgebra, a grandes rasgos, estudia cómo se comportan l
 En este pequeño trabajo vamos a estudiar los conceptos y teorema básicos sobre esta fascinante teoría; además se darán algunos ejemplos actuales y posibles aplicaciones.
 
 ## Definición de categoría
-\newcommand{\C}{\mathscr{C}}
 Un **categoría** es una clase $\C$ de objetos junto con
-\begin{enumerate}
-	\item una clase de conjuntos disjuntos, $hom(A,B)$, por cada par de objetos $A,B \in \C$; (los elementos de $hom (A,B)$  son llamados \textbf{morfismos de $A$ en $B$} y se denotan escribiendo $f:A \rightarrow B$);
+$\newcommand{\C}{\mathscr{C}}$
 
-	\item por cada terna $(A,B, C)$ de objetos de $\C$, una función $$ hom(B,C) \times hom (A,B) \rightarrow hom (A,C) $$; (para morfismos $f: A \rightarrow B, \; g:B \rightarrow C $, esta función se escribe $(g,f) \mapsto g \circ f$ y $g \circ f : A \rightarrow C$ es llamada la \textbf{compuesta} de $f$ y $g$); todo sujeto a los axiomas:
-	\begin{enumerate}
-		\item \textbf{Asociatividad}. Si $f: A \rightarrow B$, $g: B \rightarrow C$, $h: C \rightarrow D$ son morfismos de $\C$, entonces $h \circ (g \circ f) = (h \circ ) \circ f$.
+1. una clase de conjuntos disjuntos, $hom(A,B)$, por cada par de objetos $A,B \in \C$; (los elementos de $hom (A,B)$  son llamados \textbf{morfismos de $A$ en $B$} y se denotan escribiendo $f:A \rightarrow B$);
 
-		\item  \textbf{identidad}. Para cada objeto $B \in C$ existe un morfismo $id_{B}: B \rightarrow B $ tal que para  todo $f: A \rightarrow B$, $g: B \rightarrow C$: $$ id _{B} \circ f = f \mbox{  y  } g\circ id_{B} = g $$
-	\end{enumerate}
-\end{enumerate}
+2. por cada terna $(A,B, C)$ de objetos de $\C$, una función $$ hom(B,C) \times hom (A,B) \rightarrow hom (A,C) $$; (para morfismos $f: A \rightarrow B, \; g:B \rightarrow C $, esta función se escribe $(g,f) \mapsto g \circ f$ y $g \circ f : A \rightarrow C$ es llamada la \textbf{compuesta} de $f$ y $g$); todo sujeto a los axiomas:
+
+   - \textbf{Asociatividad}. Si $f: A \rightarrow B$, $g: B \rightarrow C$, $h: C \rightarrow D$ son morfismos de $\C$, entonces $h \circ (g \circ f) = (h \circ ) \circ f$.
+
+	 -  \textbf{identidad}. Para cada objeto $B \in C$ existe un morfismo $id_{B}: B \rightarrow B $ tal que para  todo $f: A \rightarrow B$, $g: B \rightarrow C$: $$ id _{B} \circ f = f \mbox{  y  } g\circ id_{B} = g $$
 
 ### Una advertencia acerca del *Lenguaje*
 Muchos piensan que la Matemática es perfecta...
