@@ -1,22 +1,5 @@
-# Teoría de Categorías
 <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'></script>
-
-$$
-\begin{align*}
-  & \phi(x,y) = \phi \left(\sum_{i=1}^n x_ie_i, \sum_{j=1}^n y_je_j \right)
-  = \sum_{i=1}^n \sum_{j=1}^n x_i y_j \phi(e_i, e_j) = \\
-  & (x_1, \ldots, x_n) \left( \begin{array}{ccc}
-      \phi(e_1, e_1) & \cdots & \phi(e_1, e_n) \\
-      \vdots & \ddots & \vdots \\
-      \phi(e_n, e_1) & \cdots & \phi(e_n, e_n)
-    \end{array} \right)
-  \left( \begin{array}{c}
-      y_1 \\
-      \vdots \\
-      y_n
-    \end{array} \right)
-\end{align*}
-$$
+# Teoría de Categorías
 
 ## ¿Para qué?
 **La teoría de categorías** ha servido mucho a la Matemática "Pura", ya que es una manera de encontrar conexiones entre diversos contextos matemáticos. Nos permite dar cuenta que hay estructuras que se repiten, lo cual es sospechoso (y provechoso)... y hermoso.
@@ -27,7 +10,18 @@ Pero eso no es todo. El Álgebra, a grandes rasgos, estudia cómo se comportan l
 En este pequeño trabajo vamos a estudiar los conceptos y teorema básicos sobre esta fascinante teoría; además se darán algunos ejemplos actuales y posibles aplicaciones.
 
 ## Definición de categoría
-[Aquí](aplied category.pdf)
+\newcommand{\C}{\mathscr{C}}
+Un **categoría** es una clase $\C$ de objetos junto con
+\begin{enumerate}
+	\item una clase de conjuntos disjuntos, $hom(A,B)$, por cada par de objetos $A,B \in \C$; (los elementos de $hom (A,B)$  son llamados \textbf{morfismos de $A$ en $B$} y se denotan escribiendo $f:A \rightarrow B$);
+
+	\item por cada terna $(A,B, C)$ de objetos de $\C$, una función $$ hom(B,C) \times hom (A,B) \rightarrow hom (A,C) $$; (para morfismos $f: A \rightarrow B, \; g:B \rightarrow C $, esta función se escribe $(g,f) \mapsto g \circ f$ y $g \circ f : A \rightarrow C$ es llamada la \textbf{compuesta} de $f$ y $g$); todo sujeto a los axiomas:
+	\begin{enumerate}
+		\item \textbf{Asociatividad}. Si $f: A \rightarrow B$, $g: B \rightarrow C$, $h: C \rightarrow D$ son morfismos de $\C$, entonces $h \circ (g \circ f) = (h \circ ) \circ f$.
+
+		\item  \textbf{identidad}. Para cada objeto $B \in C$ existe un morfismo $id_{B}: B \rightarrow B $ tal que para  todo $f: A \rightarrow B$, $g: B \rightarrow C$: $$ id _{B} \circ f = f \mbox{  y  } g\circ id_{B} = g $$
+	\end{enumerate}
+\end{enumerate}
 
 ### Una advertencia acerca del *Lenguaje*
 Muchos piensan que la Matemática es perfecta...
