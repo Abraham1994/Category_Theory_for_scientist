@@ -1,5 +1,6 @@
 # Teoría de Categorías
-hola 
+
+\\[ \frac{1}{n^{2}} \\]
 
 ## ¿Para qué?
 **La teoría de categorías** ha servido mucho a la Matemática "Pura", ya que es una manera de encontrar conexiones entre diversos contextos matemáticos. Nos permite dar cuenta que hay estructuras que se repiten, lo cual es sospechoso (y provechoso)... y hermoso.
