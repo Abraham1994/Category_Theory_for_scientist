@@ -2,27 +2,7 @@
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
-\(
-  \newcommand{\noin}{\in \!\!\!\!\! / }
-  \newcommand{\ds}{\displaystyle}
-  \newcommand{\R}{\mathbb{R}}
-  \newcommand{\Rd}{\R^{d}}
-  \newcommand{\Sr}{\mathcal{S}(\mathbb{R}^{d})}
-  \newcommand{\Rt}{\R^{3}}
-  \newcommand{\vp}{\varphi}
-  \newcommand{\F}{\mathcal{F}}
-  \newcommand{\Q}{\mathbb{Q}}
-  \newcommand{\C}{\mathscr{C}}
-  \newcommand{\D}{\mathscr{D}}
-  \newcommand{\E}{\mathbf{E}}
-  \newcommand{\V}{\mathbf{V}}
-  \newcommand{\pro}{\mathbf{P}}
-  \newcommand{\A}{\mathscr{A}}
-  \newcommand{\B}{\mathscr{B}}
-  \newcommand{\Po}{\mathcal{P}(\Omega)}
-  \newcommand{\N}{\mathbb{N}}
-  \newcommand{\Rn}{\mathbb{\R}^{n}}
-\)
+
 
 ## ¿Para qué?
 **La teoría de categorías** ha servido mucho a la Matemática "Pura", ya que es una manera de encontrar conexiones entre diversos contextos matemáticos. Nos permite dar cuenta que hay estructuras que se repiten, lo cual es sospechoso (y provechoso)... y hermoso.
