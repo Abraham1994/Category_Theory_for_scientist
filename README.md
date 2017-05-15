@@ -4,6 +4,8 @@
 </script>
 
 \\(
+  \usepackage{graphics,amsmath}
+  \usepackage[all]{xy}
   \newcommand{\noin}{\in \!\!\!\!\! / }
   \newcommand{\ds}{\displaystyle}
   \newcommand{\R}{\mathbb{R}}
@@ -74,9 +76,18 @@ Los siguientes son hechos triviales acerca de los isomorfismos:
 Se dice que dos conjuntos tienen el mismo **cardinal** si existe una función biyectiva entre ellos (es decir, si son isomorfos).
 
 Para todo \\(  n\in \N_{0}\\) vamos a considerar \\( \underline{n} = \{ 0, 1, \ldots , n \} \\).
-Sea \\(A \\) un conjunto. Decimos que \\( A \\) tiene **cardinalidad** \\(n\\) si tiene el mismo cardinal que \\( \underline{n} \\), lo cual se denota por \\( # A \\). En este caso, decimos que \\( A\\) es finito. Un conjunto es **infinito** cuando no es finito.
+Sea \\(A \\) un conjunto. Decimos que \\( A \\) tiene **cardinalidad** \\(n\\) si tiene el mismo cardinal que \\( \underline{n} \\), lo cual se denota por \\( \# A =n \\). En este caso, decimos que \\( A\\) es finito. Un conjunto es **infinito** cuando no es finito.
 
 Dos conjuntos finitos tienen la misma cardinalidad si y solo si existe un isomorfismo entre ellos.
+
+### "Diagramas" conmutativos
+Consideremos el siguiente diagrama
+\\[ \xymatrix { a \ar [r] & b \ar [d] \\
+                 c \ar [u] & d \ar [l]
+} \\]
+
+
+
 
 
 ## La Categoría de Conjuntos
