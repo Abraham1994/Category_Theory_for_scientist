@@ -4,7 +4,9 @@
 </script>
 
 \\(
-  \usepackage{graphics,amsmath}
+  \usepackage{graphics}
+  \usepackage{color}
+  \usepackage{amsmath}
   \usepackage[all]{xy}
   \newcommand{\noin}{\in \!\!\!\!\! / }
   \newcommand{\ds}{\displaystyle}
@@ -63,7 +65,7 @@ En la práctica estas paradojas no son un obstáculo, por lo menos al principio.
 En esta sección se presentarán algunos conceptos que se usarán en las definiciones y proposiciones. También se introducen los ***OLOGS***.
 
 ### Isomorfismos
-Sean los conjuntos \\( X \\) y \\(Y \\). Una función \\(f :X \rightarrow Y\\) es un **isomorfismo** si existe una función \\( g : \rightarrow X \\) tal que \\( g \circ f = id_{X} \\) y \\( f \circ g = id_{Y}\\). En tal caso, \\(g \\) es llamada la **inversa** de \\(f\\9) y se denota por \\(f^{-1} \\).
+Sean los conjuntos \\( X \\) y \\(Y \\). Una función \\(f :X \rightarrow Y\\) es un **isomorfismo** si existe una función \\( g : \rightarrow X \\) tal que \\( g \circ f = id_{X} \\) y \\( f \circ g = id_{Y}\\). En tal caso, \\(g \\) es llamada la **inversa** de \\( f\\) y se denota por \\(f^{-1} \\).
  Si existe un isomorfismo entre dos conjuntos, estos son llamados **isomorfos**; se usa el símbolo \\( \simeq \\) .
 
 Los siguientes son hechos triviales acerca de los isomorfismos:
@@ -75,7 +77,7 @@ Los siguientes son hechos triviales acerca de los isomorfismos:
 ### Cardinalidad
 Se dice que dos conjuntos tienen el mismo **cardinal** si existe una función biyectiva entre ellos (es decir, si son isomorfos).
 
-Para todo \\(  n\in \N_{0}\\) vamos a considerar \\( \underline{n} = \{ 0, 1, \ldots , n \} \\).
+Para todo \\(  n\in \N_{0}\\) vamos a considerar \\( \underline{n} = \lbrace 0, 1, \ldots , n \rbrace \\).
 Sea \\(A \\) un conjunto. Decimos que \\( A \\) tiene **cardinalidad** \\(n\\) si tiene el mismo cardinal que \\( \underline{n} \\), lo cual se denota por \\(  |A| =n \\). En este caso, decimos que \\( A\\) es finito. Un conjunto es **infinito** cuando no es finito.
 
 Dos conjuntos finitos tienen la misma cardinalidad si y solo si existe un isomorfismo entre ellos.
