@@ -3,6 +3,7 @@
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
 
+When $a \ne 0$, there are two solutions to \(ax^2 + bx + c = 0\) and they are
 
 ## ¿Para qué?
 **La teoría de categorías** ha servido mucho a la Matemática "Pura", ya que es una manera de encontrar conexiones entre diversos contextos matemáticos. Nos permite dar cuenta que hay estructuras que se repiten, lo cual es sospechoso (y provechoso)... y hermoso.
@@ -16,7 +17,7 @@ En este pequeño trabajo vamos a estudiar los conceptos y teorema básicos sobre
 Un **categoría** es una clase \( \C \) de objetos junto con
 
 
-1. una clase de conjuntos disjuntos, $hom(A,B)$, por cada par de objetos \( (A,B \in \C) \); (los elementos de $hom (A,B)$  son llamados **morfismos** de \( A \) en  \(B \) y se denotan escribiendo \( f:A \rightarrow B$ \) ) ;
+1. una clase de conjuntos disjuntos, $hom(A,B)$, por cada par de objetos \( (A,B \in \C) \); (los elementos de $hom (A,B)$  son llamados **morfismos** de \( A \) en  \(B \) y se denotan escribiendo \( f:A \rightarrow B \) ) ;
 
 2. por cada terna \( (A,B, C) \) de objetos de $\C$, una función \[ hom(B,C) \times hom (A,B) \rightarrow hom (A,C) ; \] (para morfismos \(f: A \rightarrow B, \; g:B \rightarrow C \), esta función se escribe $(g,f) \mapsto g \circ f$ y $g \circ f : A \rightarrow C$ es llamada la \textbf{compuesta} de $f$ y $g$); todo sujeto a los axiomas:
 
