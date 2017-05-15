@@ -39,9 +39,8 @@ Un **categoría** es una clase \\( \C \\) de objetos junto con
 
 2. por cada terna \\( (A,B, C) \\) de objetos de \\(\C\\), una función \\[ hom(B,C) \times hom (A,B) \rightarrow hom (A,C) ; \\] (para morfismos \\(f: A \rightarrow B, \; g:B \rightarrow C \\), esta función se escribe \\( (g,f) \mapsto g \circ f \\) y \\( g \circ f : A \rightarrow C\\) es llamada la **composición** de \\(f\\) y \\(g\\)); todo sujeto a los axiomas:
 
-   - **Asociatividad**. Si \\(f: A \rightarrow B\\), \\(g: B \rightarrow C\\), \\(h: C \rightarrow D\\) son morfismos de \\(\C \\), entonces \\( h \circ (g \circ f) = (h \circ g) \circ f\\).
-
-	 - **Identidad**. Para cada objeto \\(B \in C\\) existe un morfismo \\( id_{B}: B \rightarrow B \\) tal que para  todo \\(f: A \rightarrow B\\), \\(g: B \rightarrow C\\): \\[ id _{B} \circ f = f \mbox{  y  } g\circ id_{B} = g \\]
+   + **Asociatividad**. Si \\(f: A \rightarrow B\\), \\(g: B \rightarrow C\\), \\(h: C \rightarrow D\\) son morfismos de \\(\C \\), entonces \\( h \circ (g \circ f) = (h \circ g) \circ f\\).
+   + **Identidad**. Para cada objeto \\(B \in C\\) existe un morfismo \\( id_{B}: B \rightarrow B \\) tal que para  todo \\(f: A \rightarrow B\\), \\(g: B \rightarrow C\\): \\[ id _{B} \circ f = f \mbox{  y  } g\circ id_{B} = g \\]
 
 ### Una advertencia acerca del *Lenguaje*
 Muchos piensan que la Matemática es perfecta...
@@ -54,12 +53,30 @@ En la definición más amplia de categoría se usa el concepto de clase. Sin ent
 #### [Paradoja de Russel](https://es.wikipedia.org/wiki/Paradoja_de_Russell)
 Supongamos que conjunto se define como colección de elementos. Sea *M* el conjunto de todos los conjuntos que no son elementos de sí mismos. Luego, ¿M es elemento de sí mismo?
 
-Para evitar esto, se introduce el concepto de **clase**, la cual es un generelización de conjunto. Para no entrar en detalles, solo diremos que una clase es  una colección en la cual se puede determinar si un objeto pertenece o no a ella. Es como un "conjunto muy grande". En este caso, un conjunto se define como una clase tal que existe otra clase de la que es un elemento.\\ 
+Para evitar esto, se introduce el concepto de **clase**, la cual es un generelización de conjunto. Para no entrar en detalles, solo diremos que una clase es  una colección en la cual se puede determinar si un objeto pertenece o no a ella. Es como un "conjunto muy grande". En este caso, un conjunto se define como una clase tal que existe otra clase de la que es un elemento.   
 En la práctica estas paradojas no son un obstáculo, por lo menos al principio.
 
 
 ## Conceptos preliminares
 En esta sección se presentarán algunos conceptos que se usarán en las definiciones y proposiciones. También se introducen los ***OLOGS***.
+
+### Isomorfismos
+Sean los conjuntos \\( X \\) y \\(Y \\). Una función \\(f :X \rightarrow Y\\) es un **isomorfismo** si existe una función \\( g : \rightarrow X \\) tal que \\( g \circ f = id_{X} \\) y \\( f \circ g = id_{Y}\\). En tal caso, \\(g \\) es llamada la **inversa** de \\(f\\9) y se denota por \\(f^{-1} \\).
+ Si existe un isomorfismo entre dos conjuntos, estos son llamados **isomorfos**; se usa el símbolo \\( \simeq \\) .
+
+Los siguientes son hechos triviales acerca de los isomorfismos:
+1. Todo conjunto es isomorfo a sí mismo.
+2. Si \\( A \simeq B \\) entonces \\(B \simeq A\\).
+3. Si \\( A \simeq B \\) y \\( B \simeq C \\) entonces \\( A \simeq C \\)
+4. Una función es un isomorfismo si y solo si es biyectiva.
+
+### Cardinalidad
+Se dice que dos conjuntos tienen el mismo **cardinal** si existe una función biyectiva entre ellos (es decir, si son isomorfos).
+
+Para todo \\(  n\in \N_{0}\\) vamos a considerar \\( \underline{n} = \{ 0, 1, \ldots , n \} \\).
+Sea \\(A \\) un conjunto. Decimos que \\( A \\) tiene **cardinalidad** \\(n\\) si tiene el mismo cardinal que \\( \underline{n} \\), lo cual se denota por \\( # A \\). En este caso, decimos que \\( A\\) es finito. Un conjunto es **infinito** cuando no es finito.
+
+Dos conjuntos finitos tienen la misma cardinalidad si y solo si existe un isomorfismo entre ellos.
 
 
 ## La Categoría de Conjuntos
