@@ -3,7 +3,7 @@
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
 
-When $a \ne 0$, there are two solutions to \(ax^2 + bx + c = 0\) and they are
+When \\(a \ne 0\\), there are two solutions to \\(ax^2 + bx + c = 0\\) and they are
 
 ## ¿Para qué?
 **La teoría de categorías** ha servido mucho a la Matemática "Pura", ya que es una manera de encontrar conexiones entre diversos contextos matemáticos. Nos permite dar cuenta que hay estructuras que se repiten, lo cual es sospechoso (y provechoso)... y hermoso.
