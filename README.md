@@ -44,7 +44,9 @@ Un **categoría** es una clase \\( \C \\) de objetos junto con
 2. por cada terna \\( (A,B, C) \\) de objetos de \\(\C\\), una función \\[ hom(B,C) \times hom (A,B) \rightarrow hom (A,C) ; \\] (para morfismos \\(f: A \rightarrow B, \; g:B \rightarrow C \\), esta función se escribe \\( (g,f) \mapsto g \circ f \\) y \\( g \circ f : A \rightarrow C\\) es llamada la **composición** de \\(f\\) y \\(g\\)); todo sujeto a los axiomas:
 
    + **Asociatividad**. Si \\(f: A \rightarrow B\\), \\(g: B \rightarrow C\\), \\(h: C \rightarrow D\\) son morfismos de \\(\C \\), entonces \\( h \circ (g \circ f) = (h \circ g) \circ f\\).
-   + **Identidad**. Para cada objeto \\(B \in C\\) existe un morfismo \\( id_{B}: B \rightarrow B \\) tal que para  todo \\(f: A \rightarrow B\\), \\(g: B \rightarrow C\\): \\[ id _{B} \circ f = f \mbox{  y  } g\circ id_{B} = g \\]
+   
+   + **Identidad**. Para cada objeto \\(B \in C\\) existe un morfismo \\( id_{B}: B \rightarrow B \\) tal que para  todo \\(f: A \rightarrow B\\), \\(g: B \rightarrow C\\): $$ id _{B} \circ f = f \mbox{  y  } g\circ id_{B} = g $$
+
 
 ### Una advertencia acerca del *Lenguaje*
 Muchos piensan que la Matemática es perfecta...
@@ -83,12 +85,41 @@ Sea \\(A \\) un conjunto. Decimos que \\( A \\) tiene **cardinalidad** \\(n\\) s
 Dos conjuntos finitos tienen la misma cardinalidad si y solo si existe un isomorfismo entre ellos.
 
 ### "Diagramas" conmutativos
-Consideremos el siguiente diagrama
+Consideremos la siguiente figura
 $$ \xymatrix { a \ar [r] & b \ar [d] \\
-                 c \ar [u] & d \ar [l]
+               c \ar [u] & d \ar [l]
 } $$
 
+Se dice que este es un **diagrama de conjuntos** si \\( A,B, C \\) son conjuntos y \\( f,g,h \\) son funciones. Decimos que es un **triángulo conmutativo de conjuntos** si \\( g \circ f = h\\).
 
+Ahora consideremos la siguiente figura
+$$ \xymatrix { a \ar [r] & b \ar [d] \\
+               c \ar [u] & d \ar [l]
+} $$
+
+Se dice que este es un *diagrama de conjuntos* si \\( A,B, C,D \\) son conjuntos y \\( f,g,h \\) son funciones. Decimos que es un **cuadrado conmutativo de conjuntos** si \\( g \circ f = i \circ h\\).
+
+.... Más dibujos....
+
+### Ologs
+Los científicos tienen una constante necesidad de organizar sus experimentos, datos, resultados y conclusiones en algún *esquema* de tal forma que su trabajo sea reutilizable, transferible y comparable con el trabajo de otros científicos. Puede que los **ologs** sean la solución a esta necesidad :)
+
+Olog es la abreviatura de "ontological log"(apunte ontológico). Fueron introducidos en 2010 por David Spivak , profesor investigador del MIT. En mi opinión, los ologs tienen un futuro prometedor. Algunas ventajas de usar ologs son:
+
+- permiten una formulación precisa de un punto de vista.
+- pueden convertirse a esquemas de datos
+- pueden expandirse a medida que aumenta la información
+- pueden ser referenciados fácil y precisamente
+- los ologs pueden compararse usando funtores, lo cual genera una "traducción" automática de las distintas terminologías.
+
+En este trabajo veremos muchos teoremas e ideas aplicándose a ologs; sin embargo, estos no serán estudiados profundamente. En vez de eso, vamos a dar las definiciones y conceptos más necesarios para las aplicaciones. Hay mucho que decir acerca de los ologs, puede encontrarse más información en las referencias. Procedamos a definir algunps térmnos importantes:
+
+#### Tipos 
+Un **tipo** es un concepto abstracto, es decir, una distinción hecha por el autor. Se representan como cajas que contienen una *frase nominal singular indefinida*. Por ejemplo, las siguientes cajas son tipos: ........................
+
+
+
+.....¿Diagramas?
 
 
 
