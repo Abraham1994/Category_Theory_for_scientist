@@ -3,6 +3,8 @@
 <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"> </script>
 
 \\(
+  \usepackage{amsmath,amssymb}
+  \usepackage{graphics}
   \usepackage[all]{xy}
   \newcommand{\noin}{\in \!\!\!\!\! / }
   \newcommand{\ds}{\displaystyle}
