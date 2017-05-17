@@ -52,3 +52,20 @@ Las tres primeras reglas aseguran la buena definición del tipo (para el autor d
 ## Aspectos
 
 .......................
+
+
+### Aspectos inválidos
+
+
+### Leyendo aspectos y caminos 
+
+
+### Convertir relaciones no funcionales en aspectos
+
+### Más reglas de buena práctica
+
+
+## Hechos
+La equivalencia de caminos es la causa del gran poder de la Teoría de Categorías. Los **hechos** son simplemente "equivalencias de caminos" en un olog. 
+
+...............
