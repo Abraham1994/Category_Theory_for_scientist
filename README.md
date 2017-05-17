@@ -44,18 +44,23 @@ Un **categoría** es una clase \\( \C \\) de objetos junto con
    + **Identidad**. Para cada objeto \\(B \in C\\) existe un morfismo \\( id_{B}: B \rightarrow B \\) tal que para  todo \\(f: A \rightarrow B\\), \\(g: B \rightarrow C\\): $$ id _{B} \circ f = f \mbox{  y  } g\circ id_{B} = g $$
 
 
+### Ejemplos
+
+.........................
+
+
 ### Una advertencia acerca del *Lenguaje*
 Muchos piensan que la Matemática es perfecta...
 
 Entre los cimientos de la Matemática están la Teoría de Conjuntos y la Lógica. Es increíble e inquitante saber que estos cimientos, en lugar de fortalecer, pueden hacer tambalear la Matemática conocida.
 Al respecto, podemos citar los famosos [teoremas de incompletitud de Gödel](https://es.wikipedia.org/wiki/Teoremas_de_incompletitud_de_G%C3%B6del) y el debate sobre el [axioma de elección](https://es.wikipedia.org/wiki/Axioma_de_elecci%C3%B3n).
 
-En la definición más amplia de categoría se usa el concepto de clase. Sin entrar en detalles, este concepto se desarrolló debido a la aparición de paradojas, como la de Russel:
+En la definición más amplia de categoría se usa el concepto de clase. Este concepto se desarrolló debido a la aparición de paradojas, como la de Russel:
 
 #### [Paradoja de Russel](https://es.wikipedia.org/wiki/Paradoja_de_Russell)
 Supongamos que conjunto se define como colección de elementos. Sea *M* el conjunto de todos los conjuntos que no son elementos de sí mismos. Luego, ¿M es elemento de sí mismo?
 
-Para evitar esto, se introduce el concepto de **clase**, la cual es un generelización de conjunto. Para no entrar en detalles, solo diremos que una clase es  una colección en la cual se puede determinar si un objeto pertenece o no a ella. Es como un "conjunto muy grande". En este caso, un conjunto se define como una clase tal que existe otra clase de la que es un elemento.   
+Para evitar esto, se introduce el concepto de **clase**, el cual es un generelización de conjunto. Digamos que una clase es una colección tal que se puede determinar si un objeto pertenece o no a ella. Es como un "conjunto muy grande". En este caso, un conjunto se define como una clase tal que existe otra clase de la que es un elemento.   
 En la práctica estas paradojas no son un obstáculo, por lo menos al principio.
 
 
@@ -63,19 +68,19 @@ En la práctica estas paradojas no son un obstáculo, por lo menos al principio.
 En esta sección se presentarán algunos conceptos que se usarán en las definiciones y proposiciones. También se introducen los ***OLOGS***.
 
 
-## La Categoría de Conjuntos
+## [La Categoría de Conjuntos](La_categoria_de_conjuntos.md)
 En esta sección vamos a ver como los conceptos categóricos se aplican a los conjuntos. Las definiciones y resultados serán casos particulares de cosas más profundas. No seremos taaan formales, porque la intención aquí es sentar ideas y comenzar con las aplicaciones.
 
 
-## Más aplicaciones
-Se definirán varias estructuras algebraicas muy utlizadas en la Ciencia: Monoides, grupos, grados, órdenes y bases de datos. En en el fondo, cada una de ellas es una categoría, vista por dentro y por fuera; aunque no hablaremos mucho de categorías en esta sección.
+## [Más aplicaciones](Mas_aplicaciones.md)
+Se definirán varias estructuras algebraicas muy utlizadas en la Ciencia: Monoides, grupos, grados, órdenes y bases de datos. En en el fondo, cada una de ellas es una categoría, vista por dentro y por fuera; aunque no hablaremos mucho de categorías en esta sección...
 
 
-## Formalizando
+## [Formalizando](Formalizando.md)
 Como la rigurosa y bella estructura logra englobarlo todo. Algunas consecuencias de este hecho. Muchos resultados parecerían poco prácticos si no se tiene en cuenta las secciones anteriores.
 
 
-## Más teoría y resultados
+## [Más teoría y resultados](Mas_teoria_y_resultados)
 Funtores adjuntos. Categoría de funtores. Mónadas. Operadas. Estas últimas son una generalización de categorías.
 
 
