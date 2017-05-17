@@ -59,6 +59,9 @@ Se dice que este es un *diagrama de conjuntos* si \\( A,B, C,D \\) son conjuntos
 
 .... Más dibujos....
 
+
+
+
 ## [Ologs](olog.md)
 Los científicos tienen una constante necesidad de organizar sus experimentos, datos, resultados y conclusiones en algún *esquema* de tal forma que su trabajo sea reutilizable, transferible y comparable con el trabajo de otros científicos. Puede que los **ologs** sean la solución a esta necesidad :)
 
