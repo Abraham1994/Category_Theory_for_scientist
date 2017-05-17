@@ -4,10 +4,6 @@
 </script>
 
 \\(
-  \usepackage{graphics}
-  \usepackage{color}
-  \usepackage{amsmath}
-  \usepackage[all]{xy}
   \newcommand{\noin}{\in \!\!\!\!\! / }
   \newcommand{\ds}{\displaystyle}
   \newcommand{\R}{\mathbb{R}}
@@ -39,7 +35,7 @@ En este pequeño trabajo vamos a estudiar los conceptos y teorema básicos sobre
 ## Definición de categoría
 Un **categoría** es una clase \\( \C \\) de objetos junto con  
 
-1. una clase de conjuntos disjuntos, \\( hom(A,B)\\), por cada par de objetos \\( (A,B \in \C) \\); (los elementos de \\(hom (A,B)\\)$  son llamados **morfismos** de \\( A \\) en  \\(B \\) y se denotan escribiendo \\( f:A \rightarrow B \\)) ;
+1. una clase de conjuntos disjuntos, \\( hom(A,B)\\), por cada par de objetos \\( (A,B \in \C) \\); (los elementos de \\(hom (A,B)\\)  son llamados **morfismos** de \\( A \\) en  \\(B \\) y se denotan escribiendo \\( f:A \rightarrow B \\)) ;
 
 2. por cada terna \\( (A,B, C) \\) de objetos de \\(\C\\), una función \\[ hom(B,C) \times hom (A,B) \rightarrow hom (A,C) ; \\] (para morfismos \\(f: A \rightarrow B, \; g:B \rightarrow C \\), esta función se escribe \\( (g,f) \mapsto g \circ f \\) y \\( g \circ f : A \rightarrow C\\) es llamada la **composición** de \\(f\\) y \\(g\\)); todo sujeto a los axiomas:
 
