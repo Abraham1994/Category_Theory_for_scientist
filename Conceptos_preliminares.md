@@ -2,6 +2,28 @@
 
 <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"> </script>
 
+\\(
+  \newcommand{\noin}{\in \!\!\!\!\! / }
+  \newcommand{\ds}{\displaystyle}
+  \newcommand{\R}{\mathbb{R}}
+  \newcommand{\Rd}{\R^{d}}
+  \newcommand{\Sr}{\mathcal{S}(\mathbb{R}^{d})}
+  \newcommand{\Rt}{\R^{3}}
+  \newcommand{\vp}{\varphi}
+  \newcommand{\F}{\mathcal{F}}
+  \newcommand{\Q}{\mathbb{Q}}
+  \newcommand{\C}{\mathscr{C}}
+  \newcommand{\D}{\mathscr{D}}
+  \newcommand{\V}{\mathbf{V}}
+  \newcommand{\pro}{\mathbf{P}}
+  \newcommand{\A}{\mathscr{A}}
+  \newcommand{\B}{\mathscr{B}}
+  \newcommand{\Po}{\mathcal{P}(\Omega)}
+  \newcommand{\N}{\mathbb{N}}
+  \newcommand{\Rn}{\mathbb{\R}^{n}}
+  \newcommand{\Rna}{(\R^{n})^{*}}
+\\)
+
 ## Isomorfismos
 Sean los conjuntos \\( X \\) y \\(Y \\). Una función \\(f :X \rightarrow Y\\) es un **isomorfismo** si existe una función \\( g : \rightarrow X \\) tal que \\( g \circ f = id_{X} \\) y \\( f \circ g = id_{Y}\\). En tal caso, \\(g \\) es llamada la **inversa** de \\( f\\) y se denota por \\(f^{-1} \\).
  Si existe un isomorfismo entre dos conjuntos, estos son llamados **isomorfos**; se usa el símbolo \\( \simeq \\) .
@@ -37,7 +59,7 @@ Se dice que este es un *diagrama de conjuntos* si \\( A,B, C,D \\) son conjuntos
 
 .... Más dibujos....
 
-## Ologs
+## [Ologs](olog.md)
 Los científicos tienen una constante necesidad de organizar sus experimentos, datos, resultados y conclusiones en algún *esquema* de tal forma que su trabajo sea reutilizable, transferible y comparable con el trabajo de otros científicos. Puede que los **ologs** sean la solución a esta necesidad :)
 
 Olog es la abreviatura de "ontological log"(apunte ontológico). Fueron introducidos en 2010 por David Spivak , profesor investigador del MIT. En mi opinión, los ologs tienen un futuro prometedor. Algunas ventajas de usar ologs son:
@@ -48,11 +70,4 @@ Olog es la abreviatura de "ontological log"(apunte ontológico). Fueron introduc
 - pueden ser referenciados fácil y precisamente
 - los ologs pueden compararse usando funtores, lo cual genera una "traducción" automática de las distintas terminologías.
 
-En este trabajo veremos muchos teoremas e ideas aplicándose a ologs; sin embargo, estos no serán estudiados profundamente. En vez de eso, vamos a dar las definiciones y conceptos más necesarios para las aplicaciones. Hay mucho que decir acerca de los ologs, puede encontrarse más información en las referencias. Procedamos a definir algunps térmnos importantes:
 
-### Tipos 
-Un **tipo** es un concepto abstracto, es decir, una distinción hecha por el autor. Se representan como cajas que contienen una *frase nominal singular indefinida*. Por ejemplo, las siguientes cajas son tipos: ........................
-
-
-
-.....¿Diagramas?
