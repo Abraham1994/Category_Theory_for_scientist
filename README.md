@@ -40,13 +40,9 @@ Un **categoría** es una clase \\( \C \\) de objetos junto con
 2. por cada terna \\( (A,B, C) \\) de objetos de \\(\C\\), una función \\[ hom(B,C) \times hom (A,B) \rightarrow hom (A,C) ; \\] (para morfismos \\(f: A \rightarrow B, \; g:B \rightarrow C \\), esta función se escribe \\( (g,f) \mapsto g \circ f \\) y \\( g \circ f : A \rightarrow C\\) es llamada la **composición** de \\(f\\) y \\(g\\)); todo sujeto a los axiomas:
 
    + **Asociatividad**. Si \\(f: A \rightarrow B\\), \\(g: B \rightarrow C\\), \\(h: C \rightarrow D\\) son morfismos de \\(\C \\), entonces \\( h \circ (g \circ f) = (h \circ g) \circ f\\).
-   
+
    + **Identidad**. Para cada objeto \\(B \in C\\) existe un morfismo \\( id_{B}: B \rightarrow B \\) tal que para  todo \\(f: A \rightarrow B\\), \\(g: B \rightarrow C\\): $$ id _{B} \circ f = f \mbox{  y  } g\circ id_{B} = g $$
 
-
-### Ejemplos
-
-.........................
 
 
 ### Una advertencia acerca del *Lenguaje*
@@ -58,7 +54,7 @@ Al respecto, podemos citar los famosos [teoremas de incompletitud de Gödel](htt
 En la definición más amplia de categoría se usa el concepto de clase. Este concepto se desarrolló debido a la aparición de paradojas, como la de Russel:
 
 #### [Paradoja de Russel](https://es.wikipedia.org/wiki/Paradoja_de_Russell)
-Supongamos que conjunto se define como colección de elementos. Sea *M* el conjunto de todos los conjuntos que no son elementos de sí mismos. Luego, ¿M es elemento de sí mismo?
+>Supongamos que conjunto se define como colección de elementos. Sea *M* el conjunto de todos los conjuntos que no son elementos de sí mismos. Luego, ¿M es elemento de sí mismo?
 
 Para evitar esto, se introduce el concepto de **clase**, el cual es un generelización de conjunto. Digamos que una clase es una colección tal que se puede determinar si un objeto pertenece o no a ella. Es como un "conjunto muy grande". En este caso, un conjunto se define como una clase tal que existe otra clase de la que es un elemento.   
 En la práctica estas paradojas no son un obstáculo, por lo menos al principio.
