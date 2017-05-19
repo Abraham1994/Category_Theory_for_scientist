@@ -34,13 +34,17 @@ Existen dos **proyecciones canónicas**, \\( \pi_{1}: X \times Y \rightarrow X \
 
 ..... imagen
 
-También sabemos cuál es el producto de tres o más conjuntos, por ejemplos $$ X \times Y \times Z = \lbrace (x,y,z) \; | \; X \in X , \, y \in Y,  \, z \in Z \rbrace $$
+También sabemos cuál es el producto de tres o más conjuntos, por ejemplos $$ X \times Y \times Z = \lbrace (x,y,z) \; / \; X \in X , \, y \in Y,  \, z \in Z \rbrace $$
 
 Ahora viene...
 
 ### LA PROPIEDAD UNIVERSAL del producto
-> Sean \\( X, Y \\) conjuntos. Para todo conjunto \\( A \\) y funciones \\( f: A \rightarrow X \\) y  \\( g : A \rightarrow Y\\) entonces *existe un única función* \\(A \rightarrow X \times Y \\) tal que el siguiente diagrama conmmuta.....
+> Sean \\( X, Y \\) conjuntos. Para todo conjunto \\( A \\) y funciones \\( f: A \rightarrow X \\) y  \\( g : A \rightarrow Y\\) entonces *existe un única función* \\( \langle f,g \rangle: A \rightarrow X \times Y \\), llamada **función inducida** por \\(f \\) y \\(g\\), tal que el siguiente diagrama conmmuta.....  
 
 
-### Un ejemplo:
-Supongamos que \\( |X| = m \\) y \\( |Y| = n  \\). Sabemos que puede representarse como una matriz de dimensiones \\( m \times n \\); además las proyecciones canónicas son \\( \ds X \stackrel{\pi_{1}}{\leftarrow} X \times Y \stackrel{\pi_{2}}{\rightarrow} Y \\)  
+### Un ejemplo (usando la notación del lema):
+Supongamos que \\( |X| = m \\) y \\( |Y| = n  \\). Sabemos que puede representarse como una matriz de dimensiones \\( m \times n \\); además \\( \ds X \stackrel{\pi_{1}}{\leftarrow} X \times Y \stackrel{\pi_{2}}{\rightarrow} Y \\). Gráficamente: 
+
+....
+
+Supongamos que \\( A \\) representa a un grupo de personas. Digamos que una persona \\(a \in A \\) escoge un elemento \\( f(a) \in X\\) y otro elemento \\( g(a) \in Y\\); ¡pero al hacerlo está "escogiendo" el elemento \\( (f(a), g(a)) \\)!, lo cual justamente define a la función \\( \langle f,g \\).
