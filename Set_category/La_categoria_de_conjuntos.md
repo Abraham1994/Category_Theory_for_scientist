@@ -1,4 +1,7 @@
 # La Categoría de Conjuntos
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
 
 \\(
   \newcommand{\noin}{\in \!\!\!\!\! / }
@@ -25,3 +28,14 @@
 ## Productos
 
 Sean \\( X, Y \\) conjuntos. Sabemos que \\[ X \times Y = \lbrace (x,y) \: | \: X \in X , \, y \in Y \rbrace \\]
+
+Existen dos **proyecciones naturales**, \\( \pi_{1}: X \times Y \rightarrow X \\) y \( \pi_{2}: X \times Y \rightarrow Y \\). Gráficamente:
+
+..... imagen
+
+También sabemos cuál es el producto de tres o más conjuntos, por ejemplos \\[ X \times Y \times Z = \lbrace (x,y,z) \: | \: X \in X , \, y \in Y,  \, z \in Z \rbrace \\]
+
+Ahora viene...
+
+### LA PROPIEDAD UNIVERSAL del producto
+> Sean \\( X, Y \\) conjuntos. Para todo conjunto \\( A \\) y funciones \\( f: A \rightarrow X \\) y  \\( g : A \rightarrow Y\\) entonces *existe un única función* \\(A \rightarrow X \times Y \\) tal que el siguiente diagrama conmmuta.....
