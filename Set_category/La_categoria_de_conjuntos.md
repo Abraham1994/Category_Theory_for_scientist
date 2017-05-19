@@ -43,8 +43,13 @@ Ahora viene...
 
 
 ### Un ejemplo (usando la notación del lema):
-Supongamos que \\( |X| = m \\) y \\( |Y| = n  \\). Sabemos que puede representarse como una matriz de dimensiones \\( m \times n \\); además \\( \ds X \stackrel{\pi_{1}}{\leftarrow} X \times Y \stackrel{\pi_{2}}{\rightarrow} Y \\). Gráficamente: 
+Supongamos que \\( |X| = m \\) y \\( |Y| = n  \\). Sabemos que puede representarse como una matriz de dimensiones \\( m \times n \\); además \\( \ds X \stackrel{\pi_{1}}{\leftarrow} X \times Y \stackrel{\pi_{2}}{\rightarrow} Y \\). Gráficamente:
 
 ....
 
-Supongamos que \\( A \\) representa a un grupo de personas. Digamos que una persona \\(a \in A \\) escoge un elemento \\( f(a) \in X\\) y otro elemento \\( g(a) \in Y\\); ¡pero al hacerlo está "escogiendo" el elemento \\( (f(a), g(a)) \\)!, lo cual justamente define a la función \\( \langle f,g \\).
+Supongamos que \\( A \\) representa a un grupo de personas. Digamos que una persona \\(a \in A \\) escoge un elemento \\( f(a) \in X\\) y otro elemento \\( g(a) \in Y\\); pero al hacerlo está "escogiendo" el elemento \\( (f(a), g(a)) \\), ¡lo cual justamente define a la función \\( \langle f,g \\)!
+
+#### Productos en ologs con tipos compuestos
+Sean \\(c \\) y \\(d \\) dos tipos, podemos etiquetar el producto \\( c \times d \\) de esta manera: "\\(c times d\\)" := un par \\( (x,y) \\) donde \\( x \\) es "\\(c \\)" y \\( y \\) es "\\(d \\)".
+
+Veamos un ejemplo. Consideremos los tipos \\( \ulcorner \\)un dueño de carro\\(\urcorner\\) y \\( \ulcorner \\)un carro\\( \urcorner \\); una persona puede tener varios. La relación que asocia a cada dueño el carro que usa más es una función (un aspecto). Además, un economista puede preguntar cuánto ingresa le genera a cierto dueño el uso de cierto carro (es claro que el ingreso es cero si el carro no le pertenece). Usando la propiedad universal, tenemos el siguiente gráfico.
