@@ -64,23 +64,23 @@ Para evitar esto, se introduce el concepto de **clase**, el cual es un genereliz
 En la práctica estas paradojas no son un obstáculo, por lo menos al principio.
 
 
-## [Conceptos preliminares](Conceptos_preliminares.md)
+## [Conceptos preliminares](Preliminares/Conceptos_preliminares.md)
 En esta sección se presentarán algunos conceptos que se usarán en las definiciones y proposiciones. También se introducen los ***OLOGS***.
 
 
-## [La Categoría de Conjuntos](La_categoria_de_conjuntos.md)
+## [La Categoría de Conjuntos](Set_category/La_categoria_de_conjuntos.md)
 En esta sección vamos a ver como los conceptos categóricos se aplican a los conjuntos. Las definiciones y resultados serán casos particulares de cosas más profundas. No seremos taaan formales, porque la intención aquí es sentar ideas y comenzar con las aplicaciones.
 
 
-## [Más aplicaciones](Mas_aplicaciones.md)
+## [Más aplicaciones](More_aplications/Mas_aplicaciones.md)
 Se definirán varias estructuras algebraicas muy utlizadas en la Ciencia: Monoides, grupos, grados, órdenes y bases de datos. En en el fondo, cada una de ellas es una categoría, vista por dentro y por fuera; aunque no hablaremos mucho de categorías en esta sección...
 
 
-## [Formalizando](Formalizando.md)
+## [Formalizando](Formalizing/Formalizando.md)
 Como la rigurosa y bella estructura logra englobarlo todo. Algunas consecuencias de este hecho. Muchos resultados parecerían poco prácticos si no se tiene en cuenta las secciones anteriores.
 
 
-## [Más teoría y resultados](Mas_teoria_y_resultados)
+## [Más teoría y resultados](More_theory_and_results/Mas_teoria_y_resultados)
 Funtores adjuntos. Categoría de funtores. Mónadas. Operadas. Estas últimas son una generalización de categorías.
 
 
