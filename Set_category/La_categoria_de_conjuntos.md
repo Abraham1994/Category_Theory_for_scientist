@@ -30,11 +30,11 @@
 Sean \\( X, Y \\) conjuntos. Sabemos que
 $$ X \times Y = \lbrace (x,y) \: | \: X \in X , \, y \in Y \rbrace $$
 
-Existen dos **proyecciones canónicas**, \\( \pi_{1}: X \times Y \rightarrow X \\) y \( \pi_{2}: X \times Y \rightarrow Y \\). Gráficamente:
+Existen dos **proyecciones canónicas**, \\( \pi_{1}: X \times Y \rightarrow X \\) y \\( \pi_{2}: X \times Y \rightarrow Y \\). Gráficamente:
 
 ..... imagen
 
-También sabemos cuál es el producto de tres o más conjuntos, por ejemplos $$ X \times Y \times Z = \lbrace (x,y,z) \: | \: X \in X , \, y \in Y,  \, z \in Z \rbrace $$
+También sabemos cuál es el producto de tres o más conjuntos, por ejemplos $$ X \times Y \times Z = \lbrace (x,y,z) \; | \; X \in X , \, y \in Y,  \, z \in Z \rbrace $$
 
 Ahora viene...
 
