@@ -27,6 +27,14 @@
   \newcommand{\Rna}{(\R^{n})^{*}}
 \\)
 
+## Relaciones de equivalencia
+
+Sea \\( X \\) un conjunto. Una **relación** en \\( X \\) es un subconjunto \\( R \subset X \times X \\).
+
+
+
+
+
 ## Isomorfismos
 Sean los conjuntos \\( X \\) y \\(Y \\). Una función \\(f :X \rightarrow Y\\) es un **isomorfismo** si existe una función \\( g : \rightarrow X \\) tal que \\( g \circ f = id_{X} \\) y \\( f \circ g = id_{Y}\\). En tal caso, \\(g \\) es llamada la **inversa** de \\( f\\) y se denota por \\(f^{-1} \\).
  Si existe un isomorfismo entre dos conjuntos, estos son llamados **isomorfos**; se usa el símbolo \\( \simeq \\) .
@@ -75,5 +83,3 @@ Olog es la abreviatura de "ontological log"(apunte ontológico). Fueron introduc
 - pueden expandirse a medida que aumenta la información
 - pueden ser referenciados fácil y precisamente
 - los ologs pueden compararse usando funtores, lo cual genera una "traducción" automática de las distintas terminologías.
-
-
