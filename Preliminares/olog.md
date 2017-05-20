@@ -27,7 +27,7 @@
 
 En este trabajo veremos muchos teoremas e ideas aplicándose a ologs; sin embargo, estos no serán estudiados profundamente. En vez de eso, vamos a dar las definiciones y conceptos más necesarios para las aplicaciones. Hay mucho que decir acerca de los ologs, puede encontrarse más información en las referencias. Procedamos a definir algunos términos importantes:
 
-## Tipos 
+## Tipos
 Un **tipo** es un concepto abstracto, es decir, una distinción hecha por el autor. Se representan como cajas que contienen una *frase nominal singular indefinida*. Por ejemplo, las siguientes cajas son tipos: ........................
 ....................
 
@@ -44,9 +44,9 @@ La caja de texto que representa a un tipo debería:,
 2. referir a una distinción que el autor haya creado y que él reconozca;
 3. referir a un concepto con ejemplos documentables;
 4. no terminar en signo de puntuación;
-5. declarar las variables si el tipo es compuesto. 
+5. declarar las variables si el tipo es compuesto.
 
-Las tres primeras reglas aseguran la buena definición del tipo (para el autor del mismo). Las otras aseguran una buena lectura cuando incluyamos aspectos al diagrama. Estas reglas no son rígidas al momento de escribir, pero "en el fondo" deben seguirse. 
+Las tres primeras reglas aseguran la buena definición del tipo (para el autor del mismo). Las otras aseguran una buena lectura cuando incluyamos aspectos al diagrama. Estas reglas no son rígidas al momento de escribir, pero "en el fondo" deben seguirse.
 
 
 
@@ -54,11 +54,12 @@ Las tres primeras reglas aseguran la buena definición del tipo (para el autor d
 
 .......................
 
+inclusiones....
 
 ### Aspectos inválidos
 
 
-### Leyendo aspectos y caminos 
+### Leyendo aspectos y caminos
 
 
 ### Convertir relaciones no funcionales en aspectos
@@ -67,6 +68,6 @@ Las tres primeras reglas aseguran la buena definición del tipo (para el autor d
 
 
 ## Hechos
-La equivalencia de caminos es la causa del gran poder de la Teoría de Categorías. Los **hechos** son simplemente "equivalencias de caminos" en un olog. 
+La equivalencia de caminos es la causa del gran poder de la Teoría de Categorías. Los **hechos** son simplemente "equivalencias de caminos" en un olog.
 
 ...............

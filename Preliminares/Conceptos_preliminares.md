@@ -27,10 +27,11 @@
   \newcommand{\Rna}{(\R^{n})^{*}}
 \\)
 
+## función inyectiva......
+
 ## Relaciones de equivalencia
 
 Sea \\( X \\) un conjunto. Una **relación** en \\( X \\) es un subconjunto \\( R \subset X \times X \\).
-
 
 
 

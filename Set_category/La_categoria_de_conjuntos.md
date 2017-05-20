@@ -33,7 +33,7 @@ Existen dos **proyecciones canónicas**, \\( \pi_{1}: X \times Y \rightarrow X \
 
 ..... imagen
 
-También sabemos cuál es el producto de tres o más conjuntos, por ejemplos $$ X \times Y \times Z = \lbrace (x,y,z) \; / \; X \in X , \, y \in Y,  \, z \in Z \rbrace $$
+También sabemos cuál es el producto de tres o más conjuntos, por ejemplos \\[ X \times Y \times Z = \lbrace (x,y,z) \; / \; X \in X , \, y \in Y,  \, z \in Z \rbrace \\]
 
 Ahora viene...
 
@@ -66,7 +66,7 @@ Existen dos **inclusiones canónicas**, \\( i_{1} : X \rightarrow X \sqcup Y \\)
 ### Un ejemplo
 El coproducto de \\( X = \lbrace a,b,c,d \rbrace \\) y \\( Y = 1,2,3 \\) es \\[ X \sqcup Y \simeq \lbrace a,b,c,d,1,2,3 \rbrace \\]
 
-El coproducto de \\( X \\) consigo mismo es \\[ i_{1} a , i_{1} b, i_{1} c, i_{1} d, i_{2}a , i_{2} b , i_{2} c, i_{2} d \rbrace  \\]
+El coproducto de \\( X \\) consigo mismo es \\[ X \sqcup X = \lbrace i_{1} a , i_{1} b, i_{1} c, i_{1} d, i_{2}a , i_{2} b , i_{2} c, i_{2} d \rbrace  \\]
 
 ### Propiedad universal del coproducto
 > Sean \\(X , Y \\) conjuntos. Para todo conjunto \\( A \\) y funciones \\( f : X \rightarrow A \\) y \\( g: Y \rightarrow A \\), existe una única función \\( \displaystyle \left\lbrace {f \atop g } \right. : X \sqcup Y \rightarrow A \\) tal que el siguiente diagrama conmuta
@@ -81,9 +81,23 @@ Consideremos el siguiente olog, el cual incluye las funciones inducidas.
 
 ..............
 
- \\( "X \sqcup Y" = \\) \\( \ulcorner \\)un asiento en un avión\\( \ urcorner \\) significa que todos los asientos en cualquier avión son ecónomicos o de primera clase.
+ \\( "X \sqcup Y" = \\) \\( \ulcorner \\)un asiento en un avión\\( \urcorner \\) significa que todos los asientos en cualquier avión son ecónomicos o de primera clase.
 
  Gracias a la propiedad universal, llegamos a las siguientes conclusiones *(estamos formalizando nuestra intuición)*:
  1. Si sabemos cuánto cuestan los asientos ecónomicos y cuánto cuestan los de primera clase, y si sabemos que todo asiento (en todo avión) es económico o de primera clase, entonces sabemos cuánto cuesta cualquier asiento (en cualquier avión)
 
  2. Si sabemos en qué avión está cada asiento económico y en qué avión está cada asiento de primera clase, no necesitamos más información para saber en qué avión está un asiento cualquiera.
+
+
+## [Límites finitos en **Set**](limites_finitos_en_set.md)
+Los límites finitos tienen bellas aplicaciones en Topología, Análisis y otras ramas de la Matemática. Aquí veremos su aplición para formalizar ideas usando ologs.
+
+## Ámbitos, experimentos y matrices.
+
+Sean \\( A \\)  y \\(B \\) dos conjuntos, un **ámbito con resultados \\(A\\) y \\(B\\)**  es un conjunto \\( R\\) junto con funciones \\( f: R \rightarrow A\\) y  \\(g: R \rightarrow B\\). Gráficamente,
+
+.............
+
+Podemos pensar en \\(A\\) y \\(B\\) como magnitudes observables y \\(R \\) como un conjunto de experimentos.
+
+Sean \\( \displaystyle A \stackrel{f}{\leftarrow} R \stackrel{g}{\rightarrow} B \\) y \\( \displaystyle B \stackrel{f'}{\leftarrow} R' \stackrel{g'}{\rightarrow} C \\) dos ámbitos. El **ámbito compuesto** es el producto fibra \\( R \times_{B} R' \\). Gráficamente: 
