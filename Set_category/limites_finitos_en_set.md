@@ -42,7 +42,7 @@ conmuta. Cabe resaltar que el producto fibra depende de las funciones \\( f\\) y
 
 En general, suponiendo la configuración del diagrama 1, se define el **pullback de \\(X \\) y \\(Y \\) sobre \\(Z\\)** como cualquier conjunto \\(W \\)  que es isomorfo a \\( \xyz \\). El símbolo \\( \drcorner \\)  en el diagrama (2) indica que \\( W \\) es el pullback.
 
-Observar que, si \\( W \\) es el pullback, entonces para todo \\(w \in W \\), \\( f (\pi_{1}(w)) = g ( \pi_{2}(w))= z \\) para algún \\(z \in Z\\); *podemos que corresponder \\( w \\) con algún \\(z \in Im(f) \cap Im(g) \\)*. Cuando \\(f \\) y \\(g\\) son inclusiones, *podemos decir que \\( W = Im(f) \cap Im (g) \\)*, lo cual se verifica encontrando un isomorfismo con \\(X \times_{Z} Y \\). Esto será usado a continuación.
+Observar que, si \\( W \\) es el pullback, entonces para todo \\(w \in W \\), \\( f (\pi_{1}(w)) = g ( \pi_{2}(w))= z \\) para algún \\(z \in Z\\); *podemos que corresponder \\( w \\) con algún \\(z \in Im(f) \cap Im(g) \\)*. Cuando \\(f \\) y \\(g\\) son inclusiones, *podemos decir que \\( W \simeq Im(f) \cap Im (g) \\)*, lo cual se verifica encontrando un isomorfismo con \\(X \times_{Z} Y \\). Esto será usado a continuación.
 
 
 ## Usando pullbacks para definir nuevas ideas de anteriores  
@@ -73,4 +73,41 @@ Veamo como definir Group actions on algebraic varieties \\( \ulcorner \\)un celu
 
 .............
 
-Por la propiedad fundamental, se concluye que \\( A \simeq B \times_{F}  E \\). Luego, yendo hacia abajo y luego a la derecha, obtenemos: "un celular con mala batería es un celular que tiene una batería que permanece cargada menos de una hora". 
+Por la propiedad fundamental, se concluye que \\( A \simeq B \times_{F}  E \\). Luego, yendo hacia abajo y luego a la derecha, obtenemos: "un celular con mala batería es un celular que tiene una batería que permanece cargada menos de una hora".
+
+
+
+## Ámbitos, experimentos y matrices.
+
+Sean \\( A \\)  y \\(B \\) dos conjuntos, un **ámbito con resultados \\(A\\) y \\(B\\)**  es un conjunto \\( R\\) junto con funciones \\( f: R \rightarrow A\\) y  \\(g: R \rightarrow B\\). Gráficamente,
+
+.............
+
+Podemos pensar en \\(A\\) y \\(B\\) como magnitudes observables y \\(R \\) como un conjunto de experimentos que produce valores para dichas magnitudes.
+
+Sean \\( \displaystyle A \stackrel{f}{\leftarrow} R \stackrel{g}{\rightarrow} B \\) y \\( \displaystyle B \stackrel{f'}{\leftarrow} R' \stackrel{g'}{\rightarrow} C \\) dos ámbitos. El **ámbito compuesto** es el producto fibra \\( R \times_{B} R' \\). Gráficamente:
+
+.........
+
+En este caso, podemos decir que \\( R \times_{B} R' \\) representa un experimento que produce los mismos valores para las magnitudes \\( A\\), \\(B\\) y \\( C\\) que los experimentos \\( R \\) y \\( R' \\) cuando los valores de \\( B \\) coinciden.
+
+### Matriz de un ámbito
+
+Sea \\(  A \leftarrow R \rightarrow B \\) un ámbito. Sea \\( R \stackrel{p}{\rightarrow} A \times B \\) la función única generada por la propiedad universal del producto. Podemos considerar la matriz (*o mejor dicho, la función*) con índices \\( (a,b) \in A \times B \\) cuya entrada correspodiente es \\( |p^{-1}(a,b)| \\). Esta es la **matriz del ámbito \\(  A \leftarrow R \rightarrow B \\)**.
+
+Ahora daremos dos propiedades.
+-  Sean \\(  A \leftarrow R \rightarrow B \\) y \\(  A \leftarrow R' \rightarrow B \\) dos \\( (A,B) \\)-ámbitos. Ambos ámbitos poseen matrices de dimensión \\( |A| \times |B| \\). Por la propiedad univesal del coproducto existe  un único ámbito \\(  A \leftarrow R \sqcup R' \rightarrow B \\ tal que el diagrama .....
+conmuta. Luego, *la matriz del ámbito \\(  A \leftarrow R \sqcup R' \rightarrow B \\) es la suma de las matrices de los otros ámbitos*.
+
+- Sean \\(  A \leftarrow R \rightarrow B \\) y \\(  B \leftarrow R' \rightarrow C \\) dos ámbitos. *La matriz del ámbito compuesto es la multiplicación (usual) de las matrices de los otros ámbitos*.
+
+
+## Equalizadores y objetos terminales
+
+Consideremos los siguientes diagramas:
+
+..........
+
+El **equalizador de \\( f\\)  y \\( g\\)** es el diagrama conmutativo de la derecha, donde \\[ Eq (f,g) := \lbrace x \in X \: / \: f(x) = g(x) \\] y \\( p \\) es la inclusión canónica.
+
+Un **conjunto terminal** es un conjunto \\( S \\) tal que para todo conjunto \\(X \\) existe una única función \\(X \rightarrow S\\). 

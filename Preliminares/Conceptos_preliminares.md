@@ -27,14 +27,32 @@
   \newcommand{\Rna}{(\R^{n})^{*}}
 \\)
 
-## función inyectiva......
 
 ## Relaciones de equivalencia
 
-Sea \\( X \\) un conjunto. Una **relación** en \\( X \\) es un subconjunto \\( R \subset X \times X \\).
+Durante esta sección, \\( X \\) representa un conjunto cualquiera. Una **relación en \\( X \\)** es un subconjunto \\( R \subset X \times X \\). Se suele denotar \\( (a,b) \in R \\) por \\( a ~ b \\)
 
+Las funciones son un tipo especial de relaciones ;)
 
+Una **relación de equivalencia** es una relación \\( R \subset X \times X \\) que satisface las siguientes propiedades:
+- **Reflexividad:** \\( (x,x) \in R \\) para todo \\( x \in X \\).
+- **Simetría:** \\( (x,y) \in R \\) si y solo si \\( (y, x) \in R \\).
+- **Transitividad:** Si \\( (x,y) \in R \\) y \\( (y,z) \in  R\\) entonces \\( (x,z) \in R \\)
 
+La **clase de equivalencia de \\(x \in X \\)** es el conjunto \\[ \overline{x} = \lbrace y \in X \: / \: y ~ x \rbrace \\]
+
+El **conjunto cociente de la relación \\( R \\) (o de \\( ~ \\))** es el conjunto de las clases de equivalencia.
+
+### Generando clases de equivalencia (lema)
+> Sea \\( X \\) un conjunto y \\( R \subset X \times X \\) una relación. Existe una relación \\( S \subset X \times X \\) tal que
+- \\(S \\) es una relación de equivalencia.
+- \\(R \subset S\\)
+- para toda relación de equivalencia \\(S'\\) tal que \\( R \subset S' \\) se tiene que \\( S \subset S' \\).
+
+La relación \\(S'\\) es llamada **la relación de equivalencia generada por \\(R\\)**. Para construirla, podemos seguir el siguiente proceso heurístico (válido cuando \\(X\\) es finito), en este orden:
+1. Añadir a \\(R \\) los elementos que demanda la reflexividad.
+2. Añadir al resultado los elementos que demanda la simetría.
+3. Añadir al resultado los elementos  que demanda la transitividad.
 
 ## Isomorfismos
 Sean los conjuntos \\( X \\) y \\(Y \\). Una función \\(f :X \rightarrow Y\\) es un **isomorfismo** si existe una función \\( g : \rightarrow X \\) tal que \\( g \circ f = id_{X} \\) y \\( f \circ g = id_{Y}\\). En tal caso, \\(g \\) es llamada la **inversa** de \\( f\\) y se denota por \\(f^{-1} \\).
@@ -45,6 +63,7 @@ Los siguientes son hechos triviales acerca de los isomorfismos:
 2. Si \\( A \simeq B \\) entonces \\(B \simeq A\\).
 3. Si \\( A \simeq B \\) y \\( B \simeq C \\) entonces \\( A \simeq C \\)
 4. Una función es un isomorfismo si y solo si es biyectiva.
+
 
 ## Cardinalidad
 Se dice que dos conjuntos tienen el mismo **cardinal** si existe una función biyectiva entre ellos (es decir, si son isomorfos).

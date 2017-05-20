@@ -90,14 +90,9 @@ Consideremos el siguiente olog, el cual incluye las funciones inducidas.
 
 
 ## [Límites finitos en **Set**](limites_finitos_en_set.md)
-Los límites finitos tienen bellas aplicaciones en Topología, Análisis y otras ramas de la Matemática. Aquí veremos su aplición para formalizar ideas usando ologs.
+Los límites (categóricos) tienen bellas aplicaciones en Topología, Análisis y otras ramas de la Matemática. Aquí veremos su aplición para formalizar ideas usando ologs.
 
-## Ámbitos, experimentos y matrices.
+La razón del nombre "límites" será vista en la sección **Formalizando**.
 
-Sean \\( A \\)  y \\(B \\) dos conjuntos, un **ámbito con resultados \\(A\\) y \\(B\\)**  es un conjunto \\( R\\) junto con funciones \\( f: R \rightarrow A\\) y  \\(g: R \rightarrow B\\). Gráficamente,
 
-.............
-
-Podemos pensar en \\(A\\) y \\(B\\) como magnitudes observables y \\(R \\) como un conjunto de experimentos.
-
-Sean \\( \displaystyle A \stackrel{f}{\leftarrow} R \stackrel{g}{\rightarrow} B \\) y \\( \displaystyle B \stackrel{f'}{\leftarrow} R' \stackrel{g'}{\rightarrow} C \\) dos ámbitos. El **ámbito compuesto** es el producto fibra \\( R \times_{B} R' \\). Gráficamente: 
+##  
