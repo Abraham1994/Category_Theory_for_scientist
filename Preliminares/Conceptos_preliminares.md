@@ -3,9 +3,6 @@
 <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"> </script>
 
 \\(
-  \usepackage{amsmath,amssymb}
-  \usepackage{graphics}
-  \usepackage[all]{xy}
   \newcommand{\noin}{\in \!\!\!\!\! / }
   \newcommand{\ds}{\displaystyle}
   \newcommand{\R}{\mathbb{R}}
@@ -30,7 +27,7 @@
 
 ## Relaciones de equivalencia
 
-Durante esta sección, \\( X \\) representa un conjunto cualquiera. Una **relación en \\( X \\)** es un subconjunto \\( R \subset X \times X \\). Se suele denotar \\( (a,b) \in R \\) por \\( a ~ b \\)
+Durante esta sección, \\( X \\) representa un conjunto cualquiera. Una **relación en \\( X \\)** es un subconjunto \\( R \subset X \times X \\). Se suele denotar \\( (a,b) \in R \\) por \\( a \sim b \\)
 
 Las funciones son un tipo especial de relaciones ;)
 
@@ -39,9 +36,9 @@ Una **relación de equivalencia** es una relación \\( R \subset X \times X \\) 
 - **Simetría:** \\( (x,y) \in R \\) si y solo si \\( (y, x) \in R \\).
 - **Transitividad:** Si \\( (x,y) \in R \\) y \\( (y,z) \in  R\\) entonces \\( (x,z) \in R \\)
 
-La **clase de equivalencia de \\(x \in X \\)** es el conjunto \\[ \overline{x} = \lbrace y \in X \: / \: y ~ x \rbrace \\]
+La **clase de equivalencia de \\(x \in X \\)** es el conjunto \\[ \overline{x} = \lbrace y \in X \: / \: y \sim x \rbrace \\]
 
-El **conjunto cociente de la relación \\( R \\) (o de \\( ~ \\))** es el conjunto de las clases de equivalencia.
+El **conjunto cociente de la relación \\( R \\) (o de \\( \sim \\))** es el conjunto de las clases de equivalencia.
 
 ### Generando clases de equivalencia (lema)
 > Sea \\( X \\) un conjunto y \\( R \subset X \times X \\) una relación. Existe una relación \\( S \subset X \times X \\) tal que
@@ -89,8 +86,6 @@ $$ \xymatrix { a \ar [r] & b \ar [d] \\
 Se dice que este es un *diagrama de conjuntos* si \\( A,B, C,D \\) son conjuntos y \\( f,g,h \\) son funciones. Decimos que es un **cuadrado conmutativo de conjuntos** si \\( g \circ f = i \circ h\\).
 
 .... Más dibujos....
-
-
 
 
 ## [Ologs](olog.md)

@@ -40,9 +40,9 @@ Haciendo \\( W = \xyz \\), entonces el diagrama (2)
 
 conmuta. Cabe resaltar que el producto fibra depende de las funciones \\( f\\) y  \\( g \\).
 
-En general, suponiendo la configuración del diagrama 1, se define el **pullback de \\(X \\) y \\(Y \\) sobre \\(Z\\)** como cualquier conjunto \\(W \\)  que es isomorfo a \\( \xyz \\). El símbolo \\( \drcorner \\)  en el diagrama (2) indica que \\( W \\) es el pullback.
+En general, asumiendo la configuración del diagrama 1, se define el **pullback de \\(X \\) y \\(Y \\) sobre \\(Z\\)** como cualquier conjunto \\(W \\)  que es isomorfo a \\( \xyz \\). El símbolo \\( \lrcorner \\)  en el diagrama (2) indica que \\( W \\) es el pullback.
 
-Observar que, si \\( W \\) es el pullback, entonces para todo \\(w \in W \\), \\( f (\pi_{1}(w)) = g ( \pi_{2}(w))= z \\) para algún \\(z \in Z\\); *podemos que corresponder \\( w \\) con algún \\(z \in Im(f) \cap Im(g) \\)*. Cuando \\(f \\) y \\(g\\) son inclusiones, *podemos decir que \\( W \simeq Im(f) \cap Im (g) \\)*, lo cual se verifica encontrando un isomorfismo con \\(X \times_{Z} Y \\). Esto será usado a continuación.
+Observar que, si \\( W \\) es el pullback, entonces para todo \\(w \in W \\), \\( f (\pi_{1}(w)) = g ( \pi_{2}(w))= z \\) para algún \\(z \in Z\\); *podemos que corresponder \\( w \\) con algún \\(z \in Im(f) \cap Im(g) \\)*. Cuando \\(f \\) y \\(g\\) son inclusiones inyectivas, *podemos decir que \\( W \simeq Im(f) \cap Im (g) \\)*, lo cual se verifica encontrando un isomorfismo con \\(X \times_{Z} Y \\). Esto será usado a continuación.
 
 
 ## Usando pullbacks para definir nuevas ideas de anteriores  
@@ -65,7 +65,7 @@ Consideremos el diagrama
 
 .....
 
-Por el resultado anterior, el símbolo \\( \drcorner \\) de la derecha indica que el rectángulo de la derecha y el rectángulo grande son pullbacks.
+Por el resultado anterior, el símbolo \\( \lrcorner \\) de la derecha indica que el rectángulo de la derecha y el rectángulo grande son pullbacks.
 
 ### Un ejemplo
 
@@ -93,7 +93,7 @@ En este caso, podemos decir que \\( R \times_{B} R' \\) representa un experiment
 
 ### Matriz de un ámbito
 
-Sea \\(  A \leftarrow R \rightarrow B \\) un ámbito. Sea \\( R \stackrel{p}{\rightarrow} A \times B \\) la función única generada por la propiedad universal del producto. Podemos considerar la matriz (*o mejor dicho, la función*) con índices \\( (a,b) \in A \times B \\) cuya entrada correspodiente es \\( |p^{-1}(a,b)| \\). Esta es la **matriz del ámbito \\(  A \leftarrow R \rightarrow B \\)**.
+Sea \\(  A \leftarrow R \rightarrow B \\) un ámbito. Sea \\( R \stackrel{p}{\rightarrow} A \times B \\) la función única generada por la propiedad universal del producto. Podemos considerar la matriz (*o mejor dicho, la función*) con índices \\( (a,b) \in A \times B \\) cuya entrada correspodiente es \\( \lvert  p^{-1}(a,b) \rvert \\). Esta es la **matriz del ámbito \\(  A \leftarrow R \rightarrow B \\)**.
 
 Ahora daremos dos propiedades.
 -  Sean \\(  A \leftarrow R \rightarrow B \\) y \\(  A \leftarrow R' \rightarrow B \\) dos \\( (A,B) \\)-ámbitos. Ambos ámbitos poseen matrices de dimensión \\( |A| \times |B| \\). Por la propiedad univesal del coproducto existe  un único ámbito \\(  A \leftarrow R \sqcup R' \rightarrow B \\ tal que el diagrama .....
@@ -110,4 +110,4 @@ Consideremos los siguientes diagramas:
 
 El **equalizador de \\( f\\)  y \\( g\\)** es el diagrama conmutativo de la derecha, donde \\[ Eq (f,g) := \lbrace x \in X \: / \: f(x) = g(x) \\] y \\( p \\) es la inclusión canónica.
 
-Un **conjunto terminal** es un conjunto \\( S \\) tal que para todo conjunto \\(X \\) existe una única función \\(X \rightarrow S\\). 
+Un **conjunto terminal** es un conjunto \\( S \\) tal que para todo conjunto \\(X \\) existe una única función \\(X \rightarrow S\\).

@@ -95,4 +95,6 @@ Los límites (categóricos) tienen bellas aplicaciones en Topología, Análisis 
 La razón del nombre "límites" será vista en la sección **Formalizando**.
 
 
-##  
+## [Colímites finitos en **Set**](colimites_finitos_en_set.md) 
+
+"Conceptos dual = col-". Usaremos la noción de relación equivalencia y conjunto conciente.
