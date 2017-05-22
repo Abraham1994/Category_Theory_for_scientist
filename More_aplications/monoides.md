@@ -32,7 +32,7 @@
 Sea \\( X \\) un conjunto. Una **lista** en \\( X\\) es un par \\( (n,f)\\) donde \\( n\in \N\\) (llamado la **longitud de la lista**) y \\( f: \underline{n} \rightarrow X \\) es una función. La lista \\( (n,f) \\) se denota por \\[ [ f(1) , \ldots, f(n)] \\]
 La **lista vacía** es la *única* lista tal que \\( n=0 \\) y se denota por \\( [] \\). Dado \\(x  \in X \\), la **lista singleton en \\( x \\)** es la lista \\( [x] \\). Sea \\(L = (n,f) \\) una lista y \\( j \leq n\\), la **j-ésima entrada de \\(L\\)** es el elemento \\( f(j) \in \\). El conjunto de listas en \\( X \\) se denota por \\( List (X) \\)
 
-Sean \\(L = (n,f) \\) y \\(L' = (n',f') \\) dos listas, se define la **concatenación de \\(L\\) y \\(L' \\)**, denotada por \\( L++L'\\), como la lista \\( (n+n',f++f')\\) , donde \\( f++f':\overline{n+n'} \rightarrow X \\) está dada por \\[ (f++f')(i) = \left \lbrace  { {f(i) \mbox{   si } i \leq n } \atop f'(i-n) \mbox{   i \geq n+1}  }  \\]
+Sean \\(L = (n,f) \\) y \\(L' = (n',f') \\) dos listas, se define la **concatenación de \\(L\\) y \\(L' \\)**, denotada por \\( L++L'\\), como la lista \\( (n+n',f++f')\\) , donde \\( f++f':\overline{n+n'} \rightarrow X \\) está dada por \\[ (f++f')(i) = \left \lbrace  { {f(i) \mbox{   si } i \leq n } \atop f'(i-n) \mbox{   i \geq n+1}  } \right. \\]
 
 Como ejemplo podemos citar *la concatenación de cadenas (en Python, C y otros lenguajes de programación)*.
 
