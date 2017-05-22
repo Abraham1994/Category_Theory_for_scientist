@@ -40,12 +40,12 @@ Ahora viene...
 ### LA PROPIEDAD UNIVERSAL del producto
 > Sean \\( X, Y \\) conjuntos. Para todo conjunto \\( A \\) y funciones \\( f: A \rightarrow X \\) y  \\( g : A \rightarrow Y\\) entonces *existe un única función* \\( \langle f,g \rangle: A \rightarrow X \times Y \\), llamada **función inducida** por \\(f \\) y \\(g\\), tal que el siguiente diagrama conmmuta
 
-![uniprod](img2.png)
+![uniprod](img/img2.png)
 
 ### Un ejemplo (usando la notación del lema):
 Supongamos que \\( |X| = m \\) y \\( |Y| = n  \\). Sabemos que puede representarse como una matriz de dimensiones \\( m \times n \\); además \\( \ds X \stackrel{\pi_{1}}{\leftarrow} X \times Y \stackrel{\pi_{2}}{\rightarrow} Y \\). Por ejemplo:
 
-![ejemplito](img/img3)
+![ejemplito](img/img3.png)
 
 Supongamos que \\( A \\) representa a un grupo de personas. Digamos que una persona \\(a \in A \\) escoge un elemento \\( f(a) \in X\\) y otro elemento \\( g(a) \in Y\\); pero al hacerlo está "escogiendo" el elemento \\( (f(a), g(a)) \\), ¡lo cual justamente define a la función \\( \langle f,g \rangle \\)!
 
@@ -61,7 +61,7 @@ Sean \\( X \\) y  \\( Y \\) conjuntos. El **coproducto** de \\( X \\) y \\( Y \\
 
 Existen dos **inclusiones canónicas**, \\( i_{1} : X \rightarrow X \sqcup Y \\) y \\(i_{2}: Y \rightarrow X \sqcup Y \\). Gráficamente,
 
-........
+![coprod](img/img5.png)
 
 *Los elementos de \\( X \sqcup Y \\) no son tan importantes; lo importante son las inclusiones* \\(i_{1}\\) y \\( i_{2}\\), ya que ellas nos permiten saber de donde provienen los elementos de \\( X \sqcup Y\\). *Podemos identificar dos conjuntos isomorfos como iguales*, ese un hecho básico en la teoría de categorías.
 
@@ -73,7 +73,7 @@ El coproducto de \\( X \\) consigo mismo es \\[ X \sqcup X = \lbrace i_{1} a , i
 ### Propiedad universal del coproducto
 > Sean \\(X , Y \\) conjuntos. Para todo conjunto \\( A \\) y funciones \\( f : X \rightarrow A \\) y \\( g: Y \rightarrow A \\), existe una única función \\( \displaystyle \left\lbrace {f \atop g } \right. : X \sqcup Y \rightarrow A \\) tal que el siguiente diagrama conmuta
 
-................
+![unicoprod](img/img6.png)
 
 ### Coproductos en ologs
 
@@ -81,7 +81,7 @@ A diferencia que en los productos, no hay una forma estándar de etiquetar los c
 
 Consideremos el siguiente olog, el cual incluye las funciones inducidas.
 
-..............
+![ejecoprod](img/img7.png)
 
  \\( "X \sqcup Y" = \\) \\( \ulcorner \\)un asiento en un avión\\( \urcorner \\) significa que todos los asientos en cualquier avión son ecónomicos o de primera clase.
 

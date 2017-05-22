@@ -30,13 +30,14 @@
 
 Consideremos el siguiente diagrama (1)
 
+![pull](img/img8.png)
 
 Su **producto fibra** es el conjunto \\[ X \times_{Z} Y  = \lbrace (x,y,z) \: / \:  f(x) = g(y) = z \rbrace \qquad  \\]
 
 Las **proyecciones canónicas** son \\( \pi_{1}: X \times_{Z} Y \rightarrow X \\) y \\(\pi_{2}: X \times_{Z} Y \rightarrow Y \\).
 Haciendo \\( W = \xyz \\), entonces el diagrama (2)
 
-...........
+![pull(2)](img/img9.png)
 
 conmuta. Cabe resaltar que el producto fibra depende de las funciones \\( f\\) y  \\( g \\).
 
@@ -48,24 +49,26 @@ Observar que, si \\( W \\) es el pullback, entonces para todo \\(w \in W \\), \\
 ## Usando pullbacks para definir nuevas ideas de anteriores  
 El diagrama de la derecha es el pullback del de la izquierda (*asumiendo que estamos de acuerdo con el etiquetado*),
 
-...............
+![ologpull](img/img10.png)
 
 ¿Qué significado tiene \\( A) B \times_{D} C \\)? Significa que, para nosotros: "Un buen cliente es un cliente rico y leal"
 
 
 ### Propiedad universal de los pullbacks
-> Para todo conjunto \\( A \\) y funciones  \\(f: A \rightarrow X \\) y \\( g: A \rightarrow Y\\)  tales que  \\(t \circ g = u \circ g\\), existe una única función \\(\langle f,g \rangle : A \rightarrow \xyz \\) tal que el siguiente diagrama conmuta
+> Sea un diagrama ![unipull1](img/img11.png)
+ Para todo conjunto \\( A \\) y funciones  \\(f: A \rightarrow X \\) y \\( g: A \rightarrow Y\\)  tales que  \\(t \circ g = u \circ g\\), existe una única función \\(\langle f,g \rangle : A \rightarrow \xyz \\) tal que el siguiente diagrama conmuta
 
+![unipull2](img/img.12.png)
 
 ### Pegando diagramas usando producto fibrado
-> Sea un diagrama.........   
+> Sea un diagrama    
 donde \\( B' \simeq B \times_{C} C' \\) es un pullback. Entonces se cumple: \\[  A \times_{B} (B \times_{C} C') \simeq A \times_{C} C'. \\]
 
 Consideremos el diagrama
 
 .....
 
-Por el resultado anterior, el símbolo \\( \lrcorner \\) de la derecha indica que el rectángulo de la derecha y el rectángulo grande son pullbacks.
+Por el resultado anterior, el símbolo \\( \lrcorner \\) de la derecha indica que el rectángulo de la derecha y el rectángulo grande son pullbacks, no hau ambigüedad.
 
 ### Un ejemplo
 
