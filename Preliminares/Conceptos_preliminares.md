@@ -93,9 +93,8 @@ Consideremos la siguiente figura:
 Se dice que este es un **diagrama de conjuntos** si \\( A,B, C \\) son conjuntos y \\( f,g,h \\) son funciones. Decimos que es un **triángulo conmutativo de conjuntos** si \\( g \circ f = h\\).
 
 Ahora consideremos la siguiente figura
-$$ \xymatrix { a \ar [r] & b \ar [d] \\
-               c \ar [u] & d \ar [l]
-} $$
+
+![cuadrado](img/img2.png)
 
 Se dice que este es un *diagrama de conjuntos* si \\( A,B, C,D \\) son conjuntos y \\( f,g,h \\) son funciones. Decimos que es un **cuadrado conmutativo de conjuntos** si \\( g \circ f = i \circ h\\).
 
