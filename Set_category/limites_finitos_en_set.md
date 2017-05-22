@@ -58,15 +58,15 @@ El diagrama de la derecha es el pullback del de la izquierda (*asumiendo que est
 > Sea un diagrama ![unipull1](img/img11.png)
  Para todo conjunto \\( A \\) y funciones  \\(f: A \rightarrow X \\) y \\( g: A \rightarrow Y\\)  tales que  \\(t \circ g = u \circ g\\), existe una única función \\(\langle f,g \rangle : A \rightarrow \xyz \\) tal que el siguiente diagrama conmuta
 
-![unipull2](img/img.12.png)
+![unipull2](img/img12.png)
 
 ### Pegando diagramas usando producto fibrado
-> Sea un diagrama    
+> Sea un diagrama ![pegpull](img/img13.png)
 donde \\( B' \simeq B \times_{C} C' \\) es un pullback. Entonces se cumple: \\[  A \times_{B} (B \times_{C} C') \simeq A \times_{C} C'. \\]
 
 Consideremos el diagrama
 
-.....
+![diag](img/img14.png)
 
 Por el resultado anterior, el símbolo \\( \lrcorner \\) de la derecha indica que el rectángulo de la derecha y el rectángulo grande son pullbacks, no hau ambigüedad.
 
@@ -74,7 +74,7 @@ Por el resultado anterior, el símbolo \\( \lrcorner \\) de la derecha indica qu
 
 Veamos como definir un celular con batería con precisión usando el siguiente olog:
 
-.............
+![ologpull](img/img15.png)
 
 Por la propiedad fundamental, se concluye que \\( A \simeq B \times_{F}  E \\). Luego, yendo hacia abajo y luego a la derecha, obtenemos: "un celular con mala batería es un celular que tiene una batería que permanece cargada menos de una hora".
 
@@ -84,13 +84,13 @@ Por la propiedad fundamental, se concluye que \\( A \simeq B \times_{F}  E \\). 
 
 Sean \\( A \\)  y \\(B \\) dos conjuntos, un **ámbito con resultados \\(A\\) y \\(B\\)**  es un conjunto \\( R\\) junto con funciones \\( f: R \rightarrow A\\) y  \\(g: R \rightarrow B\\). Gráficamente,
 
-.............
+![ambito](img/img16.png)
 
 Podemos pensar en \\(A\\) y \\(B\\) como magnitudes observables y \\(R \\) como un conjunto de experimentos que produce valores para dichas magnitudes.
 
 Sean \\( \displaystyle A \stackrel{f}{\leftarrow} R \stackrel{g}{\rightarrow} B \\) y \\( \displaystyle B \stackrel{f'}{\leftarrow} R' \stackrel{g'}{\rightarrow} C \\) dos ámbitos. El **ámbito compuesto** es el producto fibra \\( R \times_{B} R' \\). Gráficamente:
 
-.........
+![compuesto](img/img17.png)
 
 En este caso, podemos decir que \\( R \times_{B} R' \\) representa un experimento que produce los mismos valores para las magnitudes \\( A\\), \\(B\\) y \\( C\\) que los experimentos \\( R \\) y \\( R' \\) cuando los valores de \\( B \\) coinciden.
 
@@ -99,7 +99,10 @@ En este caso, podemos decir que \\( R \times_{B} R' \\) representa un experiment
 Sea \\(  A \leftarrow R \rightarrow B \\) un ámbito. Sea \\( R \stackrel{p}{\rightarrow} A \times B \\) la función única generada por la propiedad universal del producto. Podemos considerar la matriz (*o mejor dicho, la función*) con índices \\( (a,b) \in A \times B \\) cuya entrada correspodiente es \\( \lvert  p^{-1}(a,b) \rvert \\). Esta es la **matriz del ámbito \\(  A \leftarrow R \rightarrow B \\)**.
 
 Ahora daremos dos propiedades.
--  Sean \\(  A \leftarrow R \rightarrow B \\) y \\(  A \leftarrow R' \rightarrow B \\) dos \\( (A,B) \\)-ámbitos. Ambos ámbitos poseen matrices de dimensión \\( |A| \times |B| \\). Por la propiedad univesal del coproducto existe  un único ámbito \\(  A \leftarrow R \sqcup R' \rightarrow B \\ tal que el diagrama .....
+-  Sean \\(  A \leftarrow R \rightarrow B \\) y \\(  A \leftarrow R' \rightarrow B \\) dos \\( (A,B) \\)-ámbitos. Ambos ámbitos poseen matrices de dimensión \\( |A| \times |B| \\). Por la propiedad univesal del coproducto existe  un único ámbito \\(  A \leftarrow R \sqcup R' \rightarrow B \\ tal que el diagrama
+
+![matriz](img/img18.png)
+
 conmuta. Luego, *la matriz del ámbito \\(  A \leftarrow R \sqcup R' \rightarrow B \\) es la suma de las matrices de los otros ámbitos*.
 
 - Sean \\(  A \leftarrow R \rightarrow B \\) y \\(  B \leftarrow R' \rightarrow C \\) dos ámbitos. *La matriz del ámbito compuesto es la multiplicación (usual) de las matrices de los otros ámbitos*.
@@ -109,7 +112,7 @@ conmuta. Luego, *la matriz del ámbito \\(  A \leftarrow R \sqcup R' \rightarrow
 
 Consideremos los siguientes diagramas:
 
-..........
+![eq](img/img19.png)
 
 El **equalizador de \\( f\\)  y \\( g\\)** es el diagrama conmutativo de la derecha, donde \\[ Eq (f,g) := \lbrace x \in X \: / \: f(x) = g(x) \\] y \\( p \\) es la inclusión canónica.
 

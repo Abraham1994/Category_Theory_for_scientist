@@ -47,10 +47,10 @@ El conjunto de símplices con cardinal \\( n+1 \\) se denota por \\( X_{n} \\) y
 
 Para dibujar un complejo \\(X \\), primero dibujamos cada vértice como un punto. Luego, para \\( x = \lbrace v,v'\rbrace \in X_{1} \\), dibujamos una línea uniendo \\( v \\) con \\( v' \\). Luego, para \\( y = \lbrace w,w',w'' \rbrace \in X_{2}\\), dibujamos un triángulo sombreado, uniéndo sus vértices
 
-### Los n-símplices \\(\delta ^{n} \\)
-Sean \\( n \in \N \\) y \\( V= \underline{n+1}\\). El **n-símplex**, denotado por \\(\delta^{n}\\), son los complejos simpliciales \\( \Po(V)\\), es decir, tomamos como subconjunto todo el conjunto potencia. A continuación se muestran ilustraciones de \\( \delta^{0}, \delta^{1}, \delta^{2}\\) y \\() \delta^{3}\\):
+### Los n-símplices \\(\Delta ^{n} \\)
+Sean \\( n \in \N \\) y \\( V= \underline{n+1}\\). El **n-símplex**, denotado por \\(\Delta^{n}\\), son los complejos simpliciales \\( \Po(V)\\), es decir, tomamos como subconjunto todo el conjunto potencia. A continuación se muestran ilustraciones de \\( \Delta^{0}, \Delta^{1}, \Delta^{2}\\) y \\( \Delta^{3}\\):
 
-......
+![n-simplex](img/img26.png)
 
 
 ## Subobjeto clasificador
@@ -78,7 +78,7 @@ Sea \\( f : X \rightarrow Y \\) una función:
 
 ### Monomorfismos y pullbacks
 
-> Sea \\( f :X  \rightarrow Y \\) un monomorfismo. Entonces para toda función \\( g : A \rightarrow Y\\), el mapa f' : X \times_{Y} A \rightarrow \\) en el diagrama..... es un monomorfismo.
+> Sea \\( f :X  \rightarrow Y \\) un monomorfismo. Entonces para toda función \\( g : A \rightarrow Y\\), el mapa f' : X \times_{Y} A \rightarrow \\) en el diagrama ![posgj](img/img27.png) es un monomorfismo.
 
 
 ## Categorías relacionadas con **Set**
@@ -91,7 +91,7 @@ Por ejemplo, *el contenedor* `counter` de Python representa un multiconjunto.
 
 Sean \\( X = (E, B , \pi) \\) y \\( X = (E', B' , \pi ') \\) Un **morfismo** entre \\( X \\) y \\( Y \\), denotado por \\(f: X \rightarrow Y \\), es un par ordenado \\( (f_{1}, f_{0} ) tales que \\( f_{1}: E \rightarrow E' \\) y \\( f_{0} : B \rightarrow B' \\) son funciones tales que  el siguiente diagrama conmuta:
 
-..........
+![multiconjunto](img/img28.png)
 
 
 ### Conjuntos relativos
@@ -102,7 +102,7 @@ Sea \\(B \\) un conjunto. Un **conjunto relativo sobre \\( B \\)**, o un **conju
 
 Un **morfismo** entre conjuntos relativos sobre \\( B \\), denotado \\(f: (E, \pi) \rightarrow (E ',\pi ') \\), es una función \\( f: E \rightarrow E'\\) tal que el siguiente diagrama conmuta
 
-..........
+![conjrel](img/img29.png)
 
 
 ### Conjuntos indexados
