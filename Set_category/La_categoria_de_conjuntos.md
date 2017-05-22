@@ -102,7 +102,7 @@ La razón del nombre "límites" será vista en la sección **Formalizando**.
 
 ## [Otras nociones en **Set**](otras_nociones_en_set.md)
 
-Por cierto, **Set** denota a la categoría de conjuntos.
+Por cierto, **Set** denota a la categoría de conjuntos. En esta sección se introducen varios conceptos nuevos, muy comunes en el estudio general de categorías.
 
 
 ## Aritmética de conjuntos

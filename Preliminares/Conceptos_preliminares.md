@@ -24,7 +24,10 @@
   \newcommand{\Rna}{(\R^{n})^{*}}
 \\)
 
-Sean los conjuntos \\( A, B\\). Usaremos las siguientes notaciones: \\[ B^{A}:= Hom_{Set} (A,B) := \lbrace f:A \rightarrow B \; / \; f \mbox{ es una función} \\]
+
+## Conjunto potencia
+
+Sea \\( B \\) un conjunto. Su **conjunto potencia**, denotado por \\( \Po (B) \\), es el conjunto de los subconjuntos de \\(B \\)
 
 ## Relaciones de equivalencia
 
@@ -52,11 +55,19 @@ La relación \\(S'\\) es llamada **la relación de equivalencia generada por \\(
 2. Añadir al resultado los elementos que demanda la simetría.
 3. Añadir al resultado los elementos  que demanda la transitividad.
 
+
+## Conceptos relacionados con funciones
+
+Sean los conjuntos \\( A, B\\). Usaremos las siguientes notaciones: \\[ B^{A}:= Hom_{Set} (A,B) := \lbrace f:A \rightarrow B \; / \; f \mbox{ es una función} \\]
+
+Sea \\(f: X \rightarrow Y \\) una función. Decimos \\(f \\) es **suryectiva** si para todo \\( y \in Y \\), existe algún \\(x \in X \\) tal que \\(f(x)=y \\). Decimos que \\( f \\) es **inyectiva** si para todos \\( x,x' \in X\\) tales que \\( f(x)=f(x') \\) se tiene que \\(x =x' \\). Una función que es inyectiva y sobreyectiva es una **función biyectiva**.
+
+
 ## Isomorfismos
 Sean los conjuntos \\( X \\) y \\(Y \\). Una función \\(f :X \rightarrow Y\\) es un **isomorfismo** si existe una función \\( g : \rightarrow X \\) tal que \\( g \circ f = id_{X} \\) y \\( f \circ g = id_{Y}\\). En tal caso, \\(g \\) es llamada la **inversa** de \\( f\\) y se denota por \\(f^{-1} \\).
  Si existe un isomorfismo entre dos conjuntos, estos son llamados **isomorfos**; se usa el símbolo \\( \simeq \\) .
 
-Los siguientes son hechos triviales acerca de los isomorfismos:
+Los siguientes son hechos acerca de los isomorfismos:
 1. Todo conjunto es isomorfo a sí mismo.
 2. Si \\( A \simeq B \\) entonces \\(B \simeq A\\).
 3. Si \\( A \simeq B \\) y \\( B \simeq C \\) entonces \\( A \simeq C \\)
