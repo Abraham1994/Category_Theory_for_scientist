@@ -28,14 +28,18 @@
 En este trabajo veremos muchos teoremas e ideas aplicándose a ologs; sin embargo, estos no serán estudiados profundamente. En vez de eso, vamos a dar las definiciones y conceptos más necesarios para las aplicaciones. Hay mucho que decir acerca de los ologs, puede encontrarse más información en las referencias. Procedamos a definir algunos términos importantes:
 
 ## Tipos
-Un **tipo** es un concepto abstracto, es decir, una distinción hecha por el autor. Se representan como cajas que contienen una *frase nominal singular indefinida* (llamada **etiqueta** del tipo). Por ejemplo, las siguientes cajas son tipos: ........................
-....................
+Un **tipo** es un concepto abstracto, es decir, una distinción hecha por el autor. Se representan como cajas que contienen una *frase nominal singular indefinida* (llamada **etiqueta** del tipo). Por ejemplo, las siguientes cajas son tipos:
+
+![ejemplo](img/img4.png)
 
 ### Tipos "compuestos"
-Muchos tipos tienen estructura compuesta. Por ejemplo.....
+Muchos tipos tienen estructura compuesta. Por ejemplo
 
-Es una buena práctica exhibir las componentes de un tipo compuesto, usando variables. Por ejemplo, .....
+![comp](img/img5.png)
 
+Es una buena práctica exhibir las componentes de un tipo compuesto, usando variables. Por ejemplo,
+
+![ejempcomp](img/img6.png)
 
 ### Reglas de buena práctica
 
@@ -61,6 +65,7 @@ Un **camino** en un olog es una secuencia de cajas y flechas ordenada en el sent
 
 El autor de un olog tiene un punto de vista acerca de las cosas, lo cual queda reflejado en su olog. Por ejemplo, algunas personas pueden estar en desacuerdo con el siguiente olog:
 
+![Advertencia](img/img7.png)
 
 Estas discrepancias no implican necesariamente un error en un olog, en realidad es una discrepancia de puntos de vista.
 
@@ -68,9 +73,11 @@ Estas discrepancias no implican necesariamente un error en un olog, en realidad 
 
  Para leer un aspecto \\( X \stackrel{f}{\rightarrow} Y \\) primero leemos la etiqueta de \\( X \\) , luego la etiqueta de \\( f \\) y finalmente la etiqueta de \\( Y \\).
 
-Los caminos más largos pueden leerse agregando la palabra "que" (o "quien") entre las etiquetas de los tipos y los aspectos
+Los caminos más largos pueden leerse agregando la palabra "que" (o "quien") entre las etiquetas de los tipos y los aspectos.
 
 En ocasiones es conveniente abreviar las etiquetas, por ejemplo:
+
+![Leyendo](img/img8.png)
 
 A pesar de que este olog no puede leerse "de corrido" como el anterior, es claro el mensaje que se quiere transmitir.
 
@@ -78,12 +85,11 @@ A pesar de que este olog no puede leerse "de corrido" como el anterior, es claro
 
 Veamos un ejemplo. Observamos que \\(\ulcorner\\)una persona\\(\urcorner \rightarrow \ulcorner \\)un carro\\( \urcorner\\) no es un aspecto por no ser una relación funcional. Para solucionar esto, podríamos considerar \\(\ulcorner\\)una persona\\(\urcorner \rightarrow \ulcorner \\)un conjunto de carros\\( \urcorner\\); este es un aspecto, pero no muestra explícitamente la relación entre un dueño y un carro. Una solución es considerar el siguiente olog:
 
-.........
+![carro](img/img9.png)
 
 Este diagrama es más útil porque representa más información. En general, las relaciones que involucran varios tipos pueden expresarse de la forma
-..........
 
-
+![otro](img/img10.png)
 
 ### Más reglas de buena práctica
 
@@ -99,6 +105,6 @@ La equivalencia de caminos es la causa del gran poder de la Teoría de Categorí
 
 Dado un olog, un autor quizás quiera indicar que dos caminos son equivalentes (por ejemplo, para dar una definición). Por ejemplo, consideremos los dos caminos entre \\( A \\) y \\( C \\) en el olog
 
-.............
+![hechos](img/img11.png)
 
 Sabemos que una madre es una mujer es un progenitor mujer, luego diremos que los dos caminos entre \\(A \\) y \\( C \\) son equivalentes. Matemáticamente hablando, decir que los caminos son equivalente significa que el diagrama dado *conmuta*. Los "ologs conmutativos" son llamados **hechos**. Usualmente, cuando no haya ambigüedad, la existencia de un hecho se indicará usando \\( \checkmark\\) dentro del diagrama.

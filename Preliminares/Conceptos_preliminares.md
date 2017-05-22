@@ -88,20 +88,22 @@ Dos conjuntos finitos tienen la misma cardinalidad si y solo si existe un isomor
 ## "Diagramas" conmutativos
 Consideremos la siguiente figura:
 
-<P ALIGN=center> ![triángulo conmutativo](img/img1.png)
+![triángulo conmutativo](img/img1.png)
 
 Se dice que este es un **diagrama de conjuntos** si \\( A,B, C \\) son conjuntos y \\( f,g,h \\) son funciones. Decimos que es un **triángulo conmutativo de conjuntos** si \\( g \circ f = h\\).
 
 Ahora consideremos la siguiente figura
 
-<P ALIGN=center> ![cuadrado](img/img2.png)
+![cuadrado](img/img2.png)
 
 Se dice que este es un *diagrama de conjuntos* si \\( A,B, C,D \\) son conjuntos y \\( f,g,h \\) son funciones. Decimos que es un **cuadrado conmutativo de conjuntos** si \\( g \circ f = i \circ h\\).
 
-.... Más dibujos....
 
 
 ## [Ologs](olog.md)
+
+![olog](img/img3.png)
+
 Los científicos tienen una constante necesidad de organizar sus experimentos, datos, resultados y conclusiones en algún *esquema* de tal forma que su trabajo sea reutilizable, transferible y comparable con el trabajo de otros científicos. Puede que los **ologs** sean la solución a esta necesidad :)
 
 Olog es la abreviatura de "ontological log"(apunte ontológico). Fueron introducidos en 2010 por David Spivak , profesor investigador del MIT. En mi opinión, los ologs tienen un futuro prometedor. Algunas ventajas de usar ologs son:

@@ -31,28 +31,30 @@ $$ X \times Y = \lbrace (x,y) \: | \: X \in X , \, y \in Y \rbrace $$
 
 Existen dos **proyecciones canónicas**, \\( \pi_{1}: X \times Y \rightarrow X \\) y \\( \pi_{2}: X \times Y \rightarrow Y \\). Gráficamente:
 
-..... imagen
+![prod](img/img1.png)
 
 También sabemos cuál es el producto de tres o más conjuntos, por ejemplos \\[ X \times Y \times Z = \lbrace (x,y,z) \; / \; X \in X , \, y \in Y,  \, z \in Z \rbrace \\]
 
 Ahora viene...
 
 ### LA PROPIEDAD UNIVERSAL del producto
-> Sean \\( X, Y \\) conjuntos. Para todo conjunto \\( A \\) y funciones \\( f: A \rightarrow X \\) y  \\( g : A \rightarrow Y\\) entonces *existe un única función* \\( \langle f,g \rangle: A \rightarrow X \times Y \\), llamada **función inducida** por \\(f \\) y \\(g\\), tal que el siguiente diagrama conmmuta.....  
+> Sean \\( X, Y \\) conjuntos. Para todo conjunto \\( A \\) y funciones \\( f: A \rightarrow X \\) y  \\( g : A \rightarrow Y\\) entonces *existe un única función* \\( \langle f,g \rangle: A \rightarrow X \times Y \\), llamada **función inducida** por \\(f \\) y \\(g\\), tal que el siguiente diagrama conmmuta
 
+![uniprod](img2.png)
 
 ### Un ejemplo (usando la notación del lema):
-Supongamos que \\( |X| = m \\) y \\( |Y| = n  \\). Sabemos que puede representarse como una matriz de dimensiones \\( m \times n \\); además \\( \ds X \stackrel{\pi_{1}}{\leftarrow} X \times Y \stackrel{\pi_{2}}{\rightarrow} Y \\). Gráficamente:
+Supongamos que \\( |X| = m \\) y \\( |Y| = n  \\). Sabemos que puede representarse como una matriz de dimensiones \\( m \times n \\); además \\( \ds X \stackrel{\pi_{1}}{\leftarrow} X \times Y \stackrel{\pi_{2}}{\rightarrow} Y \\). Por ejemplo:
 
-....
+![ejemplito](img/img3)
 
 Supongamos que \\( A \\) representa a un grupo de personas. Digamos que una persona \\(a \in A \\) escoge un elemento \\( f(a) \in X\\) y otro elemento \\( g(a) \in Y\\); pero al hacerlo está "escogiendo" el elemento \\( (f(a), g(a)) \\), ¡lo cual justamente define a la función \\( \langle f,g \rangle \\)!
 
 #### Productos en ologs
-Sean \\(c \\) y \\(d \\) dos tipos, podemos etiquetar el producto \\( c \times d \\) de esta manera: $$  "c \times d " := \mbox{un par } (x,y) \mbox{ donde }  x \mbox{ es } c  \mbox{ y }  y  \mbox{ es } d  $$
+Sean \\(c \\) y \\(d \\) dos tipos, podemos etiquetar el producto \\( c \times d \\) de esta manera: \\[  "c \times d " := \mbox{un par } (x,y) \mbox{ donde }  x \mbox{ es } c  \mbox{ y }  y  \mbox{ es } d  \\]
 
 Veamos un ejemplo. Consideremos los tipos \\( \ulcorner \\)un dueño de carro\\(\urcorner\\) y \\( \ulcorner \\)un carro\\( \urcorner \\); una persona puede tener varios. La relación que asocia a cada dueño el carro que usa más es una función (un aspecto). Además, un economista puede preguntar cuánto ingresa le genera a cierto dueño el uso de cierto carro (es claro que el ingreso es cero si el carro no le pertenece). Usando la propiedad universal, tenemos el siguiente gráfico.
 
+![prodolog](img/img4.png)
 
 ## Coproductos
 Sean \\( X \\) y  \\( Y \\) conjuntos. El **coproducto** de \\( X \\) y \\( Y \\), denotado por \\( X \sqcup Y \\), es la "unión disjunta", es decir, consiste en juntar los elementos de los dos conjuntos, considerando los elementos que se repiten como diferentes en \\( X \sqcup Y \\).
