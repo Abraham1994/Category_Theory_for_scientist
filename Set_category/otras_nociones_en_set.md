@@ -89,7 +89,7 @@ Un **multiconjunto** es un terna \\( X = (E, B , \pi) \\) donde \\(E\\) y \\( B\
 
 Por ejemplo, *el contenedor* `counter` de Python representa un multiconjunto.
 
-Sean \\( X = (E, B , \pi) \\) y \\( X = (E', B' , \pi ') \\) Un **morfismo** entre \\( X \\) y \\( Y \\), denotado por \\(f: X \rightarrow Y \\), es un par ordenado \\( (f_{1}, f_{0} ) tales que \\( f_{1}: E \rightarrow E' \\) y \\( f_{0} : B \rightarrow B' \\) son funciones tales que  el siguiente diagrama conmuta:
+Sean \\( X = (E, B , \pi) \\) y \\( X = (E', B' , \pi ') \\) Un **morfismo** entre \\( X \\) y \\( Y \\), denotado por \\(f: X \rightarrow Y \\), es un par ordenado \\( (f_{1}, f_{0} ) \\) tales que \\( f_{1}: E \rightarrow E' \\) y \\( f_{0} : B \rightarrow B' \\) son funciones tales que  el siguiente diagrama conmuta:
 
 ![multiconjunto](img/img28.png)
 
@@ -109,4 +109,4 @@ Un **morfismo** entre conjuntos relativos sobre \\( B \\), denotado \\(f: (E, \p
 
 Sea \\( A \\) un conjunto. Un **conjunto \\(A\\)-indexado** es una colección de conjuntos \\( \lbrace S_{a} \rbrace_{a \in A} \\).
 
-Si \\( \lbrace S'_{a} \rbrace_{a \in A} \\) es otro conjunto indexado, un **morfismo de conjuntos \\( A \\)-indexados** entre \\( \lbrace S_{a} \rbrace_{a \in A} \\) y \\( \lbrace S'_{a} \rbrace_{a \in A} \\) es una colección de funciones \\[ \lbrace f_{a}: S_{a} \rightarrow S'_{a} \rbrace_{a \in A} \\]
+Si \\( \lbrace R_{a} \rbrace_{a \in A} \\) es otro conjunto indexado, un **morfismo de conjuntos \\( A \\)-indexados** entre \\( \lbrace S_{a} \rbrace_{a \in A} \\) y \\( \lbrace R_{a} \rbrace_{a \in A} \\) es una colección de funciones \\[ \lbrace f_{a}: S_{a} \rightarrow R_{a} \rbrace_{a \in A} \\]

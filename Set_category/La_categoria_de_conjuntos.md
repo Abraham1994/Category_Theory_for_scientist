@@ -109,7 +109,7 @@ Por cierto, **Set** denota a la categoría de conjuntos. En esta sección se int
 
 ## Aritmética de conjuntos
 
-En esta sección vamos a usar la notación \\(A+B:= A \sqcup B \\), la cual es común en teoría de categorías. También usaremos: \\( A^{n} = A^{\overline{n}}\\). Así es como se define el producto de una familia arbitraria de conjuntos; cada upla es en realidad una función
+En esta sección vamos a usar la notación \\(A+B:= A \sqcup B \\), la cual es común en teoría de categorías. También usaremos: \\( A^{n} = A^{\underline{n}}\\). Así es como se define el producto de una familia arbitraria de conjuntos; cada upla es en realidad una función
 
 *Los números naturales son las clases de isomorfismo de los conjuntos finitos*. Por tanto, las propiedades de los números naturales se ven reflejadas en las propiedades de los conjuntos finitos. Esto nos permite obtener los siguientes resultados:
 
@@ -117,14 +117,14 @@ En esta sección vamos a usar la notación \\(A+B:= A \sqcup B \\), la cual es c
 - \\( A+B \simeq B +A \\)
 - \\( (A+B) + C \simeq A + (B+ C) \\)
 - \\( A \times \emptyset \simeq \emptyset \\)
-- \\( A \times \overline{1} \simeq A \\)
+- \\( A \times \underline{1} \simeq A \\)
 - \\( A\times B \simeq B \times A \\)
 - \\( (A \times B) \times C \simeq A \times ( B \times C) \\)
 - \\( A \times (B +C ) \simeq (A \times B) + (A \times C )  \\)
-- \\( A^{\emptyset} \simeq \overline{1} \\)
-- \\( A^{\overline{1}} \simeq A \\)
+- \\( A^{\emptyset} \simeq \underline{1} \\)
+- \\( A^{\underline{1}} \simeq A \\)
 - \\( \emptyset^{A} \simeq \emptyset  \\), excepto cuando \\(A = \emptyset\\)
-- \\( \overline{1} ^{A} \simeq \overline{1} \\)
+- \\( \underline{1} ^{A} \simeq \underline{1} \\)
 - \\( A^{B+C} \simeq A ^{B} \times A^{C} \\)
 - \\( (A^{B})^{C} \simeq A^{B\times C} \\)
 

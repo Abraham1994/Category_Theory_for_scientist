@@ -51,7 +51,7 @@ El diagrama de la derecha es el pullback del de la izquierda (*asumiendo que est
 
 ![ologpull](img/img10.png)
 
-¿Qué significado tiene \\( A) B \times_{D} C \\)? Significa que, para nosotros: "Un buen cliente es un cliente rico y leal"
+¿Qué significado tiene \\( B \times_{D} C \\)? Significa que, para nosotros: "Un buen cliente es un cliente rico y leal"
 
 
 ### Propiedad universal de los pullbacks
@@ -68,7 +68,7 @@ Consideremos el diagrama
 
 ![diag](img/img14.png)
 
-Por el resultado anterior, el símbolo \\( \lrcorner \\) de la derecha indica que el rectángulo de la derecha y el rectángulo grande son pullbacks, no hau ambigüedad.
+Por el resultado anterior, el símbolo \\( \lrcorner \\) de la derecha indica que el rectángulo de la derecha y el rectángulo grande son pullbacks, no hay ambigüedad.
 
 ### Un ejemplo
 
@@ -99,10 +99,8 @@ En este caso, podemos decir que \\( R \times_{B} R' \\) representa un experiment
 Sea \\(  A \leftarrow R \rightarrow B \\) un ámbito. Sea \\( R \stackrel{p}{\rightarrow} A \times B \\) la función única generada por la propiedad universal del producto. Podemos considerar la matriz (*o mejor dicho, la función*) con índices \\( (a,b) \in A \times B \\) cuya entrada correspodiente es \\( \lvert  p^{-1}(a,b) \rvert \\). Esta es la **matriz del ámbito \\(  A \leftarrow R \rightarrow B \\)**.
 
 Ahora daremos dos propiedades.
--  Sean \\(  A \leftarrow R \rightarrow B \\) y \\(  A \leftarrow R' \rightarrow B \\) dos \\( (A,B) \\)-ámbitos. Ambos ámbitos poseen matrices de dimensión \\( |A| \times |B| \\). Por la propiedad univesal del coproducto existe  un único ámbito \\(  A \leftarrow R \sqcup R' \rightarrow B \\ tal que el diagrama
-
+-  Sean \\(  A \leftarrow R \rightarrow B \\) y \\(  A \leftarrow R' \rightarrow B \\) dos \\( (A,B) \\)-ámbitos. Ambos ámbitos poseen matrices de dimensión \\( \lvert A\rvert \times \lvert B \rvert \\). Por la propiedad univesal del coproducto existe  un único ámbito \\(  A \leftarrow R \sqcup R' \rightarrow B \\ tal que el diagrama
 ![matriz](img/img18.png)
-
 conmuta. Luego, *la matriz del ámbito \\(  A \leftarrow R \sqcup R' \rightarrow B \\) es la suma de las matrices de los otros ámbitos*.
 
 - Sean \\(  A \leftarrow R \rightarrow B \\) y \\(  B \leftarrow R' \rightarrow C \\) dos ámbitos. *La matriz del ámbito compuesto es la multiplicación (usual) de las matrices de los otros ámbitos*.
@@ -114,6 +112,6 @@ Consideremos los siguientes diagramas:
 
 ![eq](img/img19.png)
 
-El **equalizador de \\( f\\)  y \\( g\\)** es el diagrama conmutativo de la derecha, donde \\[ Eq (f,g) := \lbrace x \in X \: / \: f(x) = g(x) \\] y \\( p \\) es la inclusión canónica.
+El **equalizador de \\( f\\)  y \\( g\\)** es el diagrama conmutativo de la derecha, donde \\[ Eq (f,g) := \lbrace x \in X \: / \: f(x) = g(x) \rbrace \\] y \\( p \\) es la inclusión canónica.
 
 Un **conjunto terminal** es un conjunto \\( S \\) tal que para todo conjunto \\(X \\) existe una única función \\(X \rightarrow S\\).
