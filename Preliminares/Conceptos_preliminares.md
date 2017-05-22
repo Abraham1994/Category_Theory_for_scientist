@@ -18,7 +18,7 @@
   \newcommand{\pro}{\mathbf{P}}
   \newcommand{\A}{\mathscr{A}}
   \newcommand{\B}{\mathscr{B}}
-  \newcommand{\Po}{\mathcal{P}(\Omega)}
+  \newcommand{\Po}{\mathcal{P}}
   \newcommand{\N}{\mathbb{N}}
   \newcommand{\Rn}{\mathbb{\R}^{n}}
   \newcommand{\Rna}{(\R^{n})^{*}}
@@ -31,7 +31,7 @@ Sea \\( B \\) un conjunto. Su **conjunto potencia**, denotado por \\( \Po (B) \\
 
 ## Relaciones de equivalencia
 
-Durante esta sección, \\( X \\) representa un conjunto cualquiera. Una **relación en \\( X \\)** es un subconjunto \\( R \subset X \times X \\). Se suele denotar \\( (a,b) \in R \\) por \\( a \sim b \\)
+Durante esta sección, \\( X \\) representa un conjunto cualquiera. Una **relación en \\( X \\)** es un subconjunto \\( R \subset X \times X \\).  \\( (a,b) \in R \\) se suele denotar por \\( a \sim b \\)
 
 Las funciones son un tipo especial de relaciones ;).
 
@@ -40,7 +40,7 @@ Una **relación de equivalencia** es una relación \\( R \subset X \times X \\) 
 - **Simetría:** \\( (x,y) \in R \\) si y solo si \\( (y, x) \in R \\).
 - **Transitividad:** Si \\( (x,y) \in R \\) y \\( (y,z) \in  R\\) entonces \\( (x,z) \in R \\)
 
-La **clase de equivalencia de \\(x \in X \\)** es el conjunto \\[ \overline{x} = \lbrace y \in X \: / \: y \sim x \rbrace \\]
+La **clase de equivalencia de \\(x \in X \\)** es el conjunto \\[ \overline{x} = \lbrace y \in X \; / \; y \sim x \rbrace \\]
 
 El **conjunto cociente de la relación \\( R \\) (o de \\( \sim \\))** es el conjunto de las clases de equivalencia.
 
@@ -56,11 +56,14 @@ La relación \\(S'\\) es llamada **la relación de equivalencia generada por \\(
 3. Añadir al resultado los elementos  que demanda la transitividad.
 
 
+
+
 ## Conceptos relacionados con funciones
 
-Sean los conjuntos \\( A, B\\). Usaremos las siguientes notaciones: \\[ B^{A}:= Hom_{Set} (A,B) := \lbrace f:A \rightarrow B \; / \; f \mbox{ es una función} \\]
+Sean los conjuntos \\( A, B\\). Usaremos las siguientes notaciones: \\[ B^{A}:= Hom_{Set} (A,B) := \lbrace f:A \rightarrow B \; / \; f \mbox{ es una función} \rbrace \\]
 
 Sea \\(f: X \rightarrow Y \\) una función. Decimos \\(f \\) es **suryectiva** si para todo \\( y \in Y \\), existe algún \\(x \in X \\) tal que \\(f(x)=y \\). Decimos que \\( f \\) es **inyectiva** si para todos \\( x,x' \in X\\) tales que \\( f(x)=f(x') \\) se tiene que \\(x =x' \\). Una función que es inyectiva y sobreyectiva es una **función biyectiva**.
+
 
 
 ## Isomorfismos
@@ -83,10 +86,9 @@ Sea \\(A \\) un conjunto. Decimos que \\( A \\) tiene **cardinalidad** \\(n\\) s
 Dos conjuntos finitos tienen la misma cardinalidad si y solo si existe un isomorfismo entre ellos.
 
 ## "Diagramas" conmutativos
-Consideremos la siguiente figura
-$$ \xymatrix { a \ar [r] & b \ar [d] \\
-               c \ar [u] & d \ar [l]
-} $$
+Consideremos la siguiente figura:
+
+![triángulo conmutativo](img/img1.png)
 
 Se dice que este es un **diagrama de conjuntos** si \\( A,B, C \\) son conjuntos y \\( f,g,h \\) son funciones. Decimos que es un **triángulo conmutativo de conjuntos** si \\( g \circ f = h\\).
 
