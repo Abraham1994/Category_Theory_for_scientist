@@ -30,6 +30,8 @@ Un **monoide** es una \\( M, e , \star\\), donde \\( M \\) es un conjunto, \\(e 
 - \\( m \star e = e \star m = m \\)
 - \\( ( m\ star n) \star = m \star (n \star p) \\) (**propiedad asociativa**).
 
+Se suele denotar \\(mn= m \star n\\) cuando no hay ambigüedades.
+
 Por ejemplo, \\( \N \\) con la operación de adición, es un monoide. También lo es \\( \N\\) junto con la multiplicación. \\( \R \\) junto con la exponenciación no es parte de ningún monoide.
 
 ## [Grupos](grupos.md)
