@@ -42,7 +42,7 @@ conmuta. Cabe resaltar que el producto fibra depende de las funciones \\( f\\) y
 
 En general, asumiendo la configuración del diagrama 1, se define el **pullback de \\(X \\) y \\(Y \\) sobre \\(Z\\)** como cualquier conjunto \\(W \\)  que es isomorfo a \\( \xyz \\). El símbolo \\( \lrcorner \\)  en el diagrama (2) indica que \\( W \\) es el pullback.
 
-Observar que, si \\( W \\) es el pullback, entonces para todo \\(w \in W \\), \\( f (\pi_{1}(w)) = g ( \pi_{2}(w))= z \\) para algún \\(z \in Z\\); *podemos que corresponder \\( w \\) con algún \\(z \in Im(f) \cap Im(g) \\)*. Cuando \\(f \\) y \\(g\\) son inclusiones inyectivas, *podemos decir que \\( W \simeq Im(f) \cap Im (g) \\)*, lo cual se verifica encontrando un isomorfismo con \\(X \times_{Z} Y \\). Esto será usado a continuación.
+Observar que, si \\( W \\) es el pullback, entonces para todo \\(w \in W \\), \\( f (\pi_{1}(w)) = g ( \pi_{2}(w))= z \\) para algún \\(z \in Z\\); *podemos corresponder cada \\( w \\) con algún \\(z \in Im(f) \cap Im(g) \\)*. Cuando \\(f \\) y \\(g\\) son inclusiones inyectivas, *podemos decir que \\( W \simeq Im(f) \cap Im (g) \\)*, lo cual se verifica encontrando un isomorfismo con \\(X \times_{Z} Y \\). Esto será usado a continuación.
 
 
 ## Usando pullbacks para definir nuevas ideas de anteriores  
@@ -69,7 +69,7 @@ Por el resultado anterior, el símbolo \\( \lrcorner \\) de la derecha indica qu
 
 ### Un ejemplo
 
-Veamo como definir Group actions on algebraic varieties \\( \ulcorner \\)un celular con batería\\( \urcorner\\) con precisión usando el siguiente olog:
+Veamos como definir un celular con batería con precisión usando el siguiente olog:
 
 .............
 

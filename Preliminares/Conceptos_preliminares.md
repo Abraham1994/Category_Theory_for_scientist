@@ -24,12 +24,13 @@
   \newcommand{\Rna}{(\R^{n})^{*}}
 \\)
 
+Sean los conjuntos \\( A, B\\). Usaremos las siguientes notaciones: \\[ B^{A}:= Hom_{Set} (A,B) := \lbrace f:A \rightarrow B \; / \; f \mbox{ es una función} \\]
 
 ## Relaciones de equivalencia
 
 Durante esta sección, \\( X \\) representa un conjunto cualquiera. Una **relación en \\( X \\)** es un subconjunto \\( R \subset X \times X \\). Se suele denotar \\( (a,b) \in R \\) por \\( a \sim b \\)
 
-Las funciones son un tipo especial de relaciones ;)
+Las funciones son un tipo especial de relaciones ;).
 
 Una **relación de equivalencia** es una relación \\( R \subset X \times X \\) que satisface las siguientes propiedades:
 - **Reflexividad:** \\( (x,x) \in R \\) para todo \\( x \in X \\).
