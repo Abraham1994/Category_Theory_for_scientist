@@ -88,13 +88,13 @@ Dos conjuntos finitos tienen la misma cardinalidad si y solo si existe un isomor
 ## "Diagramas" conmutativos
 Consideremos la siguiente figura:
 
-![triángulo conmutativo](img/img1.png)
+<P ALIGN=center> ![triángulo conmutativo](img/img1.png)
 
 Se dice que este es un **diagrama de conjuntos** si \\( A,B, C \\) son conjuntos y \\( f,g,h \\) son funciones. Decimos que es un **triángulo conmutativo de conjuntos** si \\( g \circ f = h\\).
 
 Ahora consideremos la siguiente figura
 
-![cuadrado](img/img2.png)
+<P ALIGN=center> ![cuadrado](img/img2.png)
 
 Se dice que este es un *diagrama de conjuntos* si \\( A,B, C,D \\) son conjuntos y \\( f,g,h \\) son funciones. Decimos que es un **cuadrado conmutativo de conjuntos** si \\( g \circ f = i \circ h\\).
 
