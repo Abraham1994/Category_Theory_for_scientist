@@ -28,9 +28,9 @@
 
 Un **monoide** es una \\( M, e , \star\\), donde \\( M \\) es un conjunto, \\(e \in M \\) (llamado **elemento identidad**) y \\( \star : M \times M \rightarrow \\) es una función (llamada **operación**); tal que para cualesquiera \\( m,n,p \in M\\):
 - \\( m \star e = e \star m = m \\)
-- \\( ( m\ star n) \star = m \star (n \star p) (**propiedad asociativa**).
+- \\( ( m\ star n) \star = m \star (n \star p) \\) (**propiedad asociativa**).
 
-Por ejemplo, \\( \N \\) con la operación de adición, es un monoide. También lo es \\( N\\) junto con la multiplicación. \\( \R \\) junto con la exponenciación no es parte de ningún monoide.
+Por ejemplo, \\( \N \\) con la operación de adición, es un monoide. También lo es \\( \N\\) junto con la multiplicación. \\( \R \\) junto con la exponenciación no es parte de ningún monoide.
 
 ## [Grupos](grupos.md)
 
