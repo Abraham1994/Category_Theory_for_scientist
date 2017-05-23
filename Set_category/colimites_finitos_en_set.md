@@ -66,4 +66,4 @@ Consideremos los siguientes diagramas:
 
 El **coequalizador de \\( f \\) y \\( g \\)**  es el diagrama conmutativo de la derecha, donde \\[ Coeq (f,g):= Y / f(x) \sim g(c) \\]
 
-Un **objeto inicial** es una conjunto \\( S \\ = tal que para todo conjunto \\(A \\), existe una única función \\( S \rightarrow A\\).
+Un **objeto inicial** es una conjunto \\( S \\)  tal que para todo conjunto \\(A \\), existe una única función \\( S \rightarrow A\\).

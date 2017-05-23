@@ -60,7 +60,7 @@ El **subobjeto clasificador** para **Set**, denotado por \\( \Omega \\), es el c
 ### Proposición:
 > Sea \\( B \\) un conjunto. Existe un isomorfismo \\[ \hom_{Set} (B , \Omega) \stackrel{\simeq}{\rightarrow} \Po(B) \\].
 
-Luego, dado \\(B \subset B \\), podemos definir la **función característica** de \\( B' ) en \\( B\\) como la función \\( B \rightarrow \Omega \\) correspondiente a \\(B' \\) en la proposición.
+Luego, dado \\(B' \subset B \\), podemos definir la **función característica** de \\( B' \\) en \\( B\\) como la función \\( B \rightarrow \Omega \\) correspondiente a \\(B' \\) en la proposición anterior.
 
 
 ## Monomorfismos, epimorfismos

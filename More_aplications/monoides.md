@@ -44,7 +44,7 @@ Sea \\(X \\) un conjunto. El **monoide libre generado por \\( X \\)** es la secu
 
 
 ## Monoide presentado
-Sean \\(G \\) un conjunto finito y \\( n \in \N \\), para cada \\(1 \leq  i \leq n \\) escojamos \\(m_{i}, m_{i}' \in List(G)\\). El **monoide presentado por el generador \\( G\\) y relaciones \\( \lbrace (m_{i}, m_{i}') \; / \; 1 \leq i \leq n  \rbrace \\)** es el monoide \\( \M = (M,e, \star)\\) definido de la siguiente manera: Sea \\( \sim \\) la relación de equivalencia generada por \\( \lbrace (xm_{i}y \sim xm_{i}' y ) \; / \, x,y \in List(G), \; 1 \leq i \leq n \rbrace \\); definimos \\(M = List (G) / \sim \\); \\(e := [] \\) y \\( \overline{f}  \star \overline {f'} = \overline{f++f'}  \\).
+Sean \\(G \\) un conjunto finito y \\( n \in \N \\), para cada \\(1 \leq  i \leq n \\) escojamos \\(m_{i}, m_{i}' \in List(G)\\). El **monoide presentado por el generadores en \\( G\\) y relaciones \\( \lbrace (m_{i}, m_{i}') \; / \; 1 \leq i \leq n  \rbrace \\)** es el monoide \\( \M = (M,e, \star)\\) definido de la siguiente manera: Sea \\( \sim \\) la relación de equivalencia generada por \\( \lbrace (xm_{i}y \sim xm_{i}' y ) \; / \, x,y \in List(G), \; 1 \leq i \leq n \rbrace \\); definimos \\(M = List (G) / \sim \\); \\(e := [] \\) y \\( \overline{f}  \star \overline {f'} = \overline{f++f'}  \\).
 
 Habría que demostrar que la operación \\( \star \\) está bien definida, es decir, que el resultado de operar dos clases es el mismo sin importar las listas elegidas como representantes de las clases. Se deja esto como ejercicio (*cosa rutinaria para un matemático*).
 
@@ -61,3 +61,5 @@ Para este caso, consideramos \\(m_{1}= [a,a,c], \; m_{1}'= [d,d], \; m_{2}= [c,a
 
 
 ## Monoides cíclicos
+
+Un monoide es llamdado **cíclico** su tiene una representación que posee un solo generador.
