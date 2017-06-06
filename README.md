@@ -67,23 +67,41 @@ En esta sección se presentarán algunos conceptos que se usarán en las definic
 
 
 
-## [La Categoría de Conjuntos](Set_category/La_categoria_de_conjuntos.md)
+## La Categoría de Conjuntos
 En esta sección vamos a ver como los conceptos categóricos se aplican a los conjuntos. Las definiciones y resultados serán casos particulares de cosas más profundas. No seremos taaan formales, porque la intención aquí es sentar ideas y comenzar con las aplicaciones.
 - [La Categoría de Conjuntos](Set_category/La_categoria_de_conjuntos.md)
   + [Limites en **Set**](Set_category/limites_finitos_en_set.md)
   + [Colímites en **Set**](Set_category/colimites_finitos_en_set.md)
   + [Otras nociones en **Set**](Set_category/otras_nociones_en_set.md)
 
-## [Más aplicaciones](More_aplications/Mas_aplicaciones.md)
+## Más aplicaciones
 Se definirán varias estructuras algebraicas muy utlizadas en la Ciencia: Monoides, grupos, grados, órdenes y bases de datos. En en el fondo, cada una de ellas es una categoría, vista por dentro y por fuera; aunque no hablaremos mucho de categorías en esta sección...
+- [Más aplicaciones](More_aplications/Mas_aplicaciones.md)
+  + [Monoides](More_aplications/Monoides.md)
+  + [Grupos](grupos.md) 1
+  + [Grafos](grafos.md) 1
+  + [Órdenes](ordenes.md) 1  
+  + [Bases de datos: Esquemas e  instancias](bases_de_datos.md) 2
 
-
-## [Formalizando](Formalizing/Formalizando.md)
+## Formalizando
 Como la rigurosa y bella estructura logra englobarlo todo. Algunas consecuencias de este hecho. Muchos resultados parecerían poco prácticos si no se tiene en cuenta las secciones anteriores.
+-[Formalizando](Formalizing/Formalizando.md)
+  + [Categorías y funtores](Formalizing/categorias_y funtores.md)
+  + [Transformaciones naturales](Formalizing/transformaciones_naturales.md)
+  + [**Cat** \\( \simeq \\) **Sch**](Formalizing/equiv_cat_y_sch.md)
+  + [Límites y colímites](Formalizing/limites_y_colimites.md)
+  + [Otras nociones en **Cat**](Formalizing/otras_nociones_en_cat.md)
 
 
-## [Más teoría y resultados](More_theory_and_results/Mas_teoria_y_resultados)
-Funtores adjuntos. Categoría de funtores. Mónadas. Operadas. Estas últimas son una generalización de categorías.
+## Categorias en el trabajo científico
+- [Más teoría y resultados](More_theory_and_results/Mas_teoria_y_resultados)
+  - [Funtores adjuntos ](More_theory_and_results/funtores_adjuntos.md) 3
+  - [Categoría de funtores](More_theory_and_results/categoria_de_funtores.md)
+  - [Mónadas](More_theory_and_results/monadas.md)
+  - [Operadas](More_theory_and_results/operadas.md)
+Estas últimas son una generalización de categorías.
+- [Categorías en la ciencia](More_theory_and_results/categorias_en_la_ciencia.md)
+  + [Ciencia de la Computación](More_theory_and_results/ciencia_de_la_computacion) 5
 
 
 ## Referencias y lectura adicional
