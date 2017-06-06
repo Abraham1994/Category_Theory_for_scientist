@@ -97,8 +97,8 @@ Como la rigurosa y bella estructura logra englobarlo todo. Algunas consecuencias
 - [Más teoría y resultados](More_theory_and_results/Mas_teoria_y_resultados)
   - [Funtores adjuntos ](More_theory_and_results/funtores_adjuntos.md) 3
   - [Categoría de funtores](More_theory_and_results/categoria_de_funtores.md)
-  - [Mónadas](More_theory_and_results/monadas.md)
-  - [Operadas](More_theory_and_results/operadas.md)
+  - [Mónadas](More_theory_and_results/monadas.md) 4
+  - [Operadas](More_theory_and_results/operadas.md) 4
 Estas últimas son una generalización de categorías.
 - [Categorías en la ciencia](More_theory_and_results/categorias_en_la_ciencia.md)
   + [Ciencia de la Computación](More_theory_and_results/ciencia_de_la_computacion) 5
