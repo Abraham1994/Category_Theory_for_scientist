@@ -60,13 +60,19 @@ Para evitar esto, se introduce el concepto de **clase**, el cual es un genereliz
 En la práctica estas paradojas no son un obstáculo, por lo menos al principio.
 
 
-## [Conceptos preliminares](Preliminares/Conceptos_preliminares.md)
+## Conceptos preliminares
 En esta sección se presentarán algunos conceptos que se usarán en las definiciones y proposiciones. También se introducen los ***OLOGS***.
+- [Conceptos preliminares](Preliminares/Conceptos_preliminares.md)
+  + [Ologs](Preliminares/olog.md)
+
 
 
 ## [La Categoría de Conjuntos](Set_category/La_categoria_de_conjuntos.md)
 En esta sección vamos a ver como los conceptos categóricos se aplican a los conjuntos. Las definiciones y resultados serán casos particulares de cosas más profundas. No seremos taaan formales, porque la intención aquí es sentar ideas y comenzar con las aplicaciones.
-
+- [La Categoría de Conjuntos](Set_category/La_categoria_de_conjuntos.md)
+  + [Limites en **Set**](Set_category/limites_finitos_en_set.md)
+  + [Colímites en **Set**](Set_category/colimites_finitos_en_set.md)
+  + [Otras nociones en **Set**](Set_category/otras_nociones_en_set.md)
 
 ## [Más aplicaciones](More_aplications/Mas_aplicaciones.md)
 Se definirán varias estructuras algebraicas muy utlizadas en la Ciencia: Monoides, grupos, grados, órdenes y bases de datos. En en el fondo, cada una de ellas es una categoría, vista por dentro y por fuera; aunque no hablaremos mucho de categorías en esta sección...
