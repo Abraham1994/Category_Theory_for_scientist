@@ -26,13 +26,17 @@
 
 ## [Monoides](monoides.md)
 
-Un **monoide** es una \\( M, e , \star\\), donde \\( M \\) es un conjunto, \\(e \in M \\) (llamado **elemento identidad**) y \\( \star : M \times M \rightarrow \\) es una función (llamada **operación**); tal que para cualesquiera \\( m,n,p \in M\\):
+Un **monoide** es una  terna \\( M, e , \star\\), donde \\( M \\) es un conjunto, \\(e \in M \\) (llamado **elemento identidad**) y \\( \star : M \times M \rightarrow \\) es una función (llamada **operación**); tal que para cualesquiera \\( m,n,p \in M\\):
 - \\( m \star e = e \star m = m \\)
-- \\( ( m\ star n) \star = m \star (n \star p) \\) (**propiedad asociativa**).
+- \\( ( m\ star n) \star p = m \star (n \star p) \\) (**propiedad asociativa**).
 
-Se suele denotar \\(mn= m \star n\\) cuando no hay ambigüedades.
+Si también se cumple, para cualesquiera \\(  m,n \in \M \\),
+- \\( m \star n =n \star m \\),
+entonces \\( M, e , \star\\) es llamado **monoide conmutativo**.
 
-Por ejemplo, \\( \N \\) con la operación de adición, es un monoide. También lo es \\( \N\\) junto con la multiplicación. \\( \R \\) junto con la exponenciación no es parte de ningún monoide.
+Se suele denotar \\(mn= m \star n\\) cuando no hay ambigüedad. Además, cuando no hay riesgo de confusión, se escribe \\( M \\) para representar a  \\( M, e , \star\\).
+
+Por ejemplo, \\( \N \\) con la operación de adición, es un monoide. También lo es \\( \N\\) junto con la multiplicación. \\( \N \\) junto con la operación \\( m \star n = m^n \\) no puede ser parte de ningún monoide.
 
 ## [Grupos](grupos.md)
 

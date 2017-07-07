@@ -48,7 +48,7 @@ Un **categoría** es una clase \\( \C \\) de objetos junto con
 ### Una advertencia acerca del *Lenguaje*
 Muchos piensan que la Matemática es perfecta...
 
-Entre los cimientos de la Matemática están la Teoría de Conjuntos y la Lógica. Es increíble e inquitante saber que estos cimientos, en lugar de fortalecer, pueden hacer tambalear la Matemática conocida.
+Entre los cimientos de la Matemática están la Teoría de Conjuntos y la Lógica. Es increíble e inquitante saber que la investigación sobre dichos cimientos, en lugar de fortalecer, puede hacer tambalear a la Matemática conocida.
 Al respecto, podemos citar los famosos [teoremas de incompletitud de Gödel](https://es.wikipedia.org/wiki/Teoremas_de_incompletitud_de_G%C3%B6del) y el debate sobre el [axioma de elección](https://es.wikipedia.org/wiki/Axioma_de_elecci%C3%B3n).
 
 En la definición más amplia de categoría se usa el concepto de clase. Este concepto se desarrolló debido a la aparición de paradojas, como la de Russel:
@@ -56,7 +56,7 @@ En la definición más amplia de categoría se usa el concepto de clase. Este co
 #### [Paradoja de Russel](https://es.wikipedia.org/wiki/Paradoja_de_Russell)
 >Supongamos que conjunto se define como colección de elementos. Sea *M* el conjunto de todos los conjuntos que no son elementos de sí mismos. Luego, ¿M es elemento de sí mismo?
 
-Para evitar esto, se introduce el concepto de **clase**, el cual es un generelización de conjunto. Digamos que una clase es una colección tal que se puede determinar si un objeto pertenece o no a ella. Es como un "conjunto muy grande". En este caso, un conjunto se define como una clase tal que existe otra clase de la que es un elemento.   
+Para evitar esto, se introduce el concepto de **[clase](https://es.wikipedia.org/wiki/Clase_(teoría_de_conjuntos))** el cual es un generelización de conjunto. Digamos que una clase es una colección tal que se puede determinar si un objeto pertenece o no a ella. Es como un "conjunto muy grande". En este caso, un conjunto se define como una clase tal que existe otra clase de la que es un elemento.   
 En la práctica estas paradojas no son un obstáculo, por lo menos al principio.
 
 
@@ -77,7 +77,7 @@ En esta sección vamos a ver como los conceptos categóricos se aplican a los co
 ## Más aplicaciones
 Se definirán varias estructuras algebraicas muy utlizadas en la Ciencia: Monoides, grupos, grados, órdenes y bases de datos. En en el fondo, cada una de ellas es una categoría, vista por dentro y por fuera; aunque no hablaremos mucho de categorías en esta sección...
 - [Más aplicaciones](More_aplications/Mas_aplicaciones.md)
-  + [Monoides](More_aplications/Monoides.md)
+  + [Monoides](More_aplications/monoides.md)
   + [Grupos](grupos.md) 1
   + [Grafos](grafos.md) 1
   + [Órdenes](ordenes.md) 1  
@@ -98,8 +98,7 @@ Como la rigurosa y bella estructura logra englobarlo todo. Algunas consecuencias
   - [Funtores adjuntos ](More_theory_and_results/funtores_adjuntos.md) 3
   - [Categoría de funtores](More_theory_and_results/categoria_de_funtores.md)
   - [Mónadas](More_theory_and_results/monadas.md) 4
-  - [Operadas](More_theory_and_results/operadas.md) 4
-Estas últimas son una generalización de categorías.
+  - [Operadas](More_theory_and_results/operadas.md) 4 (Estas son una generalización de categorías).
 - [Categorías en la ciencia](More_theory_and_results/categorias_en_la_ciencia.md)
   + [Ciencia de la Computación](More_theory_and_results/ciencia_de_la_computacion) 5
 
